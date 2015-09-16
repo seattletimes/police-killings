@@ -1,0 +1,15 @@
+Warning: This project is not marked as production-ready. Please make sure the
+following checklist items are complete, then set `"production": true` in your
+project.json to allow live publishes.
+
+- Has this gone through QA?
+- Has it been tested in IE 10?
+- If it's a standalone, does it have ads and related links?
+- Are you using the minified version of any third-party libraries?
+- Have you checked it for color-blindness?
+- Does it have a dateline? Are all the photos credited?
+
+Social media:
+- Do all share buttons work?
+- Is there a default photo for FB?
+- Is there alternate text (< 140 characters) for Twitter?

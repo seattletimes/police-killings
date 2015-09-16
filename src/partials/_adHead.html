@@ -1,0 +1,44 @@
+<!-- Favicon -->
+<link rel="shortcut icon" href="http://apps-production.s3.amazonaws.com/static/images/favicon.ico" type="image/x-icon">
+
+<!-- Social sharing meta -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="<%= grunt.data.json.project.title %>">
+<meta property="og:site_name" content="The Seattle Times">
+<meta property="og:url" content="<%= grunt.data.json.project.url %>">
+<meta property="og:image" content="<%= grunt.data.json.project.url + grunt.data.json.project.image %>">
+<meta property="og:description" content="<%= grunt.data.json.project.description %>">
+
+<!-- BEGIN TWITTER SUMMARY CARD -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="<%= grunt.data.json.project.title %>">
+<meta name="twitter:site" content="@seattletimes">
+<meta name="twitter:url" content="<%= grunt.data.json.project.url %>">
+<meta name="twitter:image" content="<%= grunt.data.json.project.url + grunt.data.json.project.image %>">
+<meta name="twitter:description" content="<%= grunt.data.json.project.description %>">
+
+<!-- Chartbeat top -->
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+
+<!-- start ad set-up -->
+<script>
+window.googletag = {
+  cmd: [],
+  seatimes: {
+    tags: <%= JSON.stringify(json.project.tags) %>,
+    unit: "/81279359/seattletimes.com"
+  }
+};
+</script>
+<!-- end ad set-up -->
+
+<!-- typekit fonts -->
+<script>
+(function(d) {
+var config = {
+  kitId: 'rvq5yyp',
+  scriptTimeout: 3000
+},
+h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);
+</script>
