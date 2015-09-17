@@ -11,6 +11,9 @@
 
     <%= markdown.story %>
 
+    <script>
+      var deadlyForceData = <%= JSON.stringify(csv.deadlyForceData) %>;
+    </script>
     <script src="app.js"></script>
     <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_adFoot.html") : "" %>

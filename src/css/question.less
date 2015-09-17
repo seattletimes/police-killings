@@ -27,6 +27,50 @@
 
 .answer {
   display: none;
-  height: 500px;
-  background: pink;
+  margin: 30px;
+  line-height: 10px;
 }
+
+.square {
+  height: 15px;
+  width: 15px;
+  background: @df-maroon;
+  display: inline-block;
+  margin: 2px;
+  transition: background .3s linear;
+}
+
+.color-square(@attribute) {
+  [data-filter="@{attribute}"] {
+    .square.@{attribute} {
+      background: @df-blue;
+    }
+  }
+}
+
+.color-square(age-0);
+.color-square(age-20);
+.color-square(age-30);
+.color-square(age-40);
+.color-square(age-50);
+.color-square(age-60);
+.color-square(age-70);
+.color-square(male);
+.color-square(female);
+.color-square(asian);
+.color-square(black);
+.color-square(hispanic);
+.color-square(multiple);
+.color-square(native);
+.color-square(white);
+.color-square(knife);
+.color-square(firearm);
+.color-square(no-weapon);
+.color-square(vehicle);
+.color-square(fake);
+.color-square(other);
+.color-square(time-0);
+.color-square(time-6);
+.color-square(time-12);
+.color-square(time-18);
+

@@ -12,7 +12,7 @@
   <div class="option">15%</div>
   <div class="option">30%</div> 
   <div class="answer">
-    <section data-filter="race" class="grid">Grid goes here.</section>
+    <section class="grid" data-filter="age-0"></section>
   </div>
 </aside>
 
@@ -24,7 +24,7 @@
   <div class="option">C</div>
   <div class="option">D</div>
   <div class="answer">
-    <section data-filter="race" class="grid">Grid goes here.</section>
+    <section class="grid" data-filter=""></section>
   </div>
 </aside>
 
@@ -36,6 +36,6 @@
   <div class="option">Noon to 6 p.m.</div>
   <div class="option">6 p.m. to midnight</div>
   <div class="answer">
-    <section data-filter="race" class="grid">Grid goes here.</section>
+    <section class="grid" data-filter="time-18"></section>
   </div>
 </aside>
