@@ -1,0 +1,32 @@
+.question-box {
+  max-width: 630px;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px solid @df-light-gray;
+}
+
+.question {
+  font-family: @df-sans;
+  font-weight: bold;
+}
+
+.option {
+  border: 1px solid @df-light-gray;
+  padding: 5px 15px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+
+  &:hover {
+    background: @df-blue;
+    border: 1px solid @df-blue;
+    color: white;
+  }
+}
+
+.answer {
+  display: none;
+  height: 500px;
+  background: pink;
+}
