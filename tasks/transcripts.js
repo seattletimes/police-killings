@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         var nametag = /^([A-Z\W\s]+): /;
         var speaker = line.match(nametag);
         if (speaker) {
-          floor = record.speaker = speaker[1];
+          floor = record.speaker = speaker[1].split(" ").pop();
         } else {
           record.speaker = floor;
         }

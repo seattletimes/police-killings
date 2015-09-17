@@ -1,0 +1,53 @@
+.debate-player {
+  max-width: 320px;
+
+  audio {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .show-transcript {
+    background: @df-blue;
+    font-family: @df-sans;
+    float: right;
+    display: inline-block;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .transcript {
+    clear: both;
+    max-height: 300px;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    color: @df-middle-gray;
+    font-family: @df-sans;
+    font-size: 13px;
+
+    .active {
+      color: @df-dark-gray;
+      font-weight: bold;
+    }
+
+    li {
+      margin: 4px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid @df-light-gray;
+      cursor: pointer;
+    }
+  }
+
+}
