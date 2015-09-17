@@ -1,12 +1,11 @@
 var container = document.querySelector(".debate-player");
 var audio = container.querySelector("audio");
 
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "./assets/transcript.json");
-xhr.send();
+var $ = require("jquery");
 
-xhr.onload = function() {
-  var transcript = JSON.parse(xhr.responseText);
+window.$ = $;
+
+$.ajax("./assets/transcript.json").then(function(transcript) {
 
   var tContainer = container.querySelector(".transcript");
 
@@ -30,7 +29,7 @@ xhr.onload = function() {
     var time = audio.currentTime;
     for (var i = 0; i < transcript.length; i++) {
       var line = transcript[i];
-      if (line.start <= time && line.end > time) {     
+      if (line.start <= time && line.end > time && active != line.element) {     
         if (active) {
           active.classList.remove("active");
         }
@@ -39,7 +38,7 @@ xhr.onload = function() {
         var bounds = active.getBoundingClientRect();
         var cBounds = tContainer.getBoundingClientRect();
         if (bounds.top < cBounds.top || bounds.bottom > cBounds.bottom) {
-          tContainer.scrollTop -= (cBounds.top - bounds.top + 20);
+          $(tContainer).animate({ scrollTop: active.offsetTop - 20 });
         }
         break;
       }
@@ -53,9 +52,15 @@ xhr.onload = function() {
     if (index !== null) {
       var line = transcript[index];
       audio.currentTime = line.start;
-      // audio.play();
+      audio.play();
       update();
     }
-  })
+  });
 
-};
+  container.querySelector(".show-transcript").addEventListener("click", function() {
+    tContainer.classList.toggle("show");
+    active = null;
+    update();
+  });
+
+});
