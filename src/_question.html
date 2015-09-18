@@ -1,0 +1,15 @@
+<div class="question"><%= title %></div>
+<% options.forEach(function(option) { %>
+  <div class="option"><%= option%></div>
+<% }); %>
+<div class="answer">
+  <div class="explainer">
+    <%= explanation %>
+  </div>
+  <div class="toggle-label"><%= key %>:</div>
+  <% toggles.forEach(function(toggle) { %>
+    <div class="toggle <%= toggle.selected %>" data-filter="<%= toggle.data %>"><%= toggle.label %></div>
+  <% }); %>
+  <section class="grid" data-filter="<%= filter %>"></section>
+  <section class="individual"></section>
+</div>

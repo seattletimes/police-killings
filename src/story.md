@@ -1,58 +1,52 @@
 <!-- Age -->
 <aside class="question-box">
-  <div class="question">Of the 212 people killed by police, how many were teenagers?</div>
-  <div class="option">3%</div>
-  <div class="option">9%</div>
-  <div class="option">15%</div>
-  <div class="option">30%</div> 
-  <div class="answer">
-    <div class="explainer">
-      Just seven of the deaths were teenagers. The youngest person was 16, the oldest 77. Nearly 40 percent were 40 or older. Only three of the 212 people killed by police were women.
-    </div>
-    <div class="toggle-label">Age:</div>
-    <div class="toggle selected" data-filter="age-0">0-19</div>
-    <div class="toggle" data-filter="age-20">20-29</div>
-    <div class="toggle" data-filter="age-30">30-39</div>
-    <div class="toggle" data-filter="age-40">40-49</div>
-    <div class="toggle" data-filter="age-50">50-59</div>
-    <div class="toggle" data-filter="age-60">60-69</div>
-    <div class="toggle" data-filter="age-70">70+</div>
-    <section class="grid" data-filter="age-0"></section>
-    <section class="individual"></section>
-  </div>
+  <%= t.include("_question.html", {
+    title: "Of the 212 people killed by police, how many were teenagers?",
+    filter: "age-0",
+    options: [ "3%", "9%", "15%", "30%" ],
+    key: "Age",
+    toggles: [
+      { data: "age-0", label: "0-19", selected: "selected" },
+      { data: "age-20", label: "20-29" },
+      { data: "age-30", label: "30-39" },
+      { data: "age-40", label: "40-49" },
+      { data: "age-50", label: "50-59" },
+      { data: "age-60", label: "60-69" },
+      { data: "age-70", label: "70+" }
+    ],
+    explanation: "Just seven of the deaths were teenagers. The youngest person was 16, the oldest 77. Nearly 40 percent were 40 or older. Only three of the 212 people killed by police were women."
+  }) %>
 </aside>
 
 <!-- Race -->
 <aside class="question-box">
-  <div class="question">Race question</div>
-  <div class="option">A</div>
-  <div class="option">B</div>
-  <div class="option">C</div>
-  <div class="option">D</div>
-  <div class="answer">
-    <section class="grid" data-filter=""></section>
-  </div>
+  <%= t.include("_question.html", {
+    title: "Race question",
+    filter: "",
+    options: [ "A", "B", "C", "D" ],
+    key: "Race",
+    toggles: [
+      { data: "", label: "" }
+    ],
+    explanation: ""
+  }) %>
 </aside>
 
 <!-- Time of day -->
 <aside class="question-box">
-  <div class="question">Which hours of the day had the highest number of deaths?</div>
-  <div class="option">Midnight to 6 a.m.</div>
-  <div class="option">6 a.m. to noon</div>
-  <div class="option">Noon to 6 p.m.</div>
-  <div class="option">6 p.m. to midnight</div>
-  <div class="answer">
-    <div class="explainer">
-      While evening hours saw the highest number of fatal police encounters, 41 percent occurred during the day (6 a.m. to 6 p.m.).
-    </div>
-    <div class="toggle-label">Time of day:</div>
-    <div class="toggle" data-filter="time-0"><i class="fa fa-moon-o"></i> Midnight-6 a.m.</div>
-    <div class="toggle" data-filter="time-6"><i class="fa fa-sun-o"></i> 6 a.m.-noon</div>
-    <div class="toggle" data-filter="time-12"><i class="fa fa-sun-o"></i> Noon-6 p.m.</div>
-    <div class="toggle selected" data-filter="time-18"><i class="fa fa-moon-o"></i> 6 p.m.-midnight</div>
-    <section class="grid" data-filter="time-18"></section>
-    <section class="individual"></section>
-  </div>
+  <%= t.include("_question.html", {
+    title: "Which hours of the day had the highest number of deaths?",
+    filter: "time-18",
+    options: [ "Midnight to 6 a.m.", "6 a.m. to noon", "Noon to 6 p.m.", "6 p.m. to midnight" ],
+    key: "Time of day",
+    toggles: [
+      { data: "time-0", label: "<i class='fa fa-moon-o'></i> Midnight-6 a.m." },
+      { data: "time-6", label: "<i class='fa fa-sun-o'></i> 6 a.m.-noon" },
+      { data: "time-12", label: "<i class='fa fa-sun-o'></i> Noon-6 p.m." },
+      { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m.-midnight", selected: "selected" }
+    ],
+    explanation: "While evening hours saw the highest number of fatal police encounters, 41 percent occurred during the day (6 a.m. to 6 p.m.)."
+  }) %>
 </aside>
 
 Killings by police in the line of duty have surged in Washington over the past decade, according to a Seattle Times analysis. 
