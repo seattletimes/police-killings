@@ -46,10 +46,10 @@
       While evening hours saw the highest number of fatal police encounters, 41 percent occurred during the day (6 a.m. to 6 p.m.).
     </div>
     <div class="toggle-label">Time of day:</div>
-    <div class="toggle" data-filter="time-0">Midnight-6 a.m.</div>
-    <div class="toggle" data-filter="time-6">6 a.m.-noon</div>
-    <div class="toggle" data-filter="time-12">Noon-6 p.m.</div>
-    <div class="toggle selected" data-filter="time-18">6 p.m.-midnight</div>
+    <div class="toggle" data-filter="time-0"><i class="fa fa-moon-o"></i> Midnight-6 a.m.</div>
+    <div class="toggle" data-filter="time-6"><i class="fa fa-sun-o"></i> 6 a.m.-noon</div>
+    <div class="toggle" data-filter="time-12"><i class="fa fa-sun-o"></i> Noon-6 p.m.</div>
+    <div class="toggle selected" data-filter="time-18"><i class="fa fa-moon-o"></i> 6 p.m.-midnight</div>
     <section class="grid" data-filter="time-18"></section>
     <section class="individual"></section>
   </div>

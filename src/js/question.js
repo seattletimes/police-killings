@@ -48,8 +48,11 @@ deadlyForceData.forEach(function(row) {
   var parsedTime = row.time.match(/^(\d+):.*?([AP]M)$/);
   if (parsedTime) {
     var [, hour, amPm] = parsedTime;
+    hour = Number(hour);
   }
-  if (amPm == "PM") hour += 12;
+  if (amPm == "AM" && hour == 12) hour = 0;
+  if (amPm == "PM" && hour < 12) hour += 12;
+  console.log(row.time, hour)
   var time = hour < 6 ? "time-0"   :
              hour < 12 ? "time-6"  :
              hour < 18 ? "time-12" :
