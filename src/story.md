@@ -5,6 +5,7 @@
     filter: "age-0",
     options: [ "3%", "9%", "15%", "30%" ],
     key: "Age",
+    sort: "age",
     toggles: [
       { data: "age-0", label: "0-19", selected: "selected" },
       { data: "age-20", label: "20-29" },
@@ -25,6 +26,7 @@
     filter: "white",
     options: [ "A", "B", "C", "D" ],
     key: "Race",
+    sort: "race",
     toggles: [
       { data: "white", label: "White", selected: "selected" },
       { data: "asian", label: "Asian/Pacific Islander" },
@@ -44,6 +46,7 @@
     filter: "time-18",
     options: [ "Midnight to 6 a.m.", "6 a.m. to noon", "Noon to 6 p.m.", "6 p.m. to midnight" ],
     key: "Time of day",
+    sort: "hour",
     toggles: [
       { data: "time-0", label: "<i class='fa fa-moon-o'></i> Midnight-6 a.m." },
       { data: "time-6", label: "<i class='fa fa-sun-o'></i> 6 a.m.-noon" },
@@ -61,6 +64,7 @@
     filter: "firearm",
     options: [ "24%", "44%", "64%", "84%" ],
     key: "Weapon",
+    sort: "weapon",
     toggles: [
       { data: "firearm", label: "Firearm", selected: "selected" },
       { data: "fake", label: "Fake gun" },

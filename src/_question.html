@@ -10,6 +10,6 @@
   <% toggles.forEach(function(toggle) { %>
     <div class="toggle <%= toggle.selected %>" data-filter="<%= toggle.data %>"><%= toggle.label %></div>
   <% }); %>
-  <section class="grid" data-filter="<%= filter %>"></section>
+  <section class="grid" data-filter="<%= filter %>" data-sort="<%= sort %>"></section>
   <section class="individual"></section>
 </div>
