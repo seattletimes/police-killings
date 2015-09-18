@@ -18,6 +18,7 @@ var buffer = document.createElement("div");
 deadlyForceData.forEach(function(row) {
 
   [row.last, row.first] = row.name.split(", ");
+  if (row.race == "Multiple") row.race = "Multiracial";
 
   var classes = ["square"];
 
@@ -29,12 +30,12 @@ deadlyForceData.forEach(function(row) {
             row.age < 70 ? "age-60" :
                            "age-70" ;
 
-  var gender = row.gender == "Male" ? "male" : "female";
+  // var gender = row.gender == "Male" ? "male" : "female";
 
   var race = row.race == "Asian/Pacific Islander" ? "asian"    :
              row.race == "Black"                  ? "black"    :
              row.race == "Hispanic"               ? "hispanic" :
-             row.race == "Multiple"               ? "multiple" :
+             row.race == "Multiracial"               ? "multiple" :
              row.race == "Native American"        ? "native"   :
                                                     "white"    ;
 
@@ -52,16 +53,18 @@ deadlyForceData.forEach(function(row) {
   }
   if (amPm == "AM" && hour == 12) hour = 0;
   if (amPm == "PM" && hour < 12) hour += 12;
-  console.log(row.time, hour)
+
   var time = hour < 6 ? "time-0"   :
              hour < 12 ? "time-6"  :
              hour < 18 ? "time-12" :
-                         "time-18" ;
+             hour < 24 ? "time-18" :
+             "" ;
 
   classes.push(age);
-  classes.push(gender);
+  // classes.push(gender);
   classes.push(race);
   classes.push(time);
+  classes.push(weapon);
 
   var square = document.createElement("div");
   square.className = classes.join(" ");

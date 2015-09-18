@@ -22,13 +22,18 @@
 <aside class="question-box">
   <%= t.include("_question.html", {
     title: "Race question",
-    filter: "",
+    filter: "white",
     options: [ "A", "B", "C", "D" ],
     key: "Race",
     toggles: [
-      { data: "", label: "" }
+      { data: "white", label: "White", selected: "selected" },
+      { data: "asian", label: "Asian/Pacific Islander" },
+      { data: "black", label: "Black" },
+      { data: "hispanic", label: "Hispanic" },
+      { data: "multiple", label: "Multiracial" },
+      { data: "native", label: "Native American" }
     ],
-    explanation: ""
+    explanation: "tktktk"
   }) %>
 </aside>
 
@@ -46,6 +51,25 @@
       { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m.-midnight", selected: "selected" }
     ],
     explanation: "While evening hours saw the highest number of fatal police encounters, 41 percent occurred during the day (6 a.m. to 6 p.m.)."
+  }) %>
+</aside>
+
+<!-- Weapons -->
+<aside class="question-box">
+  <%= t.include("_question.html", {
+    title: "How many people killed by police possessed a weapon?",
+    filter: "firearm",
+    options: [ "24%", "44%", "64%", "84%" ],
+    key: "Weapon",
+    toggles: [
+      { data: "firearm", label: "Firearm", selected: "selected" },
+      { data: "fake", label: "Fake gun" },
+      { data: "knife", label: "Knife/blade" },
+      { data: "vehicle", label: "Vehicle" },
+      { data: "other", label: "Other" },
+      { data: "no-weapon", label: "No weapon" }
+    ],
+    explanation: "Half of the 212 people killed by police had a firearm in their possession. Another 10 had fake guns, that could have been mistaken for actual firearms. Thirty-four had no weapon."
   }) %>
 </aside>
 
