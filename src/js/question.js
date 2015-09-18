@@ -4,6 +4,13 @@ $(document.body).on("click", ".option", function() {
   $(this).siblings(".answer").slideDown();
 });
 
+$(document.body).on("click", ".toggle", function(e) {
+  var toggle = e.target.getAttribute("data-filter");
+  $(this).siblings(".grid").attr("data-filter", toggle);
+  $(this).siblings(".toggle.selected").removeClass("selected");
+  $(this).addClass("selected");
+});
+
 var buffer = document.createElement("div");
 
 window.deadlyForceData.forEach(function(row) {

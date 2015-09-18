@@ -28,13 +28,49 @@
 .answer {
   display: none;
   margin: 30px;
+}
+
+.toggle-label {
+  font-family: @df-sans;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.toggle {
+  padding: 4px 12px 3px 12px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+  background: @df-light-gray;
+  font-family: @df-sans;
+  font-size: 14px;
+
+  &:hover {
+    background: @df-middle-gray;
+    color: white;
+  }
+
+  &.selected {
+    background: darken(@st-dark-red, 15%);
+    color: white;
+  }
+}
+
+.explainer {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+.grid {
+  margin-top: 10px;
   line-height: 10px;
 }
 
 .square {
   height: 15px;
   width: 15px;
-  background: @df-maroon;
+  background: @st-light-green;
   display: inline-block;
   margin: 2px;
   transition: background .3s linear;
@@ -43,7 +79,7 @@
 .color-square(@attribute) {
   [data-filter="@{attribute}"] {
     .square.@{attribute} {
-      background: @df-blue;
+      background: @st-dark-red;
     }
   }
 }
