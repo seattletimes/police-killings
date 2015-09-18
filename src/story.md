@@ -59,7 +59,7 @@ In 1986, Washington's Legislature decided police officers shouldn't be prosecute
 
 "This almost perfect defense to a mistaken use of force has kept police officers out of court as defendants," King County Prosecutor Dan Satterberg has said.
 
-While the vast majority of 212 fatal encounters analyzed by The Times were deemed to be legally justified, the good faith and malice language makes it nearly impossible for prosecutors to bring a charge, even if they conclude that an officer committed a wrongful killing. 
+The Times analyzed all 212 fatal police encounters from 2005 to 2014. Although the vast majority of the cases were deemed legally justified, others were controversial. But with the malice and good faith requirements, it was nearly impossible for prosecutors to bring criminal charges even if they concluded that an officer committed a wrongful killing.
 
 In the lone case, an Everett police officer was charged with second-degree murder and manslaughter after he fatally shot a drunken man through the rear window of his car in 2009.
 
@@ -83,7 +83,7 @@ Only three of the 212 were female, and seven were in their teens. Nearly 41 perc
 
 Some numbers underscore the national concerns about deadly force. 
 
-About 10 percent of those killed were black, a group that accounts for 3.6 percent of the state's population. Blacks were also overrepresented in the unarmed deaths, accounting for nearly 15 percent of that group. 
+About 10 percent of those killed were black, a group that accounts for 3.6 percent of the state’s population. Blacks were also overrepresented among those without a weapon, accounting for nearly 15 percent of that group.
 
 In King County, where blacks represent 6.3 percent of the population, they accounted for more than 20 percent of deaths. 
 
