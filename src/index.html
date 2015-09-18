@@ -9,7 +9,9 @@
   </head>
   <body>
 
-    <%= markdown.story %>
+    <main class="story">
+      <%= markdown.story %>
+    </main>
 
     <script>
       var deadlyForceData = <%= JSON.stringify(csv.deadlyForceData) %>;

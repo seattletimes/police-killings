@@ -55,7 +55,6 @@
   </div>
 </aside>
 
-
 Killings by police in the line of duty have surged in Washington over the past decade, according to a Seattle Times analysis. 
 
 During that period, only one police officer has been criminally charged in state courts with the illegal use of deadly force on the job.
@@ -144,8 +143,10 @@ Leo Poort, legal adviser to the Seattle police chief then, said the Garner decis
 
 Only about half the states had laws in line with the Garner ruling. In Washington, killing a fleeing suspect had been a justifiable police homicide since 1909. In the wake of Garner, police unions and conservative lawmakers resisted bringing Washington law in line. 
 
-<!-- Audio sidebar -->
-<%= t.include("_audio.html") %>
+<!--test -->
+<aside class="audio sidebar">
+  <%= t.include("_audio.html") %>
+</aside>
 
 In 1985, state Sens. Phil Talmadge, D-Seattle, chairman of the Senate Judiciary Committee, and George Fleming, D-Seattle, co-sponsored a bill that they hoped would help cities avoid costly wrongful-death lawsuits while protecting lives.
 
@@ -157,7 +158,7 @@ The Washington Association of Sheriffs and Police Chiefs already had studied the
 
 But Talmadge and Fleming faced heavy opposition from senators who were adamant that police officers should have the power to use deadly force to stop a fleeing suspect of any crime. 
 
-"Now, crime begets crime," Sen. Kent Pullen, R-Kent, said in debate on the floor. "And theft leads to burglary, burglary leads to robbery, robbery leads to murder. ... Passing a bill like this is telling the criminal that ‘We're condoning your crimes and you don't have to worry about any sort of penalty.' " 
+"Now, crime begets crime," Sen. Kent Pullen, R-Kent, said in debate on the floor. "And theft leads to burglary, burglary leads to robbery, robbery leads to murder. ... Passing a bill like this is telling the criminal that ‘We're condoning your crimes and you don't have to worry about any sort of penalty.'" 
 
 Fleming, the first African American to serve in the state Senate, countered: "Just because a person is running down the street with a TV in his arm, shouldn't give you reason to blow him away!"
 

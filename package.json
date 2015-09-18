@@ -13,7 +13,7 @@
     "babelify": "^6.0.2",
     "browserify": "^10.2.4",
     "chalk": "^1.0.0",
-    "commonmark": "^0.20.0",
+    "commonmark": "^0.22.0",
     "component-responsive-frame": "^1.0.6",
     "csv": "^0.4.2",
     "exorcist": "^0.4.0",
