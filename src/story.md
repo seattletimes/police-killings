@@ -59,7 +59,7 @@ In 1986, Washington's Legislature decided police officers shouldn't be prosecute
 
 "This almost perfect defense to a mistaken use of force has kept police officers out of court as defendants," King County Prosecutor Dan Satterberg has said.
 
-The Times analyzed all 212 fatal police encounters from 2005 to 2014. Although the vast majority of the cases were deemed legally justified, others were controversial. But with the malice and good faith requirements, it was nearly impossible for prosecutors to bring criminal charges even if they concluded that an officer committed a wrongful killing.
+The Times analyzed 212 fatal police encounters from 2005 to 2014. Although the vast majority of the cases were deemed legally justified, others were controversial. But with the malice and good faith requirements, it was nearly impossible for prosecutors to bring criminal charges even if they concluded that an officer committed a wrongful killing.
 
 In the lone case, an Everett police officer was charged with second-degree murder and manslaughter after he fatally shot a drunken man through the rear window of his car in 2009.
 
