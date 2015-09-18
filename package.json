@@ -16,6 +16,7 @@
     "commonmark": "^0.20.0",
     "component-responsive-frame": "^1.0.6",
     "csv": "^0.4.2",
+    "dot": "^1.0.3",
     "exorcist": "^0.4.0",
     "google-spreadsheets": "^0.4.1",
     "grunt": "^0.4.5",

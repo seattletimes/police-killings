@@ -1,4 +1,6 @@
 var $ = require("jquery");
+var dot = require("./lib/dot");
+var card = dot.compile(require("./_card.html"));
 
 $(document.body).on("click", ".option", function() {
   $(this).siblings(".answer").slideDown();
@@ -13,7 +15,10 @@ $(document.body).on("click", ".toggle", function(e) {
 
 var buffer = document.createElement("div");
 
-window.deadlyForceData.forEach(function(row) {
+deadlyForceData.forEach(function(row) {
+
+  [row.last, row.first] = row.name.split(", ");
+
   var classes = ["square"];
 
   var age = row.age < 20 ? "age-0"  :
@@ -67,7 +72,11 @@ $(".grid").each(function() {
 
 $(document.body).on("click", ".square", function(e) {
   var id = e.target.getAttribute('id');
-  $(this).closest(".grid").next(".individual").html(id);
+  var individual = deadlyForceData.filter(function(row) {
+    return row.id == id
+  })[0];
+  console.log(individual)
+  $(this).closest(".grid").next(".individual").html(card(individual));
   $(this).siblings(".square.selected").removeClass("selected");
   $(this).addClass("selected");
 });
