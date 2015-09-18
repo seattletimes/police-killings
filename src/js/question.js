@@ -57,9 +57,17 @@ window.deadlyForceData.forEach(function(row) {
 
   var square = document.createElement("div");
   square.className = classes.join(" ");
+  $(square).attr("id", row.id);
   buffer.appendChild(square);
 });
 
 $(".grid").each(function() {
   this.innerHTML = buffer.innerHTML;
+});
+
+$(document.body).on("click", ".square", function(e) {
+  var id = e.target.getAttribute('id');
+  $(this).closest(".grid").next(".individual").html(id);
+  $(this).siblings(".square.selected").removeClass("selected");
+  $(this).addClass("selected");
 });

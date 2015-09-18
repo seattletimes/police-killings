@@ -4,10 +4,10 @@
   margin-bottom: 10px;
   padding: 20px;
   border: 1px solid @df-light-gray;
+  font-family: @df-sans;
 }
 
 .question {
-  font-family: @df-sans;
   font-weight: bold;
 }
 
@@ -17,6 +17,7 @@
   display: inline-block;
   cursor: pointer;
   border-radius: 2px;
+  font-size: 16px;
 
   &:hover {
     background: @df-blue;
@@ -31,7 +32,6 @@
 }
 
 .toggle-label {
-  font-family: @df-sans;
   font-size: 14px;
   text-transform: uppercase;
   padding-bottom: 5px;
@@ -43,7 +43,6 @@
   cursor: pointer;
   border-radius: 2px;
   background: @df-light-gray;
-  font-family: @df-sans;
   font-size: 14px;
 
   &:hover {
@@ -58,6 +57,7 @@
 }
 
 .explainer {
+  font-family: @df-serif;
   font-size: 16px;
   padding-bottom: 20px;
 }
@@ -74,6 +74,11 @@
   display: inline-block;
   margin: 2px;
   transition: background .3s linear;
+  cursor: pointer;
+
+  &:hover, &.selected {
+    border: 3px solid @df-dark-gray;
+  }
 }
 
 .color-square(@attribute) {
@@ -110,3 +115,7 @@
 .color-square(time-12);
 .color-square(time-18);
 
+.individual {
+  background: lighten(@st-light-orange, 10%);
+  font-size: 16px;
+}

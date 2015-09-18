@@ -24,6 +24,7 @@
     <div class="toggle" data-filter="age-60">60-69</div>
     <div class="toggle" data-filter="age-70">70+</div>
     <section class="grid" data-filter="age-0"></section>
+    <section class="individual"></section>
   </div>
 </aside>
 
@@ -56,5 +57,6 @@
     <div class="toggle" data-filter="time-12">Noon-6 p.m.</div>
     <div class="toggle selected" data-filter="time-18">6 p.m.-midnight</div>
     <section class="grid" data-filter="time-18"></section>
+    <section class="individual"></section>
   </div>
 </aside>
