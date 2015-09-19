@@ -7,10 +7,11 @@ $(document.body).on("click", ".option", function() {
 });
 
 $(document.body).on("click", ".toggle", function(e) {
-  var toggle = e.target.getAttribute("data-filter");
-  $(this).siblings(".grid").attr("data-filter", toggle);
-  $(this).siblings(".toggle.selected").removeClass("selected");
-  $(this).addClass("selected");
+  var toggle = this.getAttribute("data-filter");
+  var $this = $(this);
+  $this.siblings(".grid").attr("data-filter", toggle);
+  $this.siblings(".toggle.selected").removeClass("selected");
+  $this.addClass("selected");
 });
 
 deadlyForceData.forEach(function(row) {
@@ -32,11 +33,30 @@ deadlyForceData.forEach(function(row) {
 
 var makeSquares = function(grid, sort) {
 
-  deadlyForceData.sort(function(a,b) {
-    if (a[sort] < b[sort]) return 1;
-    if (a[sort] > b[sort]) return -1;
-    return 0;
-  });
+  switch (sort) {
+
+    case "age":
+      deadlyForceData.sort(function(a,b) {
+        if (a[sort] < b[sort]) return -1;
+        if (a[sort] > b[sort]) return 1;
+        return 0;
+      });
+    case "hour":
+      deadlyForceData.sort(function(a,b) {
+        if (a[sort] < b[sort]) return -1;
+        if (a[sort] > b[sort]) return 1;
+        return 0;
+      });
+
+    break;
+
+    default:
+      deadlyForceData.sort(function(a,b) {
+        if (a[sort] < b[sort]) return 1;
+        if (a[sort] > b[sort]) return -1;
+        return 0;
+      });
+  }
 
   deadlyForceData.forEach(function(row) {
 
