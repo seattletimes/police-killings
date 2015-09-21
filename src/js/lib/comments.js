@@ -2,17 +2,7 @@
 //note that these libraries require jQuery or a jQuery shim, or they will throw errors
 //a no-op shim is included below, but may be disabled with the following variable:
 
-var shim$ = !("$" in window);
-
-if (shim$) {
-  var noop = function() {};
-  var ish = {
-    ready: function(f) { f() }
-  };
-  ["append", "bind", "html", "removeClass"].forEach(function(p) { ish[p] = noop });
-
-  window.$ = function() { return ish; };
-}
+var $ = require("jquery");
 
 var css = ["http://discussions.seattletimes.com/comments/css/st-commenting.css"];
 var async = [
@@ -70,6 +60,8 @@ var configure = function() {
 
         }
 
+        $(".load-comments").remove();
+
         if (cval) {
           try {
             fyre.conv.login(cval);
@@ -81,7 +73,7 @@ var configure = function() {
   });
 }
 
-var asyncScripts = function() {
+var asyncScripts = function(callback) {
   //console.log(this, scriptIndex);
   scriptIndex++;
   var url = async[scriptIndex];
@@ -94,5 +86,7 @@ var asyncScripts = function() {
   head.appendChild(script);
 };
 
-//load comments after n seconds
-setTimeout(asyncScripts, 1 * 1000);
+//load comments when clicked
+$(".load-comments").one("click", function() {
+  asyncScripts();
+});
