@@ -1,8 +1,8 @@
 {
   "s3": {
     "stage": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "careful-canvasser"
     },
     "live": {
       "bucket": "",

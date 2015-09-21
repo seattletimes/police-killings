@@ -17,19 +17,12 @@ if (shim$) {
 var css = ["http://discussions.seattletimes.com/comments/css/st-commenting.css"];
 var async = [
   "http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js",
+  "http://cdn.livefyre.com/Livefyre.js",
   "http://discussions.seattletimes.com/comments/js/livefyreembed.js",
   "https://secure.seattletimes.com/accountcenter/ssoconfig.js",
-  "https://secure.seattletimes.com/accountcenter/js/cookies.js",
-  "https://secure.seattletimes.com/accountcenter/js/logout.js",
-  "https://secure.seattletimes.com/accountcenter/js/reauth.js",
-  "https://secure.seattletimes.com/accountcenter/js/subscriptionglobals.js?1"
 ];
 
 var head = document.querySelector("head");
-var config = document.querySelector("script[type='livefyre-config']");
-if (!config) return;
-config = config.innerHTML;
-config = JSON.parse(config);
 
 css.forEach(function(url) {
   var link = document.createElement("link");
@@ -42,31 +35,52 @@ css.forEach(function(url) {
 var scriptIndex = -1;
 
 var configure = function() {
-  fyre.conv.load({
-    strings: {
-      postAsButton: "Post comment",
-      postReplyAsButton: "Post comment",
-      signIn: "You must be logged in to leave a comment. Log in or create an account.",
-      listenerCountPlural: "People Viewing",
-      listenerCount: "Person Viewing",
-      moderator: "Seattle Times staff",
-      signOut: "Log out",
-      backToComments: "View all comments"
-    },
-    authDelegate : authDelegate,
-    network: "seattletimes.fyre.co"
-  },
-  [{
-    app: "main",
-    siteId: "316317",
-    articleId: config.articleId,
-    el: "livefyre-comments",
-    checksum: config.checksum,
-    collectionMeta: config.collectionMeta
-  }], function (widget) {
-    callback();
+  Livefyre.require(['fyre.conv#3'], function(Conv) {
+
+    var authDelegate = new fyre.conv.RemoteAuthDelegate();
+    authDelegate.login = function(delegate) {
+      document.cookie  = `st-return=${location.href};domain=.seattletimes.com;path=/`;
+      window.location.href = "https://secure.seattletimes.com/accountcenter/";
+    };
+
+    new Conv({
+        network: 'seattletimes.fyre.co',
+        authDelegate: authDelegate
+      }, [{
+        app: 'main',
+        siteId: '316317',
+        articleId: 'custom-1442856951313',
+        el: 'livefyre-app-custom-1442856951313',
+        
+      }], function (widget) {
+        var cval = false;
+
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var cachedCookies = decodedCookie.split(';');
+
+        for (var i=0;i<cachedCookies.length;i++){
+
+          var splitCookie = cachedCookies[i].split('=');
+          var cookieName = splitCookie[0].replace(/^\s+|\s+jQuery/g,"");
+          var cookieData = splitCookie[1];
+
+          if (cookieName=='lftoken'){
+            cval = cookieData;
+          }
+
+        }
+        console.log(widget)
+
+        if (cval) {
+          try {
+            fyre.conv.login(cval);
+          } catch (e) {
+            window.console && console.log("Error attempting to login with lftoken cookie value: ", cval, " ", e);
+          }
+        }
+      });
   });
-};
+}
 
 var asyncScripts = function() {
   //console.log(this, scriptIndex);
@@ -81,5 +95,5 @@ var asyncScripts = function() {
   head.appendChild(script);
 };
 
-//load comments after 5 seconds
-setTimeout(asyncScripts, 5 * 1000);
+//load comments after n seconds
+setTimeout(asyncScripts, 1 * 1000);
