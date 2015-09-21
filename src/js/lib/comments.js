@@ -17,9 +17,7 @@ if (shim$) {
 var css = ["http://discussions.seattletimes.com/comments/css/st-commenting.css"];
 var async = [
   "http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js",
-  "http://cdn.livefyre.com/Livefyre.js",
-  "http://discussions.seattletimes.com/comments/js/livefyreembed.js",
-  "https://secure.seattletimes.com/accountcenter/ssoconfig.js",
+  "http://cdn.livefyre.com/Livefyre.js"
 ];
 
 var head = document.querySelector("head");
@@ -38,9 +36,12 @@ var configure = function() {
   Livefyre.require(['fyre.conv#3'], function(Conv) {
 
     var authDelegate = new fyre.conv.RemoteAuthDelegate();
-    authDelegate.login = function(delegate) {
+    authDelegate.login = function() {
       document.cookie  = `st-return=${location.href};domain=.seattletimes.com;path=/`;
       window.location.href = "https://secure.seattletimes.com/accountcenter/";
+    };
+    authDelegate.editProfile = function() {
+      window.location.href = "https://secure.seattletimes.com/accountcenter/editprofile";
     };
 
     new Conv({
@@ -50,8 +51,7 @@ var configure = function() {
         app: 'main',
         siteId: '316317',
         articleId: 'custom-1442856951313',
-        el: 'livefyre-app-custom-1442856951313',
-        
+        el: 'livefyre-app-custom-1442856951313'
       }], function (widget) {
         var cval = false;
 
@@ -69,7 +69,6 @@ var configure = function() {
           }
 
         }
-        console.log(widget)
 
         if (cval) {
           try {
