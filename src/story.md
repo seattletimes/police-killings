@@ -3,7 +3,12 @@
   <%= t.include("_question.html", {
     title: "Of the 212 people killed by police, how many were teenagers?",
     filter: "age-0",
-    options: [ "3%", "9%", "15%", "30%" ],
+    options: [
+      { data: "3%", correct: "correct" },
+      { data: "9%" },
+      { data: "15%" },
+      { data: "30%" }
+    ],
     key: "Age",
     sort: "age",
     toggles: [
@@ -22,15 +27,21 @@
 <!-- Race -->
 <aside class="question-box">
   <%= t.include("_question.html", {
-    title: "Race question",
-    filter: "white",
-    options: [ "A", "B", "C", "D" ],
+    title: "Killings by police have impacted which ethnic group the most disproportionately?",
+    filter: "black",
+    options: [
+      { data: "Black", correct: "correct" },
+      { data: "Asian" },
+      { data: "Native American" },
+      { data: "Hispanic" }
+    ],
+    included: "_race.html",
     key: "Race",
     sort: "race",
     toggles: [
-      { data: "white", label: "White", selected: "selected" },
+      { data: "white", label: "White" },
       { data: "asian", label: "Asian/Pacific Islander" },
-      { data: "black", label: "Black" },
+      { data: "black", label: "Black", selected: "selected" },
       { data: "hispanic", label: "Hispanic" },
       { data: "multiple", label: "Multiracial" },
       { data: "native", label: "Native American" }
@@ -44,7 +55,12 @@
   <%= t.include("_question.html", {
     title: "Which hours of the day had the highest number of deaths?",
     filter: "time-18",
-    options: [ "Midnight to 6 a.m.", "6 a.m. to noon", "Noon to 6 p.m.", "6 p.m. to midnight" ],
+    options: [
+      { data: "Midnight to 6 a.m." },
+      { data: "6 a.m. to noon" },
+      { data: "Noon to 6 p.m." },
+      { data: "6 p.m. to midnight", correct: "correct" }
+    ],
     key: "Time of day",
     sort: "hour",
     toggles: [
@@ -62,7 +78,12 @@
   <%= t.include("_question.html", {
     title: "How many people killed by police possessed a weapon?",
     filter: "firearm",
-    options: [ "24%", "44%", "64%", "84%" ],
+    options: [
+      { data: "24%" },
+      { data: "44%" },
+      { data: "64%", correct: "correct" },
+      { data: "84%" }
+    ],
     key: "Weapon",
     sort: "weapon",
     toggles: [

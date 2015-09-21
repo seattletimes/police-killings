@@ -2,14 +2,17 @@ var $ = require("jquery");
 var dot = require("./lib/dot");
 var card = dot.compile(require("./_card.html"));
 
-$(document.body).on("click", ".option", function() {
+$(document.body).on("click", ".option", function(e) {
   $(this).siblings(".answer").slideDown();
+  if (e.target.classList.contains("correct") > -1) {
+    // e.target.classList.add("green");
+  }
 });
 
 $(document.body).on("click", ".toggle", function(e) {
   var toggle = this.getAttribute("data-filter");
   var $this = $(this);
-  $this.siblings(".grid").attr("data-filter", toggle);
+  $this.closest(".answer").attr("data-filter", toggle);
   $this.siblings(".toggle.selected").removeClass("selected");
   $this.addClass("selected");
 });
@@ -114,7 +117,6 @@ $(document.body).on("click", ".square", function(e) {
   var individual = deadlyForceData.filter(function(row) {
     return row.id == id
   })[0];
-  console.log(individual)
   $(this).closest(".grid").next(".individual").html(card(individual));
   $(this).siblings(".square.selected").removeClass("selected");
   $(this).addClass("selected");

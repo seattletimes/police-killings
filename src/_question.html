@@ -1,8 +1,8 @@
 <div class="question"><%= title %></div>
 <% options.forEach(function(option) { %>
-  <div class="option"><%= option%></div>
+  <div class="option <%=option.correct%>"><%= option.data %></div>
 <% }); %>
-<div class="answer">
+<div class="answer" data-filter="<%= filter %>">
   <div class="explainer">
     <%= explanation %>
   </div>
@@ -10,6 +10,9 @@
   <% toggles.forEach(function(toggle) { %>
     <div class="toggle <%= toggle.selected %>" data-filter="<%= toggle.data %>"><%= toggle.label %></div>
   <% }); %>
-  <section class="grid" data-filter="<%= filter %>" data-sort="<%= sort %>"></section>
-  <section class="individual"></section>
+  <%= typeof included !== "undefined" ? t.include(included) : "" %>
+  <div class="grid-container">
+    <section class="grid" data-sort="<%= sort %>"></section>
+    <section class="individual">Click on a circle for more info.</section>
+  </div>
 </div>

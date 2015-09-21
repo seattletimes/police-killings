@@ -1,0 +1,54 @@
+<% 
+  var raceData = {
+    "White": {
+      "title": "White",
+      "short": "white",
+      "state": 70.8
+    },
+    "Black": {
+      "title": "Black",
+      "short": "black",
+      "state": 3.6
+    },
+    "Asian/Pacific Islander": {
+      "title": "Asian",
+      "short": "asian",
+      "state": 8.2
+    },
+    "Native American": {
+      "title": "Native American",
+      "short": "native",
+      "state": 1.3
+    },
+    "Multiple": {
+      "title": "Multiracial",
+      "short": "multiple",
+      "state": 4
+    },
+    "Hispanic": {
+      "title": "Hispanic",
+      "short": "hispanic",
+      "state": 12.2
+    }
+  };
+  grunt.data.csv.deadlyForceData.forEach(function(row) {
+    if (!raceData[row.race].count) raceData[row.race].count = 0;
+    raceData[row.race].count += 1;
+  });
+  for (var race in raceData) {
+    raceData[race].killings = raceData[race].count / 212 * 100;
+    if (raceData[race].killings > raceData[race].state) {
+      raceData[race].ratio = (raceData[race].killings / raceData[race].state).toFixed(1) + " times more";
+    } else {
+      raceData[race].ratio = (raceData[race].state / raceData[race].killings).toFixed(1) + " times less";
+    }
+    raceData[race].killings = (raceData[race].killings).toFixed(1);
+  }
+%>
+
+<% for (var race in raceData) { %>
+  <div class="note <%=raceData[race].short%>">
+    <div class="times"><%=raceData[race].title%> people are <span class="emphasis"><%=raceData[race].ratio%> likely</span> to be shot and killed by police.</div>
+    <div>They make up <span class="emphasis"><%=raceData[race].state%>%</span> of Washington's population and <span class="emphasis"><%=raceData[race].killings%>%</span> of killings by police.</div>
+  </div>
+<% } %>

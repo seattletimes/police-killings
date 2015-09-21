@@ -1,3 +1,5 @@
+@import "flexbox";
+
 .question-box {
   max-width: 630px;
   margin: auto;
@@ -23,6 +25,10 @@
     background: @df-blue;
     border: 1px solid @df-blue;
     color: white;
+  }
+
+  &.green {
+    background: green;
   }
 }
 
@@ -62,60 +68,13 @@
   padding-bottom: 20px;
 }
 
-.grid {
-  margin-top: 10px;
-  line-height: 10px;
+.grid-container {
+  .display-flex();
+  margin-top: 5px;
 }
-
-.square {
-  height: 15px;
-  width: 15px;
-  background: lighten(@st-light-green,15%);
-  display: inline-block;
-  margin: 2px;
-  transition: background .3s linear;
-  cursor: pointer;
-
-  &:hover, &.selected {
-    border: 3px solid @df-dark-gray;
-  }
-}
-
-.color-square(@attribute) {
-  [data-filter="@{attribute}"] {
-    .square.@{attribute} {
-      background: @st-dark-red;
-    }
-  }
-}
-
-.color-square(age-0);
-.color-square(age-20);
-.color-square(age-30);
-.color-square(age-40);
-.color-square(age-50);
-.color-square(age-60);
-.color-square(age-70);
-.color-square(male);
-.color-square(female);
-.color-square(asian);
-.color-square(black);
-.color-square(hispanic);
-.color-square(multiple);
-.color-square(native);
-.color-square(white);
-.color-square(knife);
-.color-square(firearm);
-.color-square(no-weapon);
-.color-square(vehicle);
-.color-square(fake);
-.color-square(other);
-.color-square(time-0);
-.color-square(time-6);
-.color-square(time-12);
-.color-square(time-18);
 
 .individual {
+  .flex(1);
   font-size: 14px;
   background: @df-off-white;
   margin: 2px;
@@ -131,4 +90,79 @@
   .name {
     font-weight: bold;
   }
+
+  @media @mobile {
+    display: none;
+  }
 }
+
+.grid {
+  .flex(2);
+  margin-top: 10px;
+  line-height: 10px;
+}
+
+.square {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background: lighten(@st-light-green,15%);
+  display: inline-block;
+  margin: 2px;
+  transition: background .3s linear;
+  cursor: pointer;
+
+  &:hover, &.selected {
+    border: 3px solid @df-dark-gray;
+  }
+}
+
+.filtered-items(@attribute) {
+  [data-filter="@{attribute}"] {
+    .square.@{attribute} {
+      background: @st-dark-red;
+    }
+    .note.@{attribute} {
+      display: block;
+    }
+  }
+}
+
+.note {
+  display: none;
+  padding-top: 20px;
+  font-size: 15px;
+
+  .times {
+    padding-bottom: 5px;
+  }
+  .emphasis {
+    font-weight: bold;
+  }
+}
+
+.filtered-items(age-0);
+.filtered-items(age-20);
+.filtered-items(age-30);
+.filtered-items(age-40);
+.filtered-items(age-50);
+.filtered-items(age-60);
+.filtered-items(age-70);
+.filtered-items(male);
+.filtered-items(female);
+.filtered-items(asian);
+.filtered-items(black);
+.filtered-items(hispanic);
+.filtered-items(multiple);
+.filtered-items(native);
+.filtered-items(white);
+.filtered-items(knife);
+.filtered-items(firearm);
+.filtered-items(no-weapon);
+.filtered-items(vehicle);
+.filtered-items(fake);
+.filtered-items(other);
+.filtered-items(time-0);
+.filtered-items(time-6);
+.filtered-items(time-12);
+.filtered-items(time-18);
