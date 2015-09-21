@@ -5,16 +5,16 @@
       "path": "careful-canvasser"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2015/shielded-by-the-law"
     }
   },
-  "title": "",
+  "title": "Shielded by the law",
   "description": "",
-  "url": "",
+  "url": "http://projects.seattletimes.com/2015/shielded-by-the-law/",
   "slug": "",
   "tags": [],
   "image": "",
   "production": false,
-  "embedded": true
+  "embedded": false
 }

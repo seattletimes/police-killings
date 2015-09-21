@@ -12,8 +12,39 @@
 @import "comments";
 @import "footer";
 
-// TEMP HACK
 main.story {
-  max-width: 600px;
+  max-width: 900px;
   margin: auto;
+  padding: 0 10px;
+
+  article {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    font-size: 17px;
+
+    @media @tablet {
+      width: 100%;
+    }
+  }
+
+  aside.sidebar {
+    float: right;
+    margin-right: -100px;
+    margin-left: 8px;
+    padding: 0 8px;
+    width: 320px;
+    background: @df-light-gray;
+
+    @media @tablet {
+      margin-right: 0px;
+    }
+
+    @media @mobile {
+      float: none;
+      display: block;
+      width: 100%;
+      margin-left: 0;
+    }
+  }
 }
