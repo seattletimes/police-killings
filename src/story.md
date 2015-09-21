@@ -265,6 +265,3 @@ Or without making a formal recommendation, they could ask the Legislature to rev
 They could recommend the current law remain unchanged. 
 
 That would still leave Washington, in McBride's words, as an "outlier." 
-
-Researcher Miyoko Wolf contributed. Steve Miletich: smiletich@seattletimes.com or 206-464-3302
-

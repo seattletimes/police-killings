@@ -10,9 +10,21 @@
   </head>
   <body>
 
+    <header class="splash">
+      <h1>Shielded by the law</h1>
+    </header>
+
     <main class="story">
       <%= markdown.story %>
     </main>
+
+    <footer class="colophon">
+      <ul class="credits">
+        <li> <b>Reporting</b>: Steve Miletich, Christine Willemsen
+        <li> <b>Research</b>: Miyoko Wolf, Justin Mayo
+        <li> <b>Development</b>: Thomas Wilburn, Audrey Carlsen
+        <li> <b>Design</b>: Frank Mina
+    </footer>
 
     <script>
       var deadlyForceData = <%= JSON.stringify(csv.deadlyForceData) %>;
