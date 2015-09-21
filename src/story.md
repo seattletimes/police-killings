@@ -116,7 +116,7 @@ A Snohomish County jury, instructed to consider whether he acted with malice, ac
 
 The Times also determined that a disproportionate number of the 212 deaths were African Americans &mdash; a troubling finding as the nation wrestles with a spate of police encounters that have led to the deaths of unarmed African Americans, spawning the "[Black Lives Matter](http://blacklivesmatter.com/)" movement. 
 
-Prosecutors from the state's 39 counties, some concerned about the justifiable police homicide statute, will discuss whether to have the law changed at an Oct. 1 public meeting of the Washington Prosecuting Attorneys Association.
+Prosecutors from the state's 39 counties, some concerned about the justifiable police homicide statute, will discuss whether to have the law changed at an Oct. 1 public meeting of the Washington Association of Prosecuting Attorneys.
 
 ## By the numbers
 
@@ -277,7 +277,7 @@ Roe, the only prosecutor who actually brought a murder charge against a cop, lea
 
 "We have to be careful here and not try to quench some national desire for a sacrificial cop by changing the law until we can convict somebody," he said. 
 
-Tom McBride, executive director of the prosecutors association, said there are three options. 
+Tom McBride, executive secretary of the prosecutors association, said there are three options. 
 
 They could recommend to the Legislature that the malice element be eliminated. 
 
