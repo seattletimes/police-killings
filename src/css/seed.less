@@ -14,13 +14,11 @@
 
 main.story {
   max-width: 900px;
-  margin: auto;
   padding: 0 10px;
+  margin: auto;
 
-  article {
-    position: relative;
-    max-width: 600px;
-    margin: auto;
+  > * {
+    width: 66%;
     font-size: 17px;
 
     @media @tablet {
@@ -30,14 +28,13 @@ main.story {
 
   aside.sidebar {
     float: right;
-    margin-right: -100px;
-    margin-left: 8px;
     padding: 0 8px;
-    width: 320px;
+    width: 32%;
     background: @df-light-gray;
 
     @media @tablet {
       margin-right: 0px;
+      width: 50%;
     }
 
     @media @mobile {
