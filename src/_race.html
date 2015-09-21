@@ -36,19 +36,26 @@
     raceData[row.race].count += 1;
   });
   for (var race in raceData) {
-    raceData[race].killings = raceData[race].count / 212 * 100;
-    if (raceData[race].killings > raceData[race].state) {
-      raceData[race].ratio = (raceData[race].killings / raceData[race].state).toFixed(1) + " times more";
+    var data = raceData[race];
+    data.killings = data.count / 212 * 100;
+    if (Math.abs(1 - (data.killings / data.state)) < .1) { 
+      data.ratio = false;
+    } else if (data.killings > data.state) {
+      data.ratio = (data.killings / data.state).toFixed(1) + " times more";
     } else {
-      raceData[race].ratio = (raceData[race].state / raceData[race].killings).toFixed(1) + " times less";
+      data.ratio = (data.state / data.killings).toFixed(1) + " times less";
     }
-    raceData[race].killings = (raceData[race].killings).toFixed(1);
+    data.killings = (data.killings).toFixed(1);
   }
 %>
 
 <% for (var race in raceData) { %>
   <div class="note <%=raceData[race].short%>">
-    <div class="times"><%=raceData[race].title%> people are <span class="emphasis"><%=raceData[race].ratio%> likely</span> to be shot and killed by police.</div>
+    <% if (!raceData[race].ratio) { %>
+      <div class="times"><%=raceData[race].title%> people are killed by police in proportion to their statewide population.</div>
+    <% } else { %>
+    <div class="times"><%=raceData[race].title%> people are <span class="emphasis"><%=raceData[race].ratio%> likely</span> to be killed by police.</div>
+    <% } %>
     <div>They make up <span class="emphasis"><%=raceData[race].state%>%</span> of Washington's population and <span class="emphasis"><%=raceData[race].killings%>%</span> of killings by police.</div>
   </div>
 <% } %>
