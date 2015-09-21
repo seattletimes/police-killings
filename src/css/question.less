@@ -4,7 +4,7 @@
   max-width: 630px;
   margin-bottom: 10px;
   padding: 20px;
-  border: 1px solid @df-light-gray;
+  // border: 1px solid @df-light-gray;
   font-family: @df-sans;
 }
 
@@ -12,7 +12,20 @@
   font-weight: bold;
 }
 
+.options {
+  .display-flex();
+  .flex-wrap(wrap);
+  .justify-content(space-around);
+}
+
 .option {
+  .flex(0 0 24%);
+  .display-flex();
+  .flex-direction(column);
+  .align-content(center);
+
+  margin-bottom: 4px;
+  text-align: center;
   border: 1px solid @df-light-gray;
   padding: 5px 15px;
   display: inline-block;
@@ -20,14 +33,23 @@
   border-radius: 2px;
   font-size: 16px;
 
+  @media @mobile {
+    .flex(0 0 48%);
+  }
+
   &:hover {
     background: @df-blue;
     border: 1px solid @df-blue;
     color: white;
   }
 
+  &.chosen {
+    background: @df-light-gray;
+  }
+
   &.green {
-    background: green;
+    background: @st-dark-green;
+    border: 1px solid @st-dark-green;
   }
 }
 

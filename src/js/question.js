@@ -3,10 +3,9 @@ var dot = require("./lib/dot");
 var card = dot.compile(require("./_card.html"));
 
 $(document.body).on("click", ".option", function(e) {
-  $(this).siblings(".answer").slideDown();
-  if (e.target.classList.contains("correct") > -1) {
-    // e.target.classList.add("green");
-  }
+  $(this).closest(".options").siblings(".answer").slideDown();
+  e.target.classList.add("chosen");
+  $(this).closest(".options").children(".correct").addClass("green");
 });
 
 $(document.body).on("click", ".toggle", function(e) {

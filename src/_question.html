@@ -1,7 +1,9 @@
 <div class="question"><%= title %></div>
-<% options.forEach(function(option) { %>
-  <div class="option <%=option.correct%>"><%= option.data %></div>
-<% }); %>
+<div class="options">
+  <% options.forEach(function(option) { %>
+    <div class="option <%=option.correct%>"><%= option.data %></div>
+  <% }); %>
+</div>
 <div class="answer" data-filter="<%= filter %>">
   <div class="explainer">
     <%= explanation %>
