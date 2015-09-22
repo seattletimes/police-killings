@@ -30,32 +30,31 @@ $(".law-container:first").click();
 map.find("svg").on("mouseenter", "text, polygon", function() {
   var state = this.tagName.toLowerCase() == "text" ? this.innerHTML.trim() : this.id;
 
-  // console.log(state, window.lawsByState[state]);
   var obj = window.lawsByState[state];
-  showTooltip(obj,laws);
+  showTooltip(obj);
 });
 
 map.find("svg").on("mouseleave", "text, polygon", function() {
   hideTooltip(this);
 });
 
-var showTooltip = function(target,laws) {
+var showTooltip = function(target) {
   tooltip.classList.add("show");
   tooltip.innerHTML = `<div class='tooltip-name'>${target.name}</div>`;
   if (target.law1 == "Y") {
-    tooltip.innerHTML += `<div class="tooltip-ls"><li>${laws[1].short}</div>`;
+    tooltip.innerHTML += `<div class="tooltip-ls"><li>Malicious intent and bad faith required</div>`;
   }
   if (target.law2 == "Y") {
-    tooltip.innerHTML += `<div class="tooltip-ls"><li>${laws[2].short}</div>`;
+    tooltip.innerHTML += `<div class="tooltip-ls"><li>Riot suppression allowed</div>`;
   }
   if (target.law3 == "Y") {
-    tooltip.innerHTML += `<div class="tooltip-ls"><li>${laws[3].short}</div>`;
+    tooltip.innerHTML += `<div class="tooltip-ls"><li>Escapee shooting permitted</div>`;
   }
   if (target.law4 == "Y") {
-    tooltip.innerHTML += `<div class="tooltip-ls"><li>${laws[4].short}</div>`;
+    tooltip.innerHTML += `<div class="tooltip-ls"><li>Warning required prior</div>`;
   }
   if (target.law5 == "Y") {
-    tooltip.innerHTML += `<div class="tooltip-ls"><li>${laws[5].short}</div>`;
+    tooltip.innerHTML += `<div class="tooltip-ls"><li>No laws</div>`;
   }
   if (target.law1 == "N" & target.law2 == "N" & target.law3 == "N" & target.law4 == "N" & target.law5 == "N") {
     tooltip.innerHTML += "None of listed laws apply."

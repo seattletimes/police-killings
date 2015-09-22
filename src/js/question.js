@@ -24,7 +24,6 @@ deadlyForceData.forEach(function(row, index) {
 });
 
 var makeSquares = function(grid, sort) {
-
   switch (sort) {
 
     case "age":
@@ -105,7 +104,9 @@ $(document.body).on("click", ".option", function(e) {
   var options = $(this).closest(".options");
   if (!options.hasClass("pending")) return;
   options.removeClass("pending");
+  $(".answer.open").slideUp();
   options.siblings(".answer").slideDown();
+  options.siblings(".answer").addClass("open");
   options.children(".correct").addClass("green");
   e.target.classList.add("chosen");
 });
