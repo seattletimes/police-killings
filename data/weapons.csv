@@ -1,0 +1,53 @@
+image,label,type
+Fakehandgun,Fake handgun,fake
+Toy-replicahandgun,Toy-replace handgun,fake
+Pelletgunminusorangetip,Pellet gun minus orange tip,fake
+BBgunresemblingpistol,BB gun resembling pistol,fake
+Airsofthandgun,Airsoft handgun,fake
+Airsoftrifle,Airsoft rifle,fake
+Flaregun,Flare gun,firearm
+Derringer,Derringer,firearm
+22caliberRugerrevolver,.22-caliber Ruger revolver,firearm
+38caliberSmithWessenrevolver,.38-caliber Smith & Wesson revolver,firearm
+44magnumrevolver,44-magnum revolver,firearm
+9mmGlock,9-mm Glock,firearm
+9mmRugersemiautopistol,9-mm Ruger semi-automatic pistol,firearm
+40caliberRugerhandgun,.40-caliber Ruger pistol,firearm
+Berettasemiautopistol,Beretta semi-auto pistol,firearm
+45caliberColthandgun,.45-caliber Colt handgun,firearm
+45caliberHiPoint,.45-caliber Hi Point,firearm
+7.62mmMosinNagantrifle,7.62-mm Mosin-Nagant military rifle,firearm
+12gaugeshotgun,12-Gauge shotgun,firearm
+longbarreledshotgun,Long-barreled shotgun,firearm
+22caliberRugersemiautomaticrifle,.22-caliber Ruger semi-automatic rifle,firearm
+WWIIerariflewithattachedbayonet,WWII-era rifle with attached bayonet,firearm
+Assaulttyperifle,Assult-type rifle,firearm
+AR-15replicarifle,AR-15 replica rifle,firearm
+AK-47rifle,AK-47 rifle,firearm
+tableknife,Table knife,knife
+utilityknife,Utility knife,knife
+smallwoodcarvingknife,Small wood carving knife,knife
+4inchbladedknife,4-inch bladed knife,knife
+openbuckknife4inches,"Open buck knife, approx 4 inches",knife
+5inchfixedbladeknife,5-inch bl,knife
+5.34inchfixedbladeknife,5 /4-inch fixed blade knife,knife
+kitchenknife,Kitchen knife,knife
+butcherknife,Butcher knife,knife
+largebutcherknife,Large butcher knife,knife
+10inchserratedknife,10-inch serrated knife,knife
+14inchknife,14-inch knife,knife
+machete,Machete,knife
+8inchprimitivespearknife,8-inch primitive spear/knife,knife
+doublebittedaxe,Double-bitted axe,knife
+screwdriver,Screwdriver,other
+blackcordlessdrill,Black cordless drill that resembles a pistol,other
+brokenbottle,Broken bottle,other
+hammer,Hammer,other
+woodenclub,Wooden club,other
+18pieceofrebar,18-inch piece of rebar,other
+baseballbat,Baseball bat,other
+belt,Belt,other
+cane,Cane,other
+poolcue,Pool cue,other
+shovel,Shovel,other
+bowandarrow,Bow and arrow,other

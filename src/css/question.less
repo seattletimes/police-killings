@@ -3,6 +3,10 @@
 .by-the-numbers {
   background: @df-off-white;
   padding: 15px 30px;
+
+  @media @mobile {
+    padding: 5px 15px;
+  }
 }
 
 .question-box {
@@ -63,6 +67,11 @@
 .answer {
   display: none;
   margin: 30px;
+
+  @media @mobile {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .toggle-label {
@@ -73,6 +82,7 @@
 
 .toggle {
   padding: 5px 12px 3px 12px;
+  margin-bottom: 4px;
   display: inline-block;
   cursor: pointer;
   border-radius: 2px;
@@ -103,7 +113,7 @@
 
 .individual {
   .flex(1);
-  font-size: 13px;
+  font-size: 12px;
   background: @df-light-gray;
   margin: 2px;
   margin-top: 10px;
@@ -157,6 +167,9 @@
     }
     .note.@{attribute} {
       display: block;
+    }
+    .@{attribute} img.weapon-icon {
+      display: inline;
     }
   }
 }
@@ -224,4 +237,12 @@
 .featured-attribute(weapon);
 .featured-attribute(age);
 .featured-attribute(time);
+
+.weapon-icons {
+  display: block;
+}
+
+.weapon-icon {
+  display: none;
+}
 
