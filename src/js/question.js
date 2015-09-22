@@ -103,10 +103,17 @@ $(".grid").each(function() {
 $(document.body).on("click", ".option", function(e) {
   var options = $(this).closest(".options");
   if (!options.hasClass("pending")) return;
+
+  $(".options").addClass("pending");
+  $(".correct").removeClass("green");
+  $(".chosen").removeClass("chosen");
+
   options.removeClass("pending");
+  var answer = options.siblings(".answer");
   $(".answer.open").slideUp();
-  options.siblings(".answer").slideDown();
-  options.siblings(".answer").addClass("open");
+  answer.slideDown();
+  answer.addClass("open");
+
   options.children(".correct").addClass("green");
   e.target.classList.add("chosen");
 });
