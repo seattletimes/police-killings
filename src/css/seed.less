@@ -60,3 +60,57 @@ main.story {
     }
   }
 }
+
+.thin-div {
+  border-bottom: 1px solid @df-light-gray;
+  margin-bottom: 15px;
+  font-family: @df-sans;
+  margin: auto;
+  max-width: 900px;
+
+  .center {
+    position: relative;
+    top: 15px;
+    margin: auto;
+    width: 145px;
+    text-align: center;
+    font-size: 20px;
+    background: white;
+  }
+}
+
+.dont-miss {
+  .display-flex;
+  .flex-wrap(wrap);
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 900px;
+  font-size: 17px;
+  font-family: @df-sans;
+
+  .story {
+    .flex(0 0 25%);
+
+    @media @mobile {
+      .flex(1 1 50%)
+    }
+  }
+  .padded {
+    padding: 10px;
+  }
+  .small {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  img {
+    width: 100%;
+  }
+  a {
+    color: @df-dark-gray;
+    transition: color .1s linear;
+
+    &:hover {
+      color: @df-blue;
+    }
+  }
+}
