@@ -6,6 +6,10 @@ In fact, that case is the only one to be brought in the three decades since Wash
 
 In 1986, Washington's Legislature decided police officers shouldn't be prosecuted for killing someone in the line of duty as long as they acted in good faith and without malice, or what the law calls "evil intent."
 
+<aside class="pullquote sidebar">
+  &ldquo;This <b>almost perfect defense</b> to a mistaken use of force <b>has kept police officers out of court</b> as defendants&rdquo;
+</aside>
+
 "This almost perfect defense to a mistaken use of force has kept police officers out of court as defendants," King County Prosecutor Dan Satterberg has said.
 
 The Times analyzed 212 fatal police encounters from 2005 to 2014. Although the vast majority of the cases were deemed legally justified, others were controversial. But with the malice and good faith requirements, it was nearly impossible for prosecutors to bring criminal charges even if they concluded that an officer committed a wrongful killing.
