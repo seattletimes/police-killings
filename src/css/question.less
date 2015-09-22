@@ -2,8 +2,7 @@
 
 .question-box {
   max-width: 630px;
-  margin-bottom: 10px;
-  padding: 20px;
+  margin: 10px 0 20px;
   // border: 1px solid @df-light-gray;
   font-family: @df-sans;
 }
@@ -28,27 +27,30 @@
   text-align: center;
   border: 1px solid @df-light-gray;
   padding: 5px 15px;
-  cursor: pointer;
   border-radius: 2px;
   font-size: 16px;
+  transition: background .2s linear;
 
   @media @mobile {
     .flex(0 0 48%);
   }
 
-  &:hover {
+  .pending &:hover {
     background: @df-blue;
     border: 1px solid @df-blue;
     color: white;
+    cursor: pointer;
   }
 
-  &.chosen {
-    background: @df-light-gray;
+  &.chosen:not(.correct) {
+    background: @st-light-red;
   }
 
   &.green {
     background: @st-dark-green;
     border: 1px solid @st-dark-green;
+    color: white;
+    font-weight: bold;
   }
 }
 

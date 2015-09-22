@@ -2,21 +2,9 @@ var $ = require("jquery");
 var dot = require("./lib/dot");
 var card = dot.compile(require("./_card.html"));
 
-$(document.body).on("click", ".option", function(e) {
-  $(this).closest(".options").siblings(".answer").slideDown();
-  e.target.classList.add("chosen");
-  $(this).closest(".options").children(".correct").addClass("green");
-});
+var lookup = {};
 
-$(document.body).on("click", ".toggle", function(e) {
-  var toggle = this.getAttribute("data-filter");
-  var $this = $(this);
-  $this.closest(".answer").attr("data-filter", toggle);
-  $this.siblings(".toggle.selected").removeClass("selected");
-  $this.addClass("selected");
-});
-
-deadlyForceData.forEach(function(row) {
+deadlyForceData.forEach(function(row, index) {
   [row.last, row.first] = row.name.split(", ");
   if (row.race == "Multiple") row.race = "Multiracial";
 
@@ -31,7 +19,9 @@ deadlyForceData.forEach(function(row) {
   if (amPm == "PM" && hour < 12) hour += 12;
 
   row.hour = hour;
-})
+  row.id = index;
+  lookup[index] = row;
+});
 
 var makeSquares = function(grid, sort) {
 
@@ -102,7 +92,7 @@ var makeSquares = function(grid, sort) {
 
     var square = document.createElement("div");
     square.className = classes.join(" ");
-    $(square).attr("id", row.id);
+    square.setAttribute("data-index", row.id);
     grid.appendChild(square);
   });
 };
@@ -111,11 +101,25 @@ $(".grid").each(function() {
   makeSquares(this, this.getAttribute("data-sort"));
 });
 
+$(document.body).on("click", ".option", function(e) {
+  var options = $(this).closest(".options");
+  options.removeClass("pending");
+  options.siblings(".answer").slideDown();
+  options.children(".correct").addClass("green");
+  e.target.classList.add("chosen");
+});
+
+$(document.body).on("click", ".toggle", function(e) {
+  var toggle = this.getAttribute("data-filter");
+  var $this = $(this);
+  $this.closest(".answer").attr("data-filter", toggle);
+  $this.siblings(".toggle.selected").removeClass("selected");
+  $this.addClass("selected");
+});
+
 $(document.body).on("click", ".square", function(e) {
-  var id = e.target.getAttribute('id');
-  var individual = deadlyForceData.filter(function(row) {
-    return row.id == id
-  })[0];
+  var id = e.target.getAttribute("data-index");
+  var individual = lookup[id];
   $(this).closest(".grid").next(".individual").html(card(individual));
   $(this).siblings(".square.selected").removeClass("selected");
   $(this).addClass("selected");
