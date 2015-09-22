@@ -1,9 +1,22 @@
+<div class="featured featured-weapon">Armed with <%= data.weapon %></div>
+<div class="featured featured-age"><%= data.age %> years old</div>
+<div class="featured featured-time">
+  <% if (data.time) { %>
+    Killed at <%= data.time %>
+  <% } else { %>
+    --
+  <% } %>
+</div>
+<div class="featured featured-race"><%= data.race %></div>
+
 <div class="name"><%= data.first %> <%= data.last %></div>
-<div class="divider"></div>
-<div class="demographics"><%= data.race %> <%= data.gender %>, <%= data.age %></div>
-<div class="time"><%= data.date %> 
+<div class="card-divider"></div>
+<div class="gender">Gender: <%= data.gender %></div>
+<div class="race">Race: <%= data.race %></div>
+<div class="age">Age: <%= data.age %></div>
+<div class="time">Killed: <%= data.date %> 
   <% if (data.time) { %>
     at <%= data.time %></div>
   <% } %>
-<div class="county"><%= data.county %> County </div>
+<div class="county">County: <%= data.county %> County </div>
 <div class="weapon">Armed: <%= data.weapon %></div>

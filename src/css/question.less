@@ -1,5 +1,10 @@
 @import "flexbox";
 
+.by-the-numbers {
+  background: @df-off-white;
+  padding: 15px 30px;
+}
+
 .question-box {
   margin: 10px 0 20px;
   // border: 1px solid @df-light-gray;
@@ -8,6 +13,7 @@
 
 .question {
   font-weight: bold;
+  padding-bottom: 8px;
 }
 
 .options {
@@ -23,6 +29,7 @@
   .justify-content(center);
 
   margin-bottom: 4px;
+  background: white;
   text-align: center;
   border: 1px solid @df-light-gray;
   padding: 5px 15px;
@@ -96,17 +103,17 @@
 
 .individual {
   .flex(1);
-  font-size: 14px;
-  background: @df-off-white;
+  font-size: 13px;
+  background: @df-light-gray;
   margin: 2px;
   margin-top: 10px;
   padding: 10px 15px;
   height: 100%;
 
-  .divider {
+  .card-divider {
     border-top: 1px solid @df-border-gray;
     margin-top: 4px;
-    padding-top: 4px;
+    padding-top: 6px;
   }
 
   .name {
@@ -192,3 +199,29 @@
 .filtered-items(time-6);
 .filtered-items(time-12);
 .filtered-items(time-18);
+
+.featured {
+  display: none;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  background: @df-middle-gray;
+  border-radius: 2px;
+  padding: 2px 6px 1px 6px;
+  color: white;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.featured-attribute(@attribute) {
+  .@{attribute} {
+    .featured.featured-@{attribute} {
+      display: inline-block;
+    }
+  }
+}
+
+.featured-attribute(race);
+.featured-attribute(weapon);
+.featured-attribute(age);
+.featured-attribute(time);
+

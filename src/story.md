@@ -31,105 +31,107 @@ To authoritatively examine the issue in Washington, The Times used public-record
 
 The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per year. From 2010 to 2014, it averaged 27 per year. 
 
-<!-- Weapons -->
-<aside class="question-box">
-  <%= t.include("_question.html", {
-    title: "How many people killed by police possessed a weapon?",
-    filter: "firearm",
-    options: [
-      { data: "24%" },
-      { data: "44%" },
-      { data: "64%" },
-      { data: "84%", correct: "correct" }
-    ],
-    key: "Weapon",
-    sort: "weapon",
-    toggles: [
-      { data: "firearm", label: "Firearm", selected: "selected" },
-      { data: "fake", label: "Fake gun" },
-      { data: "knife", label: "Knife/blade" },
-      { data: "vehicle", label: "Vehicle" },
-      { data: "other", label: "Other" },
-      { data: "no-weapon", label: "No weapon" }
-    ],
-    explanation: "Half of the 212 people killed by police had a firearm in their possession. Another 10 had fake guns, that could have been mistaken for actual firearms. Thirty-four had no weapon."
-  }) %>
-</aside>
+<div class="by-the-numbers">
+  <!-- Weapons -->
+  <aside class="question-box weapon">
+    <%= t.include("_question.html", {
+      title: "How many people killed by police possessed a weapon?",
+      filter: "firearm",
+      options: [
+        { data: "24%" },
+        { data: "44%" },
+        { data: "64%" },
+        { data: "84%", correct: "correct" }
+      ],
+      key: "Weapon",
+      sort: "weapon",
+      toggles: [
+        { data: "firearm", label: "Firearm", selected: "selected" },
+        { data: "fake", label: "Fake gun" },
+        { data: "knife", label: "Knife/blade" },
+        { data: "vehicle", label: "Vehicle" },
+        { data: "other", label: "Other" },
+        { data: "no-weapon", label: "No weapon" }
+      ],
+      explanation: "Half of the 212 people killed by police had a firearm in their possession. Another 10 had fake guns, that could have been mistaken for actual firearms. Thirty-four had no weapon."
+    }) %>
+  </aside>
 
-<!-- Age -->
-<aside class="question-box">
-  <%= t.include("_question.html", {
-    title: "Of the 212 people killed by police, how many were teenagers?",
-    filter: "age-0",
-    options: [
-      { data: "3%", correct: "correct" },
-      { data: "9%" },
-      { data: "15%" },
-      { data: "30%" }
-    ],
-    key: "Age",
-    sort: "age",
-    toggles: [
-      { data: "age-0", label: "0-19", selected: "selected" },
-      { data: "age-20", label: "20-29" },
-      { data: "age-30", label: "30-39" },
-      { data: "age-40", label: "40-49" },
-      { data: "age-50", label: "50-59" },
-      { data: "age-60", label: "60-69" },
-      { data: "age-70", label: "70+" }
-    ],
-    explanation: "Just seven of the deaths were teenagers. The youngest person was 16, the oldest 77. Nearly 40 percent were 40 or older. Only three of the 212 people killed by police were women."
-  }) %>
-</aside>
+  <!-- Age -->
+  <aside class="question-box age">
+    <%= t.include("_question.html", {
+      title: "Of the 212 people killed by police, how many were teenagers?",
+      filter: "age-0",
+      options: [
+        { data: "3%", correct: "correct" },
+        { data: "9%" },
+        { data: "15%" },
+        { data: "30%" }
+      ],
+      key: "Age",
+      sort: "age",
+      toggles: [
+        { data: "age-0", label: "0-19", selected: "selected" },
+        { data: "age-20", label: "20-29" },
+        { data: "age-30", label: "30-39" },
+        { data: "age-40", label: "40-49" },
+        { data: "age-50", label: "50-59" },
+        { data: "age-60", label: "60-69" },
+        { data: "age-70", label: "70+" }
+      ],
+      explanation: "Just seven of the deaths were teenagers. The youngest person was 16, the oldest 77. Nearly 40 percent were 40 or older. Only three of the 212 people killed by police were women."
+    }) %>
+  </aside>
 
-<!-- Time of day -->
-<aside class="question-box">
-  <%= t.include("_question.html", {
-    title: "Which hours of the day had the highest number of deaths?",
-    filter: "time-18",
-    options: [
-      { data: "Midnight to 6 a.m." },
-      { data: "6 a.m. to noon" },
-      { data: "Noon to 6 p.m." },
-      { data: "6 p.m. to midnight", correct: "correct" }
-    ],
-    key: "Time of day",
-    sort: "hour",
-    toggles: [
-      { data: "time-0", label: "<i class='fa fa-moon-o'></i> Midnight-6 a.m." },
-      { data: "time-6", label: "<i class='fa fa-sun-o'></i> 6 a.m.-noon" },
-      { data: "time-12", label: "<i class='fa fa-sun-o'></i> Noon-6 p.m." },
-      { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m.-midnight", selected: "selected" }
-    ],
-    explanation: "While evening hours saw the highest number of fatal police encounters, 41 percent occurred during the day (6 a.m. to 6 p.m.)."
-  }) %>
-</aside>
+  <!-- Time of day -->
+  <aside class="question-box time">
+    <%= t.include("_question.html", {
+      title: "Which hours of the day had the highest number of deaths?",
+      filter: "time-18",
+      options: [
+        { data: "Midnight to 6 a.m." },
+        { data: "6 a.m. to noon" },
+        { data: "Noon to 6 p.m." },
+        { data: "6 p.m. to midnight", correct: "correct" }
+      ],
+      key: "Time of day",
+      sort: "hour",
+      toggles: [
+        { data: "time-0", label: "<i class='fa fa-moon-o'></i> Midnight-6 a.m." },
+        { data: "time-6", label: "<i class='fa fa-sun-o'></i> 6 a.m.-noon" },
+        { data: "time-12", label: "<i class='fa fa-sun-o'></i> Noon-6 p.m." },
+        { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m.-midnight", selected: "selected" }
+      ],
+      explanation: "While evening hours saw the highest number of fatal police encounters, 41 percent occurred during the day (6 a.m. to 6 p.m.)."
+    }) %>
+  </aside>
 
-<!-- Race -->
-<aside class="question-box">
-  <%= t.include("_question.html", {
-    title: "Killings by police had the most disproportionate impact on which ethnic group?",
-    filter: "black",
-    options: [
-      { data: "Black", correct: "correct" },
-      { data: "Asian" },
-      { data: "Native American" },
-      { data: "Hispanic" }
-    ],
-    included: "_race.html",
-    key: "Race",
-    sort: "race",
-    toggles: [
-      { data: "white", label: "White" },
-      { data: "asian", label: "Asian/Pacific Islander" },
-      { data: "black", label: "Black", selected: "selected" },
-      { data: "hispanic", label: "Hispanic" },
-      { data: "multiple", label: "Multiracial" },
-      { data: "native", label: "Native American" }
-    ],
-    explanation: "tktktk"
-  }) %>
-</aside>
+  <!-- Race -->
+  <aside class="question-box race">
+    <%= t.include("_question.html", {
+      title: "Killings by police had the most disproportionate impact on which ethnic group?",
+      filter: "black",
+      options: [
+        { data: "Black", correct: "correct" },
+        { data: "Asian" },
+        { data: "Native American" },
+        { data: "Hispanic" }
+      ],
+      included: "_race.html",
+      key: "Race",
+      sort: "race",
+      toggles: [
+        { data: "white", label: "White" },
+        { data: "asian", label: "Asian/Pacific Islander" },
+        { data: "black", label: "Black", selected: "selected" },
+        { data: "hispanic", label: "Hispanic" },
+        { data: "multiple", label: "Multiracial" },
+        { data: "native", label: "Native American" }
+      ],
+      explanation: "tktktk"
+    }) %>
+  </aside>
+</div>
 
 In 84 percent of the cases, police officers who used deadly force in Washington confronted people armed with a weapon, typically a firearm. 
 
