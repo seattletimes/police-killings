@@ -45,7 +45,6 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
       ],
       key: "Weapon",
       sort: "weapon",
-      included: "_weapons.html",
       toggles: [
         { data: "firearm", label: "Firearm", selected: "selected" },
         { data: "fake", label: "Fake gun" },
