@@ -10,9 +10,16 @@
   </head>
   <body>
 
+    <%= t.include("partials/_dfHeader.html") %>
+
     <header class="splash">
       <h1>Shielded by the law</h1>
     </header>
+
+    <section class="metadata">
+      <div class="byline">By Steve Miletich, Christine Willmsen, Mike Carter, and Justin Mayo</div>
+      <div class="date">Published September 26, 2015</div>
+    </section>
 
     <main class="story">
       <%= markdown.story %>

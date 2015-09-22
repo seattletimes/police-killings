@@ -14,14 +14,27 @@
 @import "comments";
 @import "footer";
 
+.metadata {
+  display: block;
+  max-width: 900px;
+  margin: auto;
+  color: @df-middle-gray;
+  font-size: 16px;
+  font-family: @df-sans;
+
+  .byline {
+    font-size: 19px;
+  }
+}
+
 main.story {
   max-width: 900px;
   padding: 0 10px;
   margin: auto;
+  font-size: 17px;
 
   > * {
     width: 66%;
-    font-size: 17px;
 
     @media @tablet {
       width: 100%;
