@@ -1,0 +1,133 @@
+@import "flexbox";
+
+.map{
+  font-size: 15px;
+  font-family: @df-sans;
+}
+
+  .answer{
+
+    background-color: white;
+    fill: #888;
+
+    text {
+      fill: white;
+      cursor: pointer;
+    }
+    #map {
+
+      &[selected-law=law1] .law1-hex {
+        fill: #800026 !important;
+      }
+      &[selected-law=law2] .law2-hex {
+        fill: #E31A1C !important;
+      }
+      &[selected-law=law3] .law3-hex {
+        fill: #FD8D3C !important;
+      }
+      &[selected-law=law4] .law4-hex {
+        fill: #FED976 !important;
+      }
+      &[selected-law=law5] .law5-hex {
+        fill: #A05DA5 !important;
+      }
+
+      polygon {
+        &:hover {
+          cursor: pointer;
+          // fill: #666;
+        }
+      }
+    }
+  }
+
+  .button-container{
+    .display-flex;
+    .flex-wrap(wrap);
+    padding-top: 30px;
+
+    :hover {
+      cursor: pointer;
+    }
+
+    @media @tablet {
+      padding: 30px 6px 0;
+    }
+
+    @media @mobile {
+      display: block;
+    }
+
+    .law-container {
+      .flex(1 0 48%);
+      width: 50%;
+      border: 1px solid gray;
+      border-radius: 8px;
+      padding: 6px;
+      margin: 6px 0;
+      margin-right: 1%;
+
+      @media @tablet {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      @media @mobile and (orientation: portrait) {
+        min-width: 80%;
+      }
+
+      @media @mobile and (orientation: landscape){
+        min-width: 10%;
+        .flex(0 0 10%);
+      }
+    }
+    
+    .law5 {
+      .flex(1 0 80%);
+    }
+
+    .selected, :hover {
+      border-width: 2px;
+      &.law1 {
+        border-color: #800026;
+      }
+      &.law2 {
+        border-color: #E31A1C;
+      }
+      &.law3 {
+        border-color: #FD8D3C;
+      }
+      &.law4 {
+        border-color: #FED976;
+      }
+      &.law5 {
+        border-color: #A05DA5;
+      }
+    }
+  }
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background: @df-off-white;
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid @df-light-gray;
+  white-space: nowrap;
+
+  &.show {
+    display: block;
+  }
+
+  &.flip {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+.tooltip-name {
+  font-weight:bold;
+}
+li {
+  list-style-position: inside;
+}

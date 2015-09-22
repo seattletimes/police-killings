@@ -18,6 +18,11 @@ The Times also determined that a disproportionate number of the 212 deaths were 
 
 Prosecutors from the state's 39 counties, some concerned about the justifiable police homicide statute, will discuss whether to have the law changed at an Oct. 1 public meeting of the Washington Association of Prosecuting Attorneys.
 
+<!-- Map -->
+<aside class="map">
+  <%= t.include("_map.html") %>
+</aside>
+
 ## By the numbers
 
 Just how often police kill citizens in the line of duty and under what circumstances is difficult to determine. While the FBI collects data nationally on justifiable homicides by police, law-enforcement agencies are not required to submit the incidents. According to studies, the FBI totals each year are significant undercounts and unreliable. 

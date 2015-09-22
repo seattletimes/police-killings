@@ -103,6 +103,7 @@ $(".grid").each(function() {
 
 $(document.body).on("click", ".option", function(e) {
   var options = $(this).closest(".options");
+  if (!options.hasClass("pending")) return;
   options.removeClass("pending");
   options.siblings(".answer").slideDown();
   options.children(".correct").addClass("green");
