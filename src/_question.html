@@ -1,7 +1,7 @@
 <div class="question"><%= title %></div>
 <div class="options pending">
   <% options.forEach(function(option) { %>
-    <div class="option <%=option.correct%>"><%= option.data %></div>
+    <div class="option <%= option.correct %>"><%= option.data %></div>
   <% }); %>
 </div>
 <div class="answer" data-filter="<%= filter %>">

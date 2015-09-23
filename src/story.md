@@ -50,12 +50,12 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
       key: "Weapon",
       sort: "weapon",
       toggles: [
-        { data: "firearm", label: "Firearm", selected: "selected" },
-        { data: "fake", label: "Fake gun" },
-        { data: "knife", label: "Knife/blade" },
-        { data: "vehicle", label: "Vehicle" },
-        { data: "other", label: "Other" },
-        { data: "no-weapon", label: "No weapon" }
+        { data: "firearm", label: "Firearm (51.4%)", selected: "selected" },
+        { data: "fake", label: "Fake gun (4.7%)" },
+        { data: "knife", label: "Knife/blade (16.5%)" },
+        { data: "vehicle", label: "Vehicle (5.7%)" },
+        { data: "other", label: "Other (5.7%)" },
+        { data: "no-weapon", label: "No weapon (16%)" }
       ],
       explanation: "Half of the 212 people killed by police had a firearm in their possession. Another 10 had fake guns, that could have been mistaken for actual firearms. Thirty-four had no weapon."
     }) %>
@@ -75,13 +75,13 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
       key: "Age",
       sort: "age",
       toggles: [
-        { data: "age-0", label: "0-19", selected: "selected" },
-        { data: "age-20", label: "20-29" },
-        { data: "age-30", label: "30-39" },
-        { data: "age-40", label: "40-49" },
-        { data: "age-50", label: "50-59" },
-        { data: "age-60", label: "60-69" },
-        { data: "age-70", label: "70+" }
+        { data: "age-0", label: "0-19 (3.3%)", selected: "selected" },
+        { data: "age-20", label: "20-29 (31.1%)" },
+        { data: "age-30", label: "30-39 (26.9%)" },
+        { data: "age-40", label: "40-49 (20.8%)" },
+        { data: "age-50", label: "50-59 (12.3%)" },
+        { data: "age-60", label: "60-69 (4.2%)" },
+        { data: "age-70", label: "70+ (1.4%)" }
       ],
       explanation: "Just seven of the deaths were teenagers. The youngest person was 16, the oldest 77. Nearly 40 percent were 40 or older. Only three of the 212 people killed by police were women."
     }) %>
@@ -101,10 +101,10 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
       key: "Time of day",
       sort: "hour",
       toggles: [
-        { data: "time-0", label: "<i class='fa fa-moon-o'></i> Midnight-6 a.m." },
-        { data: "time-6", label: "<i class='fa fa-sun-o'></i> 6 a.m.-noon" },
-        { data: "time-12", label: "<i class='fa fa-sun-o'></i> Noon-6 p.m." },
-        { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m.-midnight", selected: "selected" }
+        { data: "time-0", label: "<i class='fa fa-moon-o'></i> Midnight-6 a.m. (21.7%)" },
+        { data: "time-6", label: "<i class='fa fa-sun-o'></i> 6 a.m.-noon (16%)" },
+        { data: "time-12", label: "<i class='fa fa-sun-o'></i> Noon-6 p.m. (25%)" },
+        { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m.-midnight (36.3%)", selected: "selected" }
       ],
       explanation: "While evening hours saw the highest number of fatal police encounters, 41 percent occurred during the day (6 a.m. to 6 p.m.)."
     }) %>
@@ -125,12 +125,12 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
       key: "Race",
       sort: "race",
       toggles: [
-        { data: "white", label: "White" },
-        { data: "asian", label: "Asian/Pacific Islander" },
-        { data: "black", label: "Black", selected: "selected" },
-        { data: "hispanic", label: "Hispanic" },
-        { data: "multiple", label: "Multiracial" },
-        { data: "native", label: "Native American" }
+        { data: "white", label: "White (72.6%)" },
+        { data: "asian", label: "Asian/Pacific Islander (2.8%)" },
+        { data: "black", label: "Black (9.9%)", selected: "selected" },
+        { data: "hispanic", label: "Hispanic (8.5%)" },
+        { data: "multiple", label: "Multiracial (3.3%)" },
+        { data: "native", label: "Native American (2.8%)" }
       ],
       explanation: "tktktk"
     }) %>
