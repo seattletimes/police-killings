@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 
+@fatface: Abril Fatface, @df-serif;
+
 @import "seattletimes";
 @import "social";
 @import "audio";
@@ -30,7 +32,7 @@
 }
 
 h2 {
-  font-family: Abril Fatface;
+  font-family: @fatface;
   font-size: 26px;
 }
 
@@ -46,6 +48,10 @@ main.story {
     @media @tablet {
       width: 100%;
     }
+  }
+
+  .deck {
+    width: 100%;
   }
 
   aside.sidebar {

@@ -1,3 +1,5 @@
+<h2 class="deck">While most killings by police are deemed justified, controversial cases are nearly impossible to prosecute under Washington’s unique law.</h2>
+
 Killings by police in the line of duty have surged in Washington over the past decade, according to a Seattle Times analysis. 
 
 During that period, only one police officer has been criminally charged in state courts with the illegal use of deadly force on the job.
