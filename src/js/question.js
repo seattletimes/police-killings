@@ -77,10 +77,11 @@ var makeSquares = function(grid, sort) {
                  row.weapon == "Fake gun"    ? "fake"      :
                                                "other"     ;
                                                       
-    var time = row.hour < 6 ? "time-0"   :
-               row.hour < 12 ? "time-6"  :
-               row.hour < 18 ? "time-12" :
-               row.hour < 24 ? "time-18" :
+    var time = row.hour == -1  ? "time-null" :
+               row.hour <   6  ? "time-0"    :
+               row.hour <   12 ? "time-6"    :
+               row.hour <   18 ? "time-12"   :
+               row.hour <   24 ? "time-18"   :
                "" ;
 
     classes.push(age);
