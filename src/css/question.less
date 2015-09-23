@@ -1,12 +1,21 @@
 @import "flexbox";
 
 .by-the-numbers {
-  background: @df-off-white;
+  // background: @df-off-white;
   padding: 15px 30px;
+  border-top: 1px solid @df-border-gray;
+  border-bottom: 1px solid @df-border-gray;
+  margin: 20px 0;
 
   @media @mobile {
     padding: 5px 15px;
   }
+}
+
+.question-divider {
+  border-top: 1px solid @df-light-gray;
+  padding-top: 15px;
+  margin-top: 25px;
 }
 
 .question-box {
@@ -16,8 +25,8 @@
 }
 
 .question {
-  font-weight: bold;
-  padding-bottom: 8px;
+  padding-bottom: 15px;
+  font-family: Abril Fatface;
 }
 
 .options {
@@ -33,7 +42,7 @@
   .justify-content(center);
 
   margin-bottom: 4px;
-  background: white;
+  background: lighten(@st-light-green,15%);
   text-align: center;
   border: 1px solid @df-light-gray;
   padding: 5px 15px;
@@ -46,19 +55,20 @@
   }
 
   .pending &:hover {
-    background: @df-blue;
-    border: 1px solid @df-blue;
+    background: @st-dark-green;
+    border: 1px solid @st-dark-green;
     color: white;
     cursor: pointer;
   }
 
   &.chosen:not(.correct) {
-    background: @st-light-red;
+    background: @df-border-gray;
+    font-weight: bold;
   }
 
   &.green {
-    background: @st-dark-green;
-    border: 1px solid @st-dark-green;
+    background: @st-dark-red;
+    border: 1px solid @st-dark-red;
     color: white;
     font-weight: bold;
   }
@@ -92,7 +102,7 @@
   display: inline-block;
   cursor: pointer;
   border-radius: 2px;
-  background: @df-light-gray;
+  background: lighten(@st-light-green,15%);
   font-size: 14px;
   text-align: center;
   .flex(0 0 32%);
@@ -114,7 +124,7 @@
   }
 
   &:hover {
-    background: @df-middle-gray;
+    background: @st-dark-green;
     color: white;
   }
 
@@ -138,7 +148,7 @@
 .individual {
   .flex(1);
   font-size: 12px;
-  background: @df-light-gray;
+  background: lighten(@st-light-green,15%);
   margin: 2px;
   margin-top: 10px;
   padding: 10px 15px;
@@ -152,7 +162,8 @@
 
   .name {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
+    font-family: Abril Fatface;
   }
 
   .click {
@@ -192,9 +203,6 @@
     }
     .note.@{attribute} {
       display: block;
-    }
-    .@{attribute} img.weapon-icon {
-      display: inline;
     }
   }
 }
@@ -242,7 +250,7 @@
   display: none;
   letter-spacing: .8px;
   text-transform: uppercase;
-  background: @df-middle-gray;
+  background: darken(@st-dark-green,20%);
   border-radius: 2px;
   padding: 2px 6px 1px 6px;
   color: white;
@@ -263,11 +271,7 @@
 .featured-attribute(age);
 .featured-attribute(time);
 
-.weapon-icons {
-  display: block;
-}
-
 .weapon-icon {
-  display: none;
+  text-align: center;
+  padding: 5px 0;
 }
-

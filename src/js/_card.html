@@ -23,3 +23,7 @@
 <div class="county"><strong>Location:</strong> <em><%= data.county %> County</em></div>
 
 <div class="weapon"><strong>Armed:</strong> <em><%= data.weapon %></em></div>
+
+<% if (data.image) { %>
+  <div class="weapon-icon"><img src="./assets/weapons/<%= data.image %>.png"</div>
+<% } %>

@@ -6,7 +6,15 @@ var lookup = {};
 
 deadlyForceData.forEach(function(row, index) {
   [row.last, row.first] = row.name.split(", ");
+
   if (row.race == "Multiple") row.race = "Multiracial";
+
+  if (row.weapon == "Weapon - other") {
+    row.weapon = row.weaponDetail;
+  }
+  if (row.weapon !== "No weapon") {
+    row.image = row.weapon.toLowerCase().replace(/[\/\s]/g, "").split(",");
+  }
 
   var parsedTime = row.time.match(/^(\d+):.*?([AP]M)$/);
   if (parsedTime) {

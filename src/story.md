@@ -33,7 +33,7 @@ Just how often police kill citizens in the line of duty and under what circumsta
 
 To authoritatively examine the issue in Washington, The Times used public-records requests, death certificates, interviews and other research to collect, measure and analyze a decade of killings by police in the state's 39 counties. 
 
-The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per year. From 2010 to 2014, it averaged 27 per year. 
+The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per year. From 2010 to 2014, it averaged 27 per year.
 
 <div class="by-the-numbers">
   <!-- Weapons -->
@@ -61,6 +61,8 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
     }) %>
   </aside>
 
+  <div class="question-divider"></div>
+
   <!-- Age -->
   <aside class="question-box age">
     <%= t.include("_question.html", {
@@ -87,6 +89,8 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
     }) %>
   </aside>
 
+  <div class="question-divider"></div>
+
   <!-- Time of day -->
   <aside class="question-box time">
     <%= t.include("_question.html", {
@@ -107,32 +111,6 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
         { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m. - midnight (36.3%)", selected: "selected" }
       ],
       explanation: "While evening hours saw the highest number of fatal police encounters, 41 percent occurred during the day (6 a.m. to 6 p.m.)."
-    }) %>
-  </aside>
-
-  <!-- Race -->
-  <aside class="question-box race">
-    <%= t.include("_question.html", {
-      title: "Killings by police had the most disproportionate impact on which racial/ethnic group?",
-      filter: "black",
-      options: [
-        { data: "Black", correct: "correct" },
-        { data: "Asian" },
-        { data: "Hispanic" },
-        { data: "Native American" }
-      ],
-      included: "_race.html",
-      key: "Race/Ethnicity",
-      sort: "race",
-      toggles: [
-        { data: "white", label: "White (72.6%)" },
-        { data: "asian", label: "Asian/Pacific Islander (2.8%)" },
-        { data: "black", label: "Black (9.9%)", selected: "selected" },
-        { data: "hispanic", label: "Hispanic (8.5%)" },
-        { data: "multiple", label: "Multiracial (3.3%)" },
-        { data: "native", label: "Native American (2.8%)" }
-      ],
-      explanation: "tktktk"
     }) %>
   </aside>
 </div>
