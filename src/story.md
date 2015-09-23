@@ -151,7 +151,7 @@ But no criminal charges were filed, which caused some community outcry. Despite 
 
 In Pasco recently, the Franklin County prosecutor came to a similar conclusion after Pasco police officers fatally shot Antonio Zambrano-Montes, a man who had been throwing rocks. That decision also sparked protest. 
 
-## Justice Dept. steps in
+## Spokane beating
 
 Well before the recent national focus on questionable law-enforcement shootings, the issue of whether police can effectively be held accountable in Washington was raised by the homicide of Otto Zehm, an unarmed, mentally challenged man in Spokane.
 
