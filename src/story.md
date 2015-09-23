@@ -132,6 +132,9 @@ The law's malice language creates a bar that is "almost impossible to get over" 
 <!-- Williams -->
 <aside class="inline-video">
   <%= t.include("_brightcove.html", { id: 715145081001 }) %>
+  <div class="caption">
+    An SPD dashboard video shows woodcarver John T. Williams crossing a Seattle street moments before being shot by Officer Ian Birk on Aug. 30, 2010.
+  </div>
 </aside>
 
 In Seattle, for example, the 2010 shooting of John T. Williams sparked outrage when [patrol-car video and audio](http://www.seattletimes.com/seattle-news/police-video-documents-fatal-encounter-between-officer-and-woodcarver/) revealed then-officer Ian Birk had given the First Nations woodcarver about four seconds to drop a knife before opening fire.
@@ -151,6 +154,9 @@ In a state with a less-restrictive law for justifiable police homicide, the [Zeh
 <!-- Zehm -->
 <aside class="inline-video">
   <%= t.include("_brightcove.html", { id: 1344652387001 }) %>
+  <div class="caption">
+    Surveillance video captures Spokane police Officer Karl Thompson Jr. beating Otto Zehm in a convenience store. (Video courtesy of KING 5)
+  </div>
 </aside>
 
 Zehm, 36, only wanted a candy bar and a soft drink when he entered a Spokane convenience store named Zip Trip in 2006.
