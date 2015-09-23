@@ -61,8 +61,6 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
     }) %>
   </aside>
 
-  <div class="question-divider"></div>
-
   <!-- Age -->
   <aside class="question-box age">
     <%= t.include("_question.html", {
@@ -88,8 +86,6 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
       explanation: "Just seven of the deaths were teenagers. The youngest person was 16, the oldest 77. Nearly 40 percent were 40 or older. Only three of the 212 people killed by police were women."
     }) %>
   </aside>
-
-  <div class="question-divider"></div>
 
   <!-- Time of day -->
   <aside class="question-box time">

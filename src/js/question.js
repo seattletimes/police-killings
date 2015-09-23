@@ -9,8 +9,13 @@ deadlyForceData.forEach(function(row, index) {
 
   if (row.race == "Multiple") row.race = "Multiracial";
 
+  row.weaponLabel = row.weapon;
+
   if (row.weapon == "Weapon - other") {
     row.weapon = row.weaponDetail;
+    row.weaponLabel = row.weapon.replace(/^([a-z])|\s+([a-z])/, function(letter) {
+      return letter.toUpperCase();
+    });
   }
   if (row.weapon !== "No weapon") {
     row.image = row.weapon.toLowerCase().replace(/[\/\s]/g, "").split(",");
@@ -109,22 +114,32 @@ $(".grid").each(function() {
   makeSquares(this, this.getAttribute("data-sort"));
 });
 
+var clearQuestion = function() {
+  $(".options").addClass("pending");
+  $(".correct").removeClass("green");
+  $(".chosen").removeClass("chosen");
+  $(".hide-question.visible").removeClass("visible");
+  $(".answer.open").slideUp();
+}
+
 $(document.body).on("click", ".option", function(e) {
   var options = $(this).closest(".options");
   if (!options.hasClass("pending")) return;
 
-  $(".options").addClass("pending");
-  $(".correct").removeClass("green");
-  $(".chosen").removeClass("chosen");
+  clearQuestion();
 
   options.removeClass("pending");
+  options.siblings(".hide-question").addClass("visible");
   var answer = options.siblings(".answer");
-  $(".answer.open").slideUp();
   answer.slideDown();
   answer.addClass("open");
 
   options.children(".correct").addClass("green");
   e.target.classList.add("chosen");
+});
+
+$(document.body).on("click", ".hide-question", function(e) {
+    clearQuestion();
 });
 
 $(document.body).on("click", ".toggle", function(e) {

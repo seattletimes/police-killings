@@ -10,11 +10,14 @@
 <div class="featured featured-race"><%= data.race %></div>
 
 <div class="name"><%= data.first %> <%= data.last %></div>
+
 <div class="card-divider"></div>
 
 <div class="gender"><strong>Gender:</strong> <em><%= data.gender %></em></div>
 <div class="race"><strong>Race/Ethnicity:</strong> <em><%= data.race %></em></div>
 <div class="age"><strong>Age:</strong> <em><%= data.age %></em></div>
+
+<div class="card-divider"></div>
 
 <div class="time"><strong>Date:</strong> <em><%= data.date %> 
   <% if (data.time) { %>
@@ -22,8 +25,12 @@
   <% } %></em>
 <div class="county"><strong>Location:</strong> <em><%= data.county %> County</em></div>
 
-<div class="weapon"><strong>Armed:</strong> <em><%= data.weapon %></em></div>
+<div class="card-divider"></div>
+
+<div class="weapon"><strong>Armed:</strong> <em><%= data.weaponLabel %></em></div>
 
 <% if (data.image) { %>
-  <div class="weapon-icon"><img src="./assets/weapons/<%= data.image %>.png"</div>
+  <% data.image.forEach(function(img) { %>
+    <div class="weapon-icon"><img src="./assets/weapons/<%= img %>.png"</div>
+  <% }); %>
 <% } %>

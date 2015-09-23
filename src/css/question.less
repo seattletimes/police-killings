@@ -12,20 +12,38 @@
   }
 }
 
-.question-divider {
-  border-top: 1px solid @df-light-gray;
-  padding-top: 15px;
-  margin-top: 25px;
+.hide-question {
+  float: right;
+  color: @df-border-gray;
+  display: none !important;
+  cursor: pointer;
+  font-size: 16px;
+
+  &:hover {
+    color: @df-middle-gray;
+  }
+
+  &.visible {
+    display: inline-block !important;
+  }
 }
 
 .question-box {
-  margin: 10px 0 20px;
-  // border: 1px solid @df-light-gray;
+  margin: 10px 0 25px;
   font-family: @df-sans;
+  border-bottom: 1px solid @df-light-gray;
+  padding-bottom: 15px;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .question {
   padding-bottom: 15px;
+  font-size: 19px;
   font-family: Abril Fatface;
 }
 
@@ -76,12 +94,7 @@
 
 .answer {
   display: none;
-  margin: 30px;
-
-  @media @mobile {
-    margin-left: 0;
-    margin-right: 0;
-  }
+  margin: 30px 0;
 }
 
 .toggle-label {
@@ -146,11 +159,10 @@
 }
 
 .individual {
-  .flex(1);
-  font-size: 12px;
+  .flex(3);
+  font-size: 13px;
   background: lighten(@st-light-green,15%);
-  margin: 2px;
-  margin-top: 10px;
+  margin: 10px 2px 2px 4px;
   padding: 10px 15px;
   height: 100%;
 
@@ -162,7 +174,7 @@
 
   .name {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     font-family: Abril Fatface;
   }
 
@@ -176,7 +188,7 @@
 }
 
 .grid {
-  .flex(2);
+  .flex(5);
   margin-top: 10px;
   line-height: 10px;
 }
@@ -273,5 +285,7 @@
 
 .weapon-icon {
   text-align: center;
-  padding: 5px 0;
+  padding: 8px 0 5px 0;
+  max-width: 85%;
+  margin: auto;
 }
