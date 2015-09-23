@@ -8,6 +8,7 @@ window.$ = $;
 $.ajax("./assets/transcript.json").then(function(transcript) {
 
   var tContainer = container.querySelector(".transcript");
+  var stage = container.querySelector(".stage");
 
   var currentSpeaker = "";
   transcript.forEach(function(line, index) {
@@ -40,6 +41,7 @@ $.ajax("./assets/transcript.json").then(function(transcript) {
         if (bounds.top < cBounds.top || bounds.bottom > cBounds.bottom) {
           $(tContainer).animate({ scrollTop: active.offsetTop - 20 });
         }
+        stage.setAttribute("data-speaker", line.speaker.toLowerCase());
         break;
       }
     }
