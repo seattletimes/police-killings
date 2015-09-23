@@ -80,6 +80,12 @@
   padding-bottom: 5px;
 }
 
+.toggle-container {
+  .display-flex();
+  .flex-wrap(wrap);
+  .justify-content(space-between);
+}
+
 .toggle {
   padding: 5px 12px 3px 12px;
   margin-bottom: 4px;
@@ -88,6 +94,16 @@
   border-radius: 2px;
   background: @df-light-gray;
   font-size: 14px;
+  text-align: center;
+  .flex(0 0 32%);
+  .display-flex();
+  .flex-direction(column);
+  .align-items(center);
+  .justify-content(center);
+
+  .time & {
+    .flex(0 0 23%);
+  }
 
   &:hover {
     background: @df-middle-gray;

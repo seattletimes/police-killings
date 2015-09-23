@@ -101,10 +101,10 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
       key: "Time of day",
       sort: "hour",
       toggles: [
-        { data: "time-0", label: "<i class='fa fa-moon-o'></i> Midnight-6 a.m. (21.7%)" },
-        { data: "time-6", label: "<i class='fa fa-sun-o'></i> 6 a.m.-noon (16%)" },
-        { data: "time-12", label: "<i class='fa fa-sun-o'></i> Noon-6 p.m. (25%)" },
-        { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m.-midnight (36.3%)", selected: "selected" }
+        { data: "time-0", label: "<i class='fa fa-moon-o'></i> Midnight - 6 a.m. (21.7%)" },
+        { data: "time-6", label: "<i class='fa fa-sun-o'></i> 6 a.m. - noon (16%)" },
+        { data: "time-12", label: "<i class='fa fa-sun-o'></i> Noon - 6 p.m. (25%)" },
+        { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m. - midnight (36.3%)", selected: "selected" }
       ],
       explanation: "While evening hours saw the highest number of fatal police encounters, 41 percent occurred during the day (6 a.m. to 6 p.m.)."
     }) %>

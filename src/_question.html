@@ -9,9 +9,11 @@
     <%= explanation %>
   </div>
   <div class="toggle-label"><%= key %>:</div>
-  <% toggles.forEach(function(toggle) { %>
-    <div class="toggle <%= toggle.selected %>" data-filter="<%= toggle.data %>"><%= toggle.label %></div>
-  <% }); %>
+  <div class="toggle-container">
+    <% toggles.forEach(function(toggle) { %>
+      <div class="toggle <%= toggle.selected %>" data-filter="<%= toggle.data %>"><%= toggle.label %></div>
+    <% }); %>
+  </div>
   <%= typeof included !== "undefined" ? t.include(included) : "" %>
   <div class="grid-container">
     <section class="grid" data-sort="<%= sort %>"></section>
