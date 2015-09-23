@@ -7,3 +7,4 @@ npm-debug.log
 src/js/lib/*/**
 # json/*.sheet.json
 # data/deadly-force-data.csv
+src/assets/**/*.mp4
