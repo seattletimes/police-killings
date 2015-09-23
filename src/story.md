@@ -37,7 +37,7 @@ To authoritatively examine the issue in Washington, The Times used public-record
 
 The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per year. From 2010 to 2014, it averaged 27 per year. 
 
-With these questions, explore the data behind the 212 deaths:
+*With these questions, explore the data behind the 212 deaths:*
 
 <div class="by-the-numbers">
   <!-- Weapons -->
@@ -68,7 +68,7 @@ With these questions, explore the data behind the 212 deaths:
   <!-- Age -->
   <aside class="question-box age">
     <%= t.include("_question.html", {
-      title: "Of the 212 people killed by police, how many do you think were teenagers?",
+      title: "How many do you think were teenagers?",
       filter: "age-0",
       options: [
         { data: "3%", correct: "correct" },
@@ -94,13 +94,13 @@ With these questions, explore the data behind the 212 deaths:
   <!-- Time of day -->
   <aside class="question-box time">
     <%= t.include("_question.html", {
-      title: "Which hour of the day do you think had the highest number of incidents?",
+      title: "How many fatal encounters do you think happened during the afternoon?",
       filter: "time-18",
       options: [
-        { data: "2 a.m." },
-        { data: "2 p.m." },
-        { data: "8 p.m.", correct: "correct" },
-        { data: "11 p.m." }
+        { data: "10%" },
+        { data: "15%" },
+        { data: "25%", correct: "correct" },
+        { data: "30%" }
       ],
       key: "Time of day",
       sort: "hour",
@@ -110,7 +110,7 @@ With these questions, explore the data behind the 212 deaths:
         { data: "time-12", label: "<i class='fa fa-sun-o'></i> Noon - 6 p.m. (25%)" },
         { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m. - midnight (36.3%)", selected: "selected" }
       ],
-      explanation: "While evening hours saw the highest number of fatal police encounters, 41 percent occurred during the day (6 a.m. to 6 p.m.)."
+      explanation: "While evening hours saw the highest number of fatal police encounters, 25 percent of incidents occurred in the afternoon, with another 16 percent occurring earlier in the day."
     }) %>
   </aside>
 </div>
