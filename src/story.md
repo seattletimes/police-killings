@@ -39,9 +39,10 @@ To authoritatively examine the issue in Washington, The Times used public-record
 
 The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per year. From 2010 to 2014, it averaged 27 per year. 
 
-*With these questions, explore the data behind the 212 deaths:*
 
 <div class="by-the-numbers">
+
+  <em>With these questions, explore the data behind the 212 deaths:</em>
   <!-- Weapons -->
   <aside class="question-box weapon">
     <%= t.include("_question.html", {
