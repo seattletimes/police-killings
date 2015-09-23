@@ -153,7 +153,7 @@ $(document.body).on("click", ".toggle", function(e) {
 $(document.body).on("click", ".square", function(e) {
   var id = e.target.getAttribute("data-index");
   var individual = lookup[id];
-  $(this).closest(".grid").next(".individual").addClass("showing").html(card(individual));
+  $(this).closest(".grid").next(".individual").html(card(individual));
   $(this).siblings(".square.selected").removeClass("selected");
   $(this).addClass("selected");
 });

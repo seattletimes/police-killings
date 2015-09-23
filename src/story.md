@@ -35,7 +35,9 @@ Just how often police kill citizens in the line of duty and under what circumsta
 
 To authoritatively examine the issue in Washington, The Times used public-records requests, death certificates, interviews and other research to collect, measure and analyze a decade of killings by police in the state's 39 counties. 
 
-The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per year. From 2010 to 2014, it averaged 27 per year.
+The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per year. From 2010 to 2014, it averaged 27 per year. 
+
+With these questions, explore the data behind the 212 deaths:
 
 <div class="by-the-numbers">
   <!-- Weapons -->
@@ -59,14 +61,14 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
         { data: "other", label: "Other (5.7%)" },
         { data: "no-weapon", label: "No weapon (16%)" }
       ],
-      explanation: "Half of the 212 people killed by police had a firearm in their possession. Another 10 had fake guns, that could have been mistaken for actual firearms. Thirty-four had no weapon."
+      explanation: "Half of the 212 people killed by police had a firearm in their possession. Another 10 had fake guns that could have been mistaken for actual firearms. Others had such weapons as a cane, baseball bat or pool cue. Thirty-four had no weapon."
     }) %>
   </aside>
 
   <!-- Age -->
   <aside class="question-box age">
     <%= t.include("_question.html", {
-      title: "Of the 212 people killed by police, how many were teenagers?",
+      title: "Of the 212 people killed by police, how many do you think were teenagers?",
       filter: "age-0",
       options: [
         { data: "3%", correct: "correct" },
@@ -92,7 +94,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
   <!-- Time of day -->
   <aside class="question-box time">
     <%= t.include("_question.html", {
-      title: "Which hour of the day had the highest number of incidents?",
+      title: "Which hour of the day do you think had the highest number of incidents?",
       filter: "time-18",
       options: [
         { data: "2 a.m." },
