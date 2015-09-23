@@ -123,6 +123,10 @@ Only three of the 212 were female, and seven were in their teens. Nearly 41 perc
 
 Some numbers underscore the national concerns about deadly force. 
 
+<aside class="pullquote sidebar tweet" data-tweet="Ten percent of those killed by police were black, a group that accounts for 3.6 percent of the state's population.">
+  <b>Ten percent</b> of those killed by police were black, a group that accounts for <b>3.6 percent</b> of the state's population. <i class="fa fa-twitter"></i>
+</aside>
+
 About 10 percent of those killed were black, a group that accounts for 3.6 percent of the state’s population. Blacks were also overrepresented among those without a weapon, accounting for nearly 15 percent of that group.
 
 In King County, where blacks represent 6.3 percent of the population, they accounted for more than 20 percent of deaths. 
@@ -184,6 +188,10 @@ Much of how and when police can use deadly force today stems from a 1985 U.S. Su
 Responding to a night police call, an officer shined his flashlight on Garner in a fenced backyard, determined he was unarmed and told him to halt. When the 100-pound teen tried to climb a 6-foot fence and flee, Officer Elton Hymon shot him in the back of the head, killing him. 
 
 The Supreme Court ruled that using deadly force to prevent the escape of an unarmed suspect violated his constitutional rights. 
+
+<aside class="pullquote sidebar tweet" data-tweet="In a state with a less-restrictive law, Spokane’s Otto Zehm case may have resulted in criminal charges against an officer.">
+  In a state with a less-restrictive law, Spokane’s Otto Zehm case <b>may have resulted in criminal charges against an officer</b>. <i class="fa fa-twitter"></i>
+</aside>
 
 The [Garner decision](https://supreme.justia.com/cases/federal/us/471/1/case.html) established that police could use deadly force to apprehend a suspect only when they had a belief they or others faced a significant threat of death or serious injury. 
 
@@ -289,6 +297,10 @@ When Pasco police were not charged earlier this month after the homicide of rock
 "The current law makes prosecutors exceedingly unwilling to file charges against police and thereby makes it almost impossible to hold police accountable for wrongfully killing civilians."
 
 ## Change the law?
+
+<aside class="pullquote sidebar tweet" data-tweet="&quo;We have to be careful here and not try to quench some national desire for a sacrificial cop by changing the law until we can convict somebody&quo;">
+  &ldquo;We have to be careful here and not try to quench some national desire for a sacrificial cop by changing the law until we can convict somebody&rdquo; <i class="fa fa-twitter"></i>
+</aside>
 
 When Roe, Satterberg and other prosecutors meet Oct. 1 in Tacoma, they will consider whether to recommend changing the law. 
 
