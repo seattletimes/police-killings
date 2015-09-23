@@ -14,6 +14,13 @@ In 1986, Washington's Legislature decided police officers shouldn't be prosecute
 
 The Times analyzed 212 fatal police encounters from 2005 to 2014. Although the vast majority of the cases were deemed legally justified, others were controversial. But with the malice and good faith requirements, it was nearly impossible for prosecutors to bring criminal charges even if they concluded that an officer committed a wrongful killing.
 
+<aside class="image">
+  <img src="./assets/images/PoliceMeadeCorvette.jpg">
+  <div class="caption">
+    Niles Meservey was drunk and sitting in this car when he was shot by Everett police Officer Troy Meade in 2009 outside a restaurant. Meade said he feared the car was going to back over him, so he shot Meservey in the head. (Photo by Paul Luvera via The Associated Press)
+  </div>
+</aside>
+
 In the lone case, an Everett police officer was charged with second-degree murder and manslaughter after he fatally shot a drunken man through the rear window of his car in 2009.
 
 A Snohomish County jury, instructed to consider whether he acted with malice, acquitted the officer. 
@@ -21,11 +28,6 @@ A Snohomish County jury, instructed to consider whether he acted with malice, ac
 The Times also determined that a disproportionate number of the 212 deaths were African Americans &mdash; a troubling finding as the nation wrestles with a spate of police encounters that have led to the deaths of unarmed African Americans, spawning the "[Black Lives Matter](http://blacklivesmatter.com/)" movement. 
 
 Prosecutors from the state's 39 counties, some concerned about the justifiable police homicide statute, will discuss whether to have the law changed at an Oct. 1 public meeting of the Washington Association of Prosecuting Attorneys.
-
-<!-- Map -->
-<aside class="map">
-  <%= t.include("_map.html") %>
-</aside>
 
 ## By the numbers
 
@@ -121,9 +123,14 @@ About 10 percent of those killed were black, a group that accounts for 3.6 perce
 
 In King County, where blacks represent 6.3 percent of the population, they accounted for more than 20 percent of deaths. 
 
-Satterberg said he saw the recent videos of police encounters nationwide that "make you sick." He said it's no surprise these "awful but lawful" cases have people demanding change. 
+Satterberg said he saw the recent videos of police encounters nationwide that "make you sick." He said it's no surprise these "awful but lawful" cases have people demanding change.
 
 The law's malice language creates a bar that is "almost impossible to get over" and is difficult to explain to the public, Satterberg, president of the prosecutors association, said in a recent interview. 
+
+<!-- Williams -->
+<aside class="inline-video">
+  <%= t.include("_brightcove.html", { id: 715145081001 }) %>
+</aside>
 
 In Seattle, for example, the 2010 shooting of John T. Williams sparked outrage when [patrol-car video and audio](http://www.seattletimes.com/seattle-news/police-video-documents-fatal-encounter-between-officer-and-woodcarver/) revealed then-officer Ian Birk had given the First Nations woodcarver about four seconds to drop a knife before opening fire.
 
@@ -138,6 +145,11 @@ In Pasco recently, the Franklin County prosecutor came to a similar conclusion a
 Well before the recent national focus on questionable law-enforcement shootings, the issue of whether police can effectively be held accountable in Washington was raised by the homicide of Otto Zehm, an unarmed, mentally challenged man in Spokane.
 
 In a state with a less-restrictive law for justifiable police homicide, the [Zehm case](http://www.seattletimes.com/seattle-news/spokane-excessive-force-saga-may-hold-lessons-for-seattle/) might well have resulted in local criminal charges against an officer.
+
+<!-- Zehm -->
+<aside class="inline-video">
+  <%= t.include("_brightcove.html", { id: 1344652387001 }) %>
+</aside>
 
 Zehm, 36, only wanted a candy bar and a soft drink when he entered a Spokane convenience store named Zip Trip in 2006.
 
@@ -171,7 +183,7 @@ Leo Poort, legal adviser to the Seattle police chief then, said the Garner decis
 
 Only about half the states had laws in line with the Garner ruling. In Washington, killing a fleeing suspect had been a justifiable police homicide since 1909. In the wake of Garner, police unions and conservative lawmakers resisted bringing Washington law in line. 
 
-<!--test -->
+<!-- Audio -->
 <aside class="audio sidebar">
   <%= t.include("_audio.html") %>
 </aside>
@@ -210,7 +222,14 @@ The law, he said, "was not intended to be a free pass for taking someone's life.
 
 Snohomish County Prosecutor Mark Roe believed he and his team had what they needed to bring the first homicide case against a cop since the restrictive 1986 law. 
 
-His office brought charges of second-degree murder and first-degree manslaughter against Everett police Officer Troy Meade in the fatal shooting in 2009 of Niles Meservey, 51. 
+His office brought charges of second-degree murder and first-degree manslaughter against Everett police Officer Troy Meade in the fatal shooting in 2009 of Niles Meservey, 51.
+
+<aside class="image">
+  <img src="./assets/images/PoliceMeadeEverett.jpg">
+  <div class="caption">
+    Everett police Officer Troy Meade, left, is greeted by Everett Police Chief Jim Scharf moments after Meade was found not guilty of murder and manslaughter for shooting a drunken driver in the back. He was later fired for violating department policy about deadly force. (John Lok/The Seattle Times)
+  </div>
+</aside>
 
 Meade had responded to reports that a drunken driver was attempting to drive away from the parking lot of Everett's Chuckwagon Inn. 
 
@@ -231,6 +250,11 @@ A Snohomish County jury &mdash; given jury instructions that included the law's 
 In a [June report](https://www.amnestyusa.org/sites/default/files/aiusa_deadlyforcereportjune2015.pdf), "Deadly Force: Police Use of Lethal Force in the United States," Amnesty International found Washington state's good faith and malice language stood alone among the 50 states.
 
 "Washington &mdash; it's the most egregious," said Jamira Burley, an Amnesty International official who handles gun violence and criminal justice issues.
+
+<!-- Map -->
+<aside class="map">
+  <%= t.include("_map.html") %>
+</aside>
 
 [Jeff Robinson](http://www.seattletimes.com/seattle-news/transformation-ahead-says-seattle-lawyer-chosen-for-aclu-national-leadership/), a longtime Seattle defense attorney who directs The Center for Justice of the national American Civil Liberties Union, wants the law changed. 
 
@@ -253,10 +277,6 @@ The ACLU of Washington wants the law changed regardless.
 When Pasco police were not charged earlier this month after the homicide of rock-wielding Zambrano-Montes, executive director Kathleen Taylor said: 
 
 "The current law makes prosecutors exceedingly unwilling to file charges against police and thereby makes it almost impossible to hold police accountable for wrongfully killing civilians."
-
-<aside class="sidebar nerdbox">
-  To authoritatively examine the issue in Washington, The Times used public-records requests, death certificates, interviews and other research to collect, measure and analyze a decade of killings by police in the state's 39 counties. Visit our repository to view <a href="https://github.com/seattletimes/police-shootings/blob/master/data/deadly-force-data.csv">this data</a> and <a href="https://github.com/seattletimes/police-shootings/">other source code</a>.
-</aside>
 
 ## Change the law?
 

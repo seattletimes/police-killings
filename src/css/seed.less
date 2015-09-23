@@ -8,6 +8,7 @@
 @import "seattletimes";
 @import "social";
 @import "audio";
+@import "video";
 @import "question";
 @import "map";
 @import "question";
@@ -52,6 +53,9 @@ main.story {
     padding: 16px;
     width: 32%;
     background: @df-light-gray;
+    clear: both;
+    margin-top: 12px;
+    margin-bottom: 12px;
 
     &.pullquote {
       font-family: @df-sans;
@@ -68,6 +72,27 @@ main.story {
       float: none;
       display: block;
       width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  aside.image {
+    width: 50%;
+    float: right;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 16px;
+    display: block;
+    clear: right;
+
+    .caption {
+      font-family: @df-sans;
+      font-size: 13px;
+    }
+
+    @media @tablet {
+      width: 100%;
+      float: none;
       margin-left: 0;
     }
   }
@@ -88,6 +113,19 @@ main.story {
     text-align: center;
     font-size: 20px;
     background: white;
+  }
+}
+
+.nerdbox {
+  padding: 16px;
+  margin: 16px;
+  background: @df-light-gray;
+  font-size: 15px;
+  width: 66%;
+
+  @media @mobile {
+    display: block;
+    width: 100%;
   }
 }
 
