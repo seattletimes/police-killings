@@ -39,7 +39,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
   <!-- Weapons -->
   <aside class="question-box weapon">
     <%= t.include("_question.html", {
-      title: "How many people killed by police possessed a weapon?",
+      title: "How many people killed by police do you think possessed a weapon?",
       filter: "firearm",
       options: [
         { data: "34%" },
@@ -90,7 +90,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
   <!-- Time of day -->
   <aside class="question-box time">
     <%= t.include("_question.html", {
-      title: "Which hour of the day had the highest number of deaths?",
+      title: "Which hour of the day had the highest number of incidents?",
       filter: "time-18",
       options: [
         { data: "2 a.m." },
@@ -113,7 +113,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
   <!-- Race -->
   <aside class="question-box race">
     <%= t.include("_question.html", {
-      title: "Killings by police had the most disproportionate impact on which ethnic group?",
+      title: "Killings by police had the most disproportionate impact on which racial/ethnic group?",
       filter: "black",
       options: [
         { data: "Black", correct: "correct" },
@@ -122,7 +122,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
         { data: "Native American" }
       ],
       included: "_race.html",
-      key: "Race",
+      key: "Race/Ethnicity",
       sort: "race",
       toggles: [
         { data: "white", label: "White (72.6%)" },
