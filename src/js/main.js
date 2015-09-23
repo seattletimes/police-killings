@@ -6,3 +6,4 @@ var track = require("./lib/tracking");
 require("./audioPlayer");
 require("./question");
 require("./map");
+require("./tweet");
