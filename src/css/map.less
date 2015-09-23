@@ -1,29 +1,69 @@
 @import "flexbox";
 
-.map {
+main.story aside.map {
+  border: 1px solid @df-light-gray;
+  padding: 16px 4px;
   font-size: 15px !important;
   font-family: @df-sans;
+  width: 100%;
+
+  @media @mobile {
+    .law-container {
+      text-align: center;
+      border-bottom: 1px solid @df-light-gray;
+
+      strong {
+        display: block;
+      }
+
+      .long {
+        display: none;
+      }
+
+    }
+  }
+}
+
+@malice: #51414A;
+@riot: #84625D;
+@escapee: #B7584A;
+@warning: #514841;
+@none: #333;
+
+h2 {
+  margin: 0;
+}
+
+.chatter {
+  margin: 10px 0;
+}
+
+.row {
+  .display-flex();
+
+  @media @mobile {
+    display: block;
+  }
 }
 
 .map-container {
   position: relative;
-}
+  .flex(1 1 66%);
 
-#map {
   &[selected-law=law1] .law1-hex {
-    fill: #800026 !important;
+    fill: @malice !important;
   }
   &[selected-law=law2] .law2-hex {
-    fill: #E31A1C !important;
+    fill: @riot !important;
   }
   &[selected-law=law3] .law3-hex {
-    fill: #FD8D3C !important;
+    fill: @escapee !important;
   }
   &[selected-law=law4] .law4-hex {
-    fill: #FED976 !important;
+    fill: @warning !important;
   }
   &[selected-law=law5] .law5-hex {
-    fill: #A05DA5 !important;
+    fill: @none !important;
   }
 
   polygon {
@@ -31,6 +71,7 @@
       cursor: pointer;
       fill: #666;
     }
+    transition: fill .2s linear;
   }
 
   text {
@@ -41,31 +82,42 @@
 
 
 .button-container{
-  .display-flex;
-  .flex-wrap(wrap);
-  padding-top: 30px;
+  .flex(0 0 300px);
+  padding: 0 8px;
   font-size: 14px;
 
   :hover {
     cursor: pointer;
   }
 
-  @media @tablet {
-    padding: 30px 6px 0;
-  }
-
   @media @mobile {
     display: block;
+    padding: 0;
   }
 
   .law-container {
-    .flex(1 0 48%);
-    width: 50%;
-    border: 1px solid gray;
-    border-radius: 8px;
+    display: block;
     padding: 6px;
-    margin: 6px 0;
-    margin-right: 1%;
+
+    &.selected, &:hover {
+      color: white;
+
+      &.law1 {
+        background: @malice;
+      }
+      &.law2 {
+        background: @riot;
+      }
+      &.law3 {
+        background: @escapee;
+      }
+      &.law4 {
+        background: @warning;
+      }
+      &.law5 {
+        background: @none;
+      }
+    }
 
     @media @tablet {
       width: 100%;
@@ -84,26 +136,6 @@
   
   .law5 {
     .flex(1 0 80%);
-  }
-
-  .selected, :hover {
-    border-width: 2px;
-
-    &.law1 {
-      border-color: #800026;
-    }
-    &.law2 {
-      border-color: #E31A1C;
-    }
-    &.law3 {
-      border-color: #FD8D3C;
-    }
-    &.law4 {
-      border-color: #FED976;
-    }
-    &.law5 {
-      border-color: #A05DA5;
-    }
   }
 }
 
@@ -131,6 +163,7 @@
   font-weight: bold;
 }
 
-li {
-  list-style-position: inside;
+.source {
+  font-style: italic;
+  padding-top: 10px;
 }

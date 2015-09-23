@@ -282,6 +282,10 @@ When Pasco police were not charged earlier this month after the homicide of rock
 
 ## Change the law?
 
+<aside class="sidebar nerdbox">
+  To authoritatively examine the issue in Washington, The Times used public-records requests, death certificates, interviews and other research to collect, measure and analyze a decade of killings by police in the state's 39 counties. Visit our repository to view <a href="https://github.com/seattletimes/police-shootings">this data</a> and <a href="https://github.com/seattletimes/police-shootings/">other source code</a>.
+</aside>
+
 When Roe, Satterberg and other prosecutors meet Oct. 1 in Tacoma, they will consider whether to recommend changing the law. 
 
 Roe, the only prosecutor who actually brought a murder charge against a cop, leans against changing the law. 

@@ -1,5 +1,6 @@
 var $ = require("jquery");
 
+var map = $(".map-container");
 var selectedLaw;
 var tooltip = document.querySelector(".tooltip");
 
@@ -15,8 +16,6 @@ for (var id in lawsByState) {
     }
   });
 };
-
-var map = $("#map");
 
 $(".button-container").on("click", ".law-container", function(e) {
   var law = this.getAttribute("data-law") * 1;
