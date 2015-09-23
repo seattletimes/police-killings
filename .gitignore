@@ -6,4 +6,4 @@ auth.json
 npm-debug.log
 src/js/lib/*/**
 # json/*.sheet.json
-data/deadly-force-data.csv
+# data/deadly-force-data.csv
