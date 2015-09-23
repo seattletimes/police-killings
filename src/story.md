@@ -113,7 +113,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
   </aside>
 </div>
 
-In 84 percent of the cases, police officers who used deadly force in Washington confronted people armed with a weapon, typically a firearm. 
+In 84 percent of the cases, police officers who used deadly force in Washington confronted people who had a weapon, typically a firearm. 
 
 Only three of the 212 were female, and seven were in their teens. Nearly 41 percent occurred during the day, defined as 6 a.m. to 6 p.m.
 
