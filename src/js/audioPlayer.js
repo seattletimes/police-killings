@@ -63,7 +63,7 @@ $.ajax("./assets/transcript.json").then(function(transcript) {
   });
 
   container.querySelector(".show-transcript").addEventListener("click", function() {
-    tContainer.classList.toggle("show");
+    tContainer.classList.toggle("toggle");
     active = null;
     update();
   });

@@ -26,9 +26,16 @@
     font-size: 12px;
     text-transform: uppercase;
     width: 100%;
+    position: relative;
 
     &:hover {
       background: @dkOrange;
+    }
+
+    i.fa {
+      position: absolute;
+      right: 8px;
+      font-weight: bold;
     }
   }
 
@@ -43,13 +50,20 @@
     font-family: @df-sans;
     font-size: 13px;
     position: relative;
-    display: none;
     border-top: 1px solid @df-blue;
     border-bottom: 1px solid @df-blue;
     background-image: linear-gradient(to bottom, #EEE, white 5%, white 95%, #EEE);
 
-    &.show {
-      display: block;
+    display: block;
+    @media @mobile {
+      display: none;
+    }
+
+    &.toggle {
+      display: none;
+      @media @mobile {
+        display: block;
+      }
     }
 
     .active {
