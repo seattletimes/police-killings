@@ -58,6 +58,7 @@ header.splash {
     opacity: 0;
     transition: opacity .5s linear;
     background: black;
+    z-index: 999999;
 
     &.show {
       display: block;
@@ -107,6 +108,7 @@ header.splash {
     color: @df-light-gray;
     text-transform: uppercase;
     line-height: 1;
+    z-index: 9999;
     
     @media @tablet {
       font-size: 36px;
@@ -122,6 +124,7 @@ header.splash {
     display: inline-block;
     position: relative;
     .sizing();
+    z-index: 999;
     
     .dot {
       .center();
