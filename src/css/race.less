@@ -1,0 +1,81 @@
+.race-table table {
+  margin: auto;
+  border-collapse: collapse;
+  font-family: @df-sans;
+  font-size: 14px;
+  text-align: right;
+  margin-bottom: 30px;
+
+
+  @media @mobile {
+    font-size: 12px;
+  }
+
+  .break {
+    @media @mobile {
+      display: block;
+    }
+  }
+
+  tr:nth-child(even) {
+    background: @gray;
+  }
+  tr:nth-child(odd) {
+    background: white
+  }
+
+  td, th {
+    padding: 8px;
+    border-bottom: 1px solid @df-light-gray;
+
+    &:first-child {
+      padding-left: 28px;
+    }
+    &:last-child {
+      padding-right: 28px;
+    }
+
+    @media @mobile {
+      padding: 4px;
+
+      &:first-child {
+        padding-left: 10px;
+      }
+      &:last-child {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  th {
+    background: white;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 12px;
+    vertical-align: bottom;
+
+    @media @mobile {
+      font-size: 10px;
+    }
+  }
+
+  .race {
+    text-align: left;
+    font-weight: bold;
+    width: 32%;
+  }
+  .deaths {
+    width: 8%;
+  }
+  .killings {
+    width: 20%;
+  }
+  .state {
+    width: 20%;
+  }
+  .ratio {
+    font-weight: bold;
+    width: 20%;
+  }
+
+}

@@ -129,11 +129,11 @@ Some numbers underscore the national concerns about deadly force.
 
 About 10 percent of those killed were black, a group that accounts for 3.6 percent of the state’s population. Blacks were also overrepresented among those without a weapon, accounting for nearly 15 percent of that group.
 
-In King County, where blacks represent 6.3 percent of the population, they accounted for more than 20 percent of deaths. 
-
-<aside class="race-graph">
+<aside class="race-table">
   <%= t.include("_race.html") %>
 </aside>
+
+In King County, where blacks represent 6.3 percent of the population, they accounted for more than 20 percent of deaths. 
 
 Satterberg said he saw the recent videos of police encounters nationwide that "make you sick." He said it's no surprise these "awful but lawful" cases have people demanding change.
 

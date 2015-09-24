@@ -1,61 +1,51 @@
-<% 
-  var raceData = {
-    "White": {
-      "title": "White",
-      "short": "white",
-      "state": 70.8
-    },
-    "Black": {
-      "title": "Black",
-      "short": "black",
-      "state": 3.6
-    },
-    "Asian/Pacific Islander": {
-      "title": "Asian",
-      "short": "asian",
-      "state": 8.2
-    },
-    "Native American": {
-      "title": "Native American",
-      "short": "native",
-      "state": 1.3
-    },
-    "Multiple": {
-      "title": "Multiracial",
-      "short": "multiple",
-      "state": 4
-    },
-    "Hispanic": {
-      "title": "Hispanic",
-      "short": "hispanic",
-      "state": 12.2
-    }
-  };
-  grunt.data.csv.deadlyForceData.forEach(function(row) {
-    if (!raceData[row.race].count) raceData[row.race].count = 0;
-    raceData[row.race].count += 1;
-  });
-  for (var race in raceData) {
-    var data = raceData[race];
-    data.killings = data.count / 212 * 100;
-    if (Math.abs(1 - (data.killings / data.state)) < .1) { 
-      data.ratio = false;
-    } else if (data.killings > data.state) {
-      data.ratio = (data.killings / data.state).toFixed(1) + " times more";
-    } else {
-      data.ratio = (data.state / data.killings).toFixed(1) + " times less";
-    }
-    data.killings = (data.killings).toFixed(1);
-  }
-%>
+<table>
+  <tr>
+    <th class="race">Race / <span class="break">Ethnicity</span>
+    <th class="deaths">Deaths
+    <th class="killings">Share of police killings
+    <th class="state">Share of state population
+    <th class="ratio">Ratio
 
-<% for (var race in raceData) { %>
-  <div class="note <%=raceData[race].short%>">
-    <% if (!raceData[race].ratio) { %>
-      <div class="times"><%=raceData[race].title%> people are killed by police in proportion to their statewide population.</div>
-    <% } else { %>
-    <div class="times"><%=raceData[race].title%> people are <span class="emphasis"><%=raceData[race].ratio%> likely</span> to be killed by police.</div>
-    <% } %>
-    <div>They make up <span class="emphasis"><%=raceData[race].state%>%</span> of Washington's population and <span class="emphasis"><%=raceData[race].killings%>%</span> of killings by police.</div>
-  </div>
-<% } %>
+  <tr>
+    <td class="race">Black
+    <td class="deaths">21
+    <td class="killings">9.9%
+    <td class="state">3.6%
+    <td class="ratio">2.7
+
+  <tr>
+    <td class="race">Native American
+    <td class="deaths">6
+    <td class="killings">2.8%
+    <td class="state">1.3%
+    <td class="ratio">2.2
+
+  <tr>
+    <td class="race">White
+    <td class="deaths">155
+    <td class="killings">72.8%
+    <td class="state">70.8%
+    <td class="ratio">1.0
+
+  <tr>
+    <td class="race">Multiracial
+    <td class="deaths">7
+    <td class="killings">3.3%
+    <td class="state">4.0%
+    <td class="ratio">0.8
+
+  <tr>
+    <td class="race">Hispanic
+    <td class="deaths">18
+    <td class="killings">8.5%
+    <td class="state">12.2%
+    <td class="ratio">0.7
+
+  <tr>
+    <td class="race">Asian/Pacific Islander
+    <td class="deaths">6
+    <td class="killings">2.8%
+    <td class="state">8.2%
+    <td class="ratio">0.3
+
+</table>
