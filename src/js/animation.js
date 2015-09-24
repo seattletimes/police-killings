@@ -39,7 +39,7 @@ $(function() {
   step(5500, 3);
   step(7000, 4);
   step(9000, 5);
-  step(12000, 6);
+  step(9500, 6);
 });
 
 $(".play-video").one("click", function() {
