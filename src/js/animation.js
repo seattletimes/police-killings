@@ -35,3 +35,31 @@ $(function() {
   step(9000, 5);
   step(12000, 6);
 });
+
+$(".play-video").one("click", function() {
+  var vTag = `<video controls class="trailer">
+    <source src="./assets/trailer.mp4"></source>
+  </video>`;
+  header.innerHTML += vTag;
+  var video = header.querySelector("video.trailer");
+
+  video.addEventListener("ended", function() {
+    video.classList.remove("enter");
+    setTimeout(() => video.classList.remove("show"), 500);
+  });
+
+  var playVideo = function() {
+    video.classList.add("show");
+    reflow();
+    video.classList.add("enter");
+    reflow();
+    if (video.readyState > 0) {
+      video.currentTime = 0;
+    }
+    video.play();
+  };
+
+  $(".play-video").on("click", playVideo);
+
+  playVideo();
+});
