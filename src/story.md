@@ -297,7 +297,7 @@ When Pasco police were not charged earlier this month after the homicide of rock
 
 ## Change the law?
 
-<aside class="pullquote sidebar tweet" data-tweet="&quo;We have to be careful here and not try to quench some national desire for a sacrificial cop by changing the law until we can convict somebody&quo;">
+<aside class="pullquote sidebar tweet" data-tweet="&quo;We have to be careful here and not try to quench some national desire for a sacrificial cop by changing the law until we can convict somebody.&quo;">
   &ldquo;We have to be careful here and not try to quench some national desire for a sacrificial cop by changing the law until we can convict somebody&rdquo; <i class="fa fa-twitter"></i>
 </aside>
 
