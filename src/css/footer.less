@@ -1,14 +1,52 @@
 footer.colophon {
-  background: @df-light-gray;
+  // background: @df-light-gray;
   display: block;
-  padding: 40px;
+  // padding: 40px;
+  letter-spacing: 0.15px;
+  line-height: 24px;
 
+  // > * {
+  //   width: 66%;
+  //   margin: auto;
+  // }
+  
   .credits {
     font-size: 15px;
     padding: 0;
-    margin: 0;
     list-style-type: none;
-    max-width: 800px;
+  }
+}
+
+footer.bar {
+  background: @dkBlue;
+  opacity: 0.95;
+  padding: 8px 8px 4px 8px;
+  position: relative;
+  z-index: 99;
+
+  .logo {
+    float: left;
+    margin-right: 10px; 
+    
+    img {
+      margin-top: 5px;
+      height: 20px;
+    }
   }
 
+  &::after {
+    clear: both;
+    content: " ";
+    display: block;
+  }
+
+  .share.bottom {
+    float: right;
+    margin-top: 2px;
+
+    label {
+      background: @dkBlue !important;
+      color: white !important;
+    }
+  }
 }

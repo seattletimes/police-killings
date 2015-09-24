@@ -32,3 +32,25 @@ var s = new Share(".share", {
 });
 
 s.config.networks.email.description += " " + addQuery(here, utm("email_share", "email"));
+
+var sb = new Share(".share.bottom", {
+  ui: {
+    flyout: "top left"
+  },
+  networks: {
+    google_plus: {
+      url: addQuery(here, utm("google+"))
+    },
+    twitter: {
+      url: addQuery(here, utm("twitter"))
+    },
+    facebook: {
+      url: addQuery(here, utm("facebook"))
+    },
+    pinterest: {
+      url: addQuery(here, utm("pinterest"))
+    }
+  }
+});
+
+sb.config.networks.email.description += " " + addQuery(here, utm("email_share", "email"));
