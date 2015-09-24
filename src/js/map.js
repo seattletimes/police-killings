@@ -15,7 +15,6 @@ for (var id in lawsByState) {
       poly.classList.add(lawClass);
     }
   });
-  console.log(id, poly);
 };
 
 $(".button-container").on("click", ".law-container", function(e) {

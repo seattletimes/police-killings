@@ -3,6 +3,7 @@ var dot = require("./lib/dot");
 var card = dot.compile(require("./_card.html"));
 
 var lookup = {};
+var logged = true;
 
 deadlyForceData.forEach(function(row, index) {
   [row.last, row.first] = row.name.split(", ");
@@ -63,6 +64,8 @@ var makeSquares = function(grid, sort) {
       });
   }
 
+  var counts = {};
+
   deadlyForceData.forEach(function(row) {
 
     var classes = ["square"];
@@ -98,6 +101,15 @@ var makeSquares = function(grid, sort) {
                row.hour <   24 ? "time-18"   :
                "" ;
 
+    [time, race, weapon, age].forEach(function(key) {
+      if (!counts[key]) {
+        counts[key] = 1;
+      } else {
+        counts[key]++;
+      }
+    });
+
+
     classes.push(age);
     // classes.push(gender);
     classes.push(race);
@@ -109,6 +121,14 @@ var makeSquares = function(grid, sort) {
     square.setAttribute("data-index", row.id);
     grid.appendChild(square);
   });
+
+  if (!logged) {
+    logged = true;
+    console.log(counts);
+    for (var key in counts) {
+      console.log(key, (counts[key] / 213 * 100).toFixed(1));
+    }
+  }
 };
 
 $(".grid").each(function() {

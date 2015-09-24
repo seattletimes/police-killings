@@ -39,7 +39,6 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
 
 
 <div class="by-the-numbers">
-
   <em>With these questions, explore the data behind the 213 deaths:</em>
   <!-- Weapons -->
   <aside class="question-box weapon">
@@ -55,11 +54,11 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
       key: "Weapon",
       sort: "weapon",
       toggles: [
-        { data: "firearm", label: "Firearm (51.4%)", selected: "selected" },
+        { data: "firearm", label: "Firearm (51.2%)", selected: "selected" },
         { data: "fake", label: "Fake gun (4.7%)" },
-        { data: "knife", label: "Knife/blade (16.5%)" },
-        { data: "vehicle", label: "Vehicle (5.7%)" },
-        { data: "other", label: "Other (5.7%)" },
+        { data: "knife", label: "Knife/blade (16.4%)" },
+        { data: "vehicle", label: "Vehicle (6.1%)" },
+        { data: "other", label: "Other (5.6%)" },
         { data: "no-weapon", label: "No weapon (16%)" }
       ],
       explanation: "Half of the 213 people killed by police had a firearm in their possession. Another 10 had fake guns that could have been mistaken for actual firearms. Others had such weapons as a cane, baseball bat or pool cue. Thirty-four had no weapon."
@@ -81,10 +80,10 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
       sort: "age",
       toggles: [
         { data: "age-0", label: "0-19 (3.3%)", selected: "selected" },
-        { data: "age-20", label: "20-29 (31.1%)" },
-        { data: "age-30", label: "30-39 (26.9%)" },
-        { data: "age-40", label: "40-49 (20.8%)" },
-        { data: "age-50", label: "50-59 (12.3%)" },
+        { data: "age-20", label: "20-29 (31.0%)" },
+        { data: "age-30", label: "30-39 (27.2%)" },
+        { data: "age-40", label: "40-49 (20.7%)" },
+        { data: "age-50", label: "50-59 (12.2%)" },
         { data: "age-60", label: "60-69 (4.2%)" },
         { data: "age-70", label: "70+ (1.4%)" }
       ],
@@ -106,10 +105,10 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
       key: "Time of day",
       sort: "hour",
       toggles: [
-        { data: "time-0", label: "<i class='fa fa-moon-o'></i> Midnight - 6 a.m. (21.7%)" },
+        { data: "time-0", label: "<i class='fa fa-moon-o'></i> Midnight - 6 a.m. (21.6%)" },
         { data: "time-6", label: "<i class='fa fa-sun-o'></i> 6 a.m. - noon (16%)" },
-        { data: "time-12", label: "<i class='fa fa-sun-o'></i> Noon - 6 p.m. (25%)", selected: "selected" },
-        { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m. - midnight (36.3%)" }
+        { data: "time-12", label: "<i class='fa fa-sun-o'></i> Noon - 6 p.m. (25.4%)", selected: "selected" },
+        { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m. - midnight (36.2%)" }
       ],
       explanation: "While evening hours saw the highest number of fatal police encounters, 25 percent of incidents occurred in the afternoon, with another 16 percent occurring earlier in the day."
     }) %>
