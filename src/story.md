@@ -19,7 +19,7 @@ The Times analyzed 212 fatal police encounters from 2005 to 2014. Although the v
 <aside class="image">
   <img src="./assets/images/PoliceMeadeCorvette.jpg">
   <div class="caption">
-    Niles Meservey was drunk and sitting in this car when he was shot by Everett police Officer Troy Meade in 2009 outside a restaurant. Meade said he feared the car was going to back over him, so he shot Meservey in the head. (Photo by Paul Luvera via The Associated Press)
+    Niles Meservey was drunk in this car when Everett police Officer Troy Meade fatally shot him in the back in 2009 outside a restaurant. Meade said he feared the car was going to back over him. (Photo by Paul Luvera via The Associated Press)
   </div>
 </aside>
 
