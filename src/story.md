@@ -23,11 +23,11 @@ The Times analyzed 213 fatal police encounters from 2005 to 2014. Although the v
   </div>
 </aside>
 
+The Times also determined that a disproportionate number of the 213 deaths were African Americans &mdash; a troubling finding as the nation wrestles with a spate of police encounters that have led to the deaths of unarmed African Americans, spawning the "[Black Lives Matter](http://blacklivesmatter.com/)" movement. 
+
 In the lone case, an Everett police officer was charged with second-degree murder and manslaughter after he fatally shot a drunken man through the rear window of his car in 2009.
 
 A Snohomish County jury, instructed to consider whether he acted with malice, acquitted the officer. 
-
-The Times also determined that a disproportionate number of the 213 deaths were African Americans &mdash; a troubling finding as the nation wrestles with a spate of police encounters that have led to the deaths of unarmed African Americans, spawning the "[Black Lives Matter](http://blacklivesmatter.com/)" movement. 
 
 Prosecutors from the state's 39 counties, some concerned about the justifiable police homicide statute, will discuss whether to have the law changed at an Oct. 1 public meeting of the Washington Association of Prosecuting Attorneys.
 
@@ -282,6 +282,10 @@ In a [June report](https://www.amnestyusa.org/sites/default/files/aiusa_deadlyfo
 
 Putting himself in the mind of the police officer, he explained: "Unless you can demonstrate that I have this evil motive, I'm not guilty."
 
+<aside class="pullquote sidebar tweet" data-tweet="&quo;It is virtually a license to kill.&quo;">
+  &ldquo;It is virtually a license to kill.&rdquo; <i class="fa fa-twitter"></i>
+</aside>
+
 Speaking as a lawyer, he said, "It is virtually a license to kill." 
 
 Even without the malice element, he noted, Washington would still have one of the country's strongest self-defense laws: Citizens and police can mistakenly use deadly force and not be charged as long as their actions are reasonable.
@@ -301,10 +305,6 @@ When Pasco police were not charged earlier this month after the homicide of rock
 "The current law makes prosecutors exceedingly unwilling to file charges against police and thereby makes it almost impossible to hold police accountable for wrongfully killing civilians."
 
 ## Change the law?
-
-<aside class="pullquote sidebar tweet" data-tweet="&quo;We have to be careful here and not try to quench some national desire for a sacrificial cop&quo;">
-  &ldquo;We have to be careful here and not try to quench some national desire for a sacrificial cop by changing the law until we can convict somebody&rdquo; <i class="fa fa-twitter"></i>
-</aside>
 
 When Roe, Satterberg and other prosecutors meet Oct. 1 in Tacoma, they will consider whether to recommend changing the law. 
 
