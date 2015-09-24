@@ -3,8 +3,8 @@
 .by-the-numbers {
   width: 100% !important;
   padding: 15px 30px;
-  border-top: 1px solid @df-border-gray;
-  border-bottom: 1px solid @df-border-gray;
+  border-top: 6px solid @mdBlue;
+  border-bottom: 3px solid @mdBlue;
   margin: 20px 0;
 
   @media @mobile {
@@ -31,7 +31,7 @@
 .question-box {
   margin: 10px 0 25px;
   font-family: @df-sans;
-  border-bottom: 1px solid @df-light-gray;
+  border-bottom: 1px solid @df-border-gray;
   padding-bottom: 15px;
 
   &:last-child {
@@ -43,7 +43,7 @@
 
 .question {
   padding-bottom: 15px;
-  font-size: 19px;
+  font-size: 22px;
   font-family: Abril Fatface;
 }
 
@@ -73,12 +73,12 @@
   }
 
   .pending & {
-    background: lighten(@st-light-green,15%);
+    background: @ltBlue;
   }
 
   .pending &:hover {
-    background: @st-dark-green;
-    border: 1px solid @st-dark-green;
+    background: @orange;
+    border: 1px solid @orange;
     color: white;
     cursor: pointer;
   }
@@ -89,8 +89,8 @@
   }
 
   &.green {
-    background: @st-dark-red;
-    border: 1px solid @st-dark-red;
+    background: @dkOrange;
+    border: 1px solid @dkOrange;
     color: white;
     font-weight: bold;
   }
@@ -124,7 +124,7 @@
   display: inline-block;
   cursor: pointer;
   border-radius: 2px;
-  background: lighten(@st-light-green,15%);
+  background: @ltBlue;
   font-size: 14px;
   text-align: center;
   .flex(0 0 24%);
@@ -138,12 +138,12 @@
   }
 
   &:hover {
-    background: @st-dark-green;
+    background: @orange;
     color: white;
   }
 
   &.selected {
-    background: darken(@st-dark-red, 15%);
+    background: @mdBlue;
     color: white;
   }
 }
@@ -178,7 +178,7 @@
   }
 
   .click {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   @media @mobile {
@@ -196,21 +196,21 @@
   border-radius: 50%;
   height: 15px;
   width: 15px;
-  background: lighten(@st-light-green,15%);
+  background: @ltBlue;
   display: inline-block;
   margin: 2px;
   transition: background .3s linear;
   cursor: pointer;
 
   &:hover, &.selected {
-    border: 3px solid @df-dark-gray;
+    border: 3px solid @dkOrange;
   }
 }
 
 .filtered-items(@attribute) {
   [data-filter="@{attribute}"] {
     .square.@{attribute} {
-      background: @st-dark-red;
+      background: @mdBlue;
     }
     .note.@{attribute} {
       display: block;
@@ -261,7 +261,7 @@
   display: none;
   letter-spacing: .8px;
   text-transform: uppercase;
-  background: darken(@st-dark-green,20%);
+  background: @df-dark-gray;
   border-radius: 2px;
   padding: 2px 6px 1px 6px;
   color: white;

@@ -1,12 +1,10 @@
 <div class="featured featured-weapon">Armed with <%= data.weapon %></div>
 <div class="featured featured-age"><%= data.age %> years old</div>
-<div class="featured featured-time">
-  <% if (data.time) { %>
+<% if (data.time) { %>
+  <div class="featured featured-time">
     <%= data.time %>
-  <% } else { %>
-    --
-  <% } %>
-</div>
+  </div>
+<% } %>
 <div class="featured featured-race"><%= data.race %></div>
 
 <div class="name"><%= data.first %> <%= data.last %></div>
@@ -27,7 +25,7 @@
 
 <div class="card-divider"></div>
 
-<div class="weapon"><strong>Armed:</strong> <em><%= data.weaponLabel %></em></div>
+<div class="weapon"><strong>Weapon:</strong> <em><%= data.weaponLabel %></em></div>
 
 <% if (data.image) { %>
   <% data.image.forEach(function(img) { %>

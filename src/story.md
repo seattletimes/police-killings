@@ -98,7 +98,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
   <aside class="question-box time">
     <%= t.include("_question.html", {
       title: "How many fatal encounters do you think happened during the afternoon?",
-      filter: "time-18",
+      filter: "time-12",
       options: [
         { data: "10%" },
         { data: "15%" },

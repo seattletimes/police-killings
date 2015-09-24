@@ -50,7 +50,7 @@ var showTooltip = function(target) {
     tooltip.innerHTML += `<div class="tooltip-ls"><li>Escapee shooting permitted</div>`;
   }
   if (target.law4 == "Y") {
-    tooltip.innerHTML += `<div class="tooltip-ls"><li>Warning required prior</div>`;
+    tooltip.innerHTML += `<div class="tooltip-ls"><li>Prior warning required</div>`;
   }
   if (target.law5 == "Y") {
     tooltip.innerHTML += `<div class="tooltip-ls"><li>No laws</div>`;

@@ -12,13 +12,14 @@ deadlyForceData.forEach(function(row, index) {
   row.weaponLabel = row.weapon;
 
   if (row.weapon == "Weapon - other") {
-    row.weapon = row.weaponDetail;
-    row.weaponLabel = row.weapon.replace(/^([a-z])|\s+([a-z])/, function(letter) {
+    row.weaponLabel = row.weaponDetail.replace(/^([a-z])|\s+([a-z])/, function(letter) {
       return letter.toUpperCase();
     });
-  }
-  if (row.weapon !== "No weapon") {
+    row.image = row.weaponDetail.toLowerCase().replace(/[\/\s]/g, "").split(",");
+  } else if (row.weapon !== "No weapon") {
     row.image = row.weapon.toLowerCase().replace(/[\/\s]/g, "").split(",");
+  } else {
+    row.weaponLabel = "None";
   }
 
   var parsedTime = row.time.match(/^(\d+):.*?([AP]M)$/);
