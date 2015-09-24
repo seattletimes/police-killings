@@ -13,7 +13,9 @@ for (var id in lawsByState) {
     var legality = state["law" + num];
     // return legality == "Y" ? palette[selectedLaw] : "#888";
     if (legality == "Y") {
-      poly.classList.add(lawClass);
+      //work around IE issue
+      var current = poly.getAttribute("class");
+      poly.setAttribute("class", `${current} ${lawClass}`);
     }
   });
 };
