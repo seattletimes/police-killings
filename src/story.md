@@ -12,7 +12,7 @@ In 1986, Washington's Legislature decided police officers shouldn't be prosecute
 
 "This almost perfect defense to a mistaken use of force has kept police officers out of court as defendants," King County Prosecutor Dan Satterberg has said.
 
-The Times analyzed 212 fatal police encounters from 2005 to 2014. Although the vast majority of the cases were deemed legally justified, others were controversial. But with the malice and good faith requirements, it was nearly impossible for prosecutors to bring criminal charges even if they concluded that an officer committed a wrongful killing.
+The Times analyzed 213 fatal police encounters from 2005 to 2014. Although the vast majority of the cases were deemed legally justified, others were controversial. But with the malice and good faith requirements, it was nearly impossible for prosecutors to bring criminal charges even if they concluded that an officer committed a wrongful killing.
 
 <aside class="image">
   <img src="./assets/images/PoliceMeadeCorvette.jpg">
@@ -25,7 +25,7 @@ In the lone case, an Everett police officer was charged with second-degree murde
 
 A Snohomish County jury, instructed to consider whether he acted with malice, acquitted the officer. 
 
-The Times also determined that a disproportionate number of the 212 deaths were African Americans &mdash; a troubling finding as the nation wrestles with a spate of police encounters that have led to the deaths of unarmed African Americans, spawning the "[Black Lives Matter](http://blacklivesmatter.com/)" movement. 
+The Times also determined that a disproportionate number of the 213 deaths were African Americans &mdash; a troubling finding as the nation wrestles with a spate of police encounters that have led to the deaths of unarmed African Americans, spawning the "[Black Lives Matter](http://blacklivesmatter.com/)" movement. 
 
 Prosecutors from the state's 39 counties, some concerned about the justifiable police homicide statute, will discuss whether to have the law changed at an Oct. 1 public meeting of the Washington Association of Prosecuting Attorneys.
 
@@ -40,7 +40,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
 
 <div class="by-the-numbers">
 
-  <em>With these questions, explore the data behind the 212 deaths:</em>
+  <em>With these questions, explore the data behind the 213 deaths:</em>
   <!-- Weapons -->
   <aside class="question-box weapon">
     <%= t.include("_question.html", {
@@ -62,7 +62,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
         { data: "other", label: "Other (5.7%)" },
         { data: "no-weapon", label: "No weapon (16%)" }
       ],
-      explanation: "Half of the 212 people killed by police had a firearm in their possession. Another 10 had fake guns that could have been mistaken for actual firearms. Others had such weapons as a cane, baseball bat or pool cue. Thirty-four had no weapon."
+      explanation: "Half of the 213 people killed by police had a firearm in their possession. Another 10 had fake guns that could have been mistaken for actual firearms. Others had such weapons as a cane, baseball bat or pool cue. Thirty-four had no weapon."
     }) %>
   </aside>
 
@@ -88,7 +88,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
         { data: "age-60", label: "60-69 (4.2%)" },
         { data: "age-70", label: "70+ (1.4%)" }
       ],
-      explanation: "Just seven of the deaths were teenagers. The youngest person was 16, the oldest 77. Nearly 40 percent were 40 or older. Only three of the 212 people killed by police were women."
+      explanation: "Just seven of the deaths were teenagers. The youngest person was 16, the oldest 77. Nearly 40 percent were 40 or older. Only three of the 213 people killed by police were women."
     }) %>
   </aside>
 
@@ -118,7 +118,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
 
 In 84 percent of the cases, police officers who used deadly force in Washington confronted people who had a weapon, typically a firearm. 
 
-Only three of the 212 were female, and seven were in their teens. Nearly 41 percent occurred during the day, defined as 6 a.m. to 6 p.m.
+Only three of the 213 were female, and seven were in their teens. Nearly 41 percent occurred during the day, defined as 6 a.m. to 6 p.m.
 
 Some numbers underscore the national concerns about deadly force. 
 
