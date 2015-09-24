@@ -8,7 +8,7 @@ In fact, that case is the only one to be brought in the three decades since Wash
 
 In 1986, Washington's Legislature decided police officers shouldn't be prosecuted for killing someone in the line of duty as long as they acted in good faith and without malice, or what the law calls "evil intent."
 
-<aside class="pullquote sidebar tweet" data-tweet="&quot;This almost perfect defense to a mistaken use of force has kept police officers out of court&quot;">
+<aside class="pullquote sidebar tweet" data-tweet="&quot;This almost perfect defense to a mistaken use of force has kept police officers out of court.&quot;">
   &ldquo;This <b>almost perfect defense</b> to a mistaken use of force <b>has kept police officers out of court</b> as defendants&rdquo;<i class="fa fa-twitter"></i>
 </aside>
 
