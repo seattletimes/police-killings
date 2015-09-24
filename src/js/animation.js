@@ -1,5 +1,6 @@
 //NPM
 var $ = require("jquery");
+var track = require("./lib/tracking");
 
 //utility
 var qsa = s => Array.prototype.slice.call(document.querySelectorAll(s));
@@ -8,6 +9,8 @@ var wait = (d, f) => setTimeout(f, d);
 
 //CSS
 var delay = (d) => (Math.random() * d).toFixed(2) + "s";
+
+var iOS = !!window.navigator.userAgent.match(/i(phone|pad)/i);
 
 var header = document.querySelector("header.splash");
 var squares = qsa("header.splash .dot:not(.conviction)");
@@ -25,6 +28,9 @@ reflow();
 
 header.classList.add("animation-start");
 
+header.classList.add(iOS ? "no-video" : "video-capable");
+
+
 var step = (d, n) => setTimeout(() => header.classList.add(`animation-step-${n}`), d);
 
 $(function() {
@@ -40,7 +46,7 @@ $(".play-video").one("click", function() {
   var vTag = `<video controls class="trailer">
     <source src="./assets/trailer.mp4"></source>
   </video>`;
-  header.innerHTML += vTag;
+  header.querySelector(".aspect-inner").innerHTML += vTag;
   var video = header.querySelector("video.trailer");
 
   video.addEventListener("ended", function() {
@@ -57,6 +63,9 @@ $(".play-video").one("click", function() {
       video.currentTime = 0;
     }
     video.play();
+
+
+    track("investigation-police", "played-header-video");
   };
 
   $(".play-video").on("click", playVideo);

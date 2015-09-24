@@ -56,6 +56,7 @@ header.splash {
     height: 100%;
     opacity: 0;
     transition: opacity .5s linear;
+    background: black;
 
     &.show {
       display: block;
@@ -217,24 +218,24 @@ header.splash {
     }
   }
   
-  &.animation-step-6 {  
+  &.animation-step-6.video-capable {  
     .conviction {
-      @media (min-width: 768px) {
-        width: 110px;
-        height: 110px;
-        // -webkit-transform: translateX(-20%) translateY(-20%);
-        // transform: translateX(-20%) translateY(-20%);
-        opacity: 1;
-        
-        .play-video {
-          opacity: 1;
-        }
-      }
+      width: 110px;
+      height: 110px;
+      // -webkit-transform: translateX(-20%) translateY(-20%);
+      // transform: translateX(-20%) translateY(-20%);
+      opacity: 1;
       
-      @media @tablet {
-        transition-duration: 1s;
-        opacity: 0;
+      .play-video {
+        opacity: 1;
       }
+    }
+  }
+
+  &.animation-step-6.no-video {
+    .conviction {
+      transition-duration: .5s;
+      opacity: .1;
     }
   }
   
