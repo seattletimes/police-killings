@@ -29,6 +29,7 @@ header.splash {
   display: block;
   text-align: center;
   position: relative;
+  background: black;
 
   .aspect-outer {
     max-width: 1200px;
@@ -84,8 +85,9 @@ header.splash {
   
   .opening, .closing {
     opacity: 0;
-    color: @df-dark-gray;
+    color: @df-light-gray;
     font-size: 32px;
+    line-height: 1.25;
     
     @media @tablet {
       font-size: 24px;
@@ -101,6 +103,10 @@ header.splash {
     transition: opacity 1s linear;
     opacity: 0;
     font-size: 64px;
+    margin: 0;
+    color: @df-light-gray;
+    text-transform: uppercase;
+    line-height: 1;
     
     @media @tablet {
       font-size: 36px;
@@ -120,7 +126,7 @@ header.splash {
       .center();
       .sizing();
       border-radius: 100%;
-      background: @dkBlue;
+      background: @mdBlue;
       opacity: 0;
     }
     
@@ -133,18 +139,33 @@ header.splash {
       overflow: hidden;
       
       .play-video {
+        white-space: nowrap;
         display: block;
         .center();
-        color: black;
+        color: white;
         text-align: center;
         font-family: @df-sans;
-        font-size: 32px;
+        font-size: 14px;
         line-height: 1;
-        text-transform: lowercase;
-        font-weight: bold;
+        text-transform: uppercase;
         opacity: 0;
         cursor: pointer;
         transition: opacity .5s linear;
+        z-index: 999;
+
+        .fa {
+          display: block;
+          font-size: 36px;
+          opacity: .7;
+          margin-bottom: 4px;
+          transition: opacity .2s linear;
+        }
+
+        &:hover {
+          .fa {
+            opacity: 1;
+          }
+        }
       }
     }
   }
@@ -205,12 +226,12 @@ header.splash {
   
   &.animation-step-5 {
     .opening, .closing {
-      opacity: 0;
+      opacity: .5;
     }
     
     .dot {
       transition-duration: .5s;
-      opacity: .1;
+      opacity: .5;
     }
     
     h1 {
