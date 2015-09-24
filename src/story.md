@@ -1,8 +1,10 @@
-Killings by police in the line of duty have surged in Washington over the past decade, according to a Seattle Times analysis. 
+<div class="bigger">
+  <div class="drop-cap">K</div>illings by police in the line of duty have surged in Washington over the past decade, according to a Seattle Times analysis. 
 
-During that period, only one police officer has been criminally charged in state courts with the illegal use of deadly force on the job.
+  During that period, only one police officer has been criminally charged in state courts with the illegal use of deadly force on the job.
 
-In fact, that case is the only one to be brought in the three decades since Washington enacted the nation's most restrictive law on holding officers accountable for the unjustified use of deadly force.
+  In fact, that case is the only one to be brought in the three decades since Washington enacted the nation's most restrictive law on holding officers accountable for the unjustified use of deadly force.
+</div>
 
 In 1986, Washington's Legislature decided police officers shouldn't be prosecuted for killing someone in the line of duty as long as they acted in good faith and without malice, or what the law calls "evil intent."
 
