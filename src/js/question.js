@@ -1,6 +1,7 @@
 var $ = require("jquery");
 var dot = require("./lib/dot");
 var card = dot.compile(require("./_card.html"));
+var track = require("./lib/tracking");
 
 var lookup = {};
 var logged = true;
@@ -146,6 +147,8 @@ var clearQuestion = function(action) {
 $(document.body).on("click", ".option", function(e) {
   var options = $(this).closest(".options");
   if (!options.hasClass("pending")) return;
+
+  track("investigation-police", "opened-question-box");
 
   var box = options.closest(".question-box")[0];
   var beforeBounds = box.getBoundingClientRect();

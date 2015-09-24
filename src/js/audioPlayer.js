@@ -2,6 +2,7 @@ var container = document.querySelector(".debate-player");
 var audio = container.querySelector("audio");
 
 var $ = require("jquery");
+var track = require("./lib/tracking");
 
 window.$ = $;
 
@@ -48,6 +49,8 @@ $.ajax("./assets/transcript.json").then(function(transcript) {
   }
 
   audio.addEventListener("timeupdate", update);
+
+  audio.addEventListener("playing", () => track("investigation-police", "played-audio"));
 
   tContainer.addEventListener("click", function(e) {
     var index = e.target.getAttribute("data-index");

@@ -1,4 +1,5 @@
 var $ = require("jquery");
+var track = require("./lib/tracking");
 
 var tweets = $(".tweet");
 
@@ -8,6 +9,7 @@ tweets.on("click", function() {
   var location = encodeURI(window.location.href);
   var url = `https://twitter.com/intent/tweet?text=${text}&url=${location}&via=seattletimes`;
   window.open(url, "_blank", "width=640,height=480,menubar=0,toolbar=0,location=0");
+  track("investigation-police", "prepped-tweet");
 });
 
 tweets.each(function() {

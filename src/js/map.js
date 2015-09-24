@@ -1,4 +1,5 @@
 var $ = require("jquery");
+var track = require("./lib/tracking");
 
 var map = $(".map-container");
 var selectedLaw;
@@ -22,6 +23,8 @@ $(".button-container").on("click", ".law-container", function(e) {
   map.attr("selected-law", `law${law}`);
   $(".law-container.selected").removeClass("selected");
   $(this).addClass("selected");
+
+  track("investigation-police", "changed-map-layer");
 });
 
 $(".law-container:first").click();
