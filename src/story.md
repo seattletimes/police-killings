@@ -121,7 +121,7 @@ Only three of the 213 were female, and seven were in their teens. Nearly 41 perc
 
 Some numbers underscore the national concerns about deadly force. 
 
-<aside class="pullquote sidebar tweet" data-tweet="Ten percent of those killed by police were black, a group that accounts for 3.6 percent of the state's population.">
+<aside class="pullquote sidebar tweet" data-tweet="Ten percent of those killed by police were black, vs. 3.6 percent of the state's population.">
   <b>Ten percent</b> of those killed by police were black, a group that accounts for <b>3.6 percent</b> of the state's population. <i class="fa fa-twitter"></i>
 </aside>
 
@@ -187,7 +187,7 @@ Responding to a night police call, an officer shined his flashlight on Garner in
 
 The Supreme Court ruled that using deadly force to prevent the escape of an unarmed suspect violated his constitutional rights. 
 
-<aside class="pullquote sidebar tweet" data-tweet="In a state with a less-restrictive law, Spokane’s Otto Zehm case may have resulted in criminal charges against an officer.">
+<aside class="pullquote sidebar tweet" data-tweet="In a state with a less-restrictive law, the Otto Zehm case may have resulted in criminal charges.">
   In a state with a less-restrictive law, Spokane’s Otto Zehm case <b>may have resulted in criminal charges against an officer</b>. <i class="fa fa-twitter"></i>
 </aside>
 
@@ -296,7 +296,7 @@ When Pasco police were not charged earlier this month after the homicide of rock
 
 ## Change the law?
 
-<aside class="pullquote sidebar tweet" data-tweet="&quo;We have to be careful here and not try to quench some national desire for a sacrificial cop by changing the law until we can convict somebody.&quo;">
+<aside class="pullquote sidebar tweet" data-tweet="&quo;We have to be careful here and not try to quench some national desire for a sacrificial cop&quo;">
   &ldquo;We have to be careful here and not try to quench some national desire for a sacrificial cop by changing the law until we can convict somebody&rdquo; <i class="fa fa-twitter"></i>
 </aside>
 

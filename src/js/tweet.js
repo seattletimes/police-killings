@@ -12,5 +12,6 @@ tweets.on("click", function() {
 
 tweets.each(function() {
   var text = this.getAttribute("data-tweet") || this.innerHTML;
+  text = text.replace(/\&quo;/g, "\"");
   if (text.length > 100) console.warn("Tweet too long: ", text);
 });
