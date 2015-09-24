@@ -15,6 +15,7 @@ for (var id in lawsByState) {
       poly.classList.add(lawClass);
     }
   });
+  console.log(id, poly);
 };
 
 $(".button-container").on("click", ".law-container", function(e) {
@@ -26,38 +27,40 @@ $(".button-container").on("click", ".law-container", function(e) {
 
 $(".law-container:first").click();
 
-map.find("svg").on("mouseenter", "text, polygon", function() {
-  var state = this.tagName.toLowerCase() == "text" ? this.innerHTML.trim() : this.id;
-
+map.find("svg").on("mouseenter", "g", function() {
+  var state = this.id;
   var obj = window.lawsByState[state];
   showTooltip(obj);
 });
 
-map.find("svg").on("mouseleave", "text, polygon", function() {
+map.find("svg").on("mouseleave", "g", function() {
   hideTooltip(this);
 });
 
 var showTooltip = function(target) {
   tooltip.classList.add("show");
-  tooltip.innerHTML = `<div class='tooltip-name'>${target.name}</div>`;
-  if (target.law1 == "Y") {
-    tooltip.innerHTML += `<div class="tooltip-ls"><li>Malicious intent and bad faith required</div>`;
+  var laws = {
+    law1: "Malicious intent and bad faith required",
+    law2: "Riot suppression allowed",
+    law3: "Escapee shooting permitted",
+    law4: "Prior warning required",
+    law5: "No laws"
+  };
+  var hasLaw = false;
+  var lawItems = "";
+  for (var key in laws) {
+    if (target[key] == "Y") {
+      hasLaw = true;
+      lawItems += `<li>${laws[key]}</li>`;
+    }
   }
-  if (target.law2 == "Y") {
-    tooltip.innerHTML += `<div class="tooltip-ls"><li>Riot suppression allowed</div>`;
+  if (!hasLaw) {
+    lawItems = "None of listed laws apply."
   }
-  if (target.law3 == "Y") {
-    tooltip.innerHTML += `<div class="tooltip-ls"><li>Escapee shooting permitted</div>`;
-  }
-  if (target.law4 == "Y") {
-    tooltip.innerHTML += `<div class="tooltip-ls"><li>Prior warning required</div>`;
-  }
-  if (target.law5 == "Y") {
-    tooltip.innerHTML += `<div class="tooltip-ls"><li>No laws</div>`;
-  }
-  if (target.law1 == "N" & target.law2 == "N" & target.law3 == "N" & target.law4 == "N" & target.law5 == "N") {
-    tooltip.innerHTML += "None of listed laws apply."
-  }
+  tooltip.innerHTML = `
+  <div class='tooltip-name'>${target.name}</div>
+  <ul class="tooltip-ls">${lawItems}</ul>
+  `;
 };
 
 var hideTooltip = function(target) {

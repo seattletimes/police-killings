@@ -50,34 +50,39 @@ h2 {
 .map-container {
   position: relative;
   .flex(1 1 66%);
+  .flex-order(1);
 
-  &[selected-law=law1] .law1-hex {
+  &[selected-law=law1] .law1-hex polygon {
     fill: @malice !important;
   }
-  &[selected-law=law2] .law2-hex {
+  &[selected-law=law2] .law2-hex polygon {
     fill: @riot !important;
   }
-  &[selected-law=law3] .law3-hex {
+  &[selected-law=law3] .law3-hex polygon {
     fill: @escapee !important;
   }
-  &[selected-law=law4] .law4-hex {
+  &[selected-law=law4] .law4-hex polygon {
     fill: @warning !important;
   }
-  &[selected-law=law5] .law5-hex {
+  &[selected-law=law5] .law5-hex polygon {
     fill: @none !important;
   }
 
-  polygon {
-    &:hover {
+  g {
+    polygon {
+      transition: fill .2s linear;
+    }
+
+    &:hover polygon {
       cursor: pointer;
       fill: #666;
     }
-    transition: fill .2s linear;
   }
 
   text {
     fill: white;
     cursor: pointer;
+    font-family: @df-sans;
   }
 }
 
@@ -86,6 +91,7 @@ h2 {
   .flex(0 0 300px);
   padding: 0 8px;
   font-size: 14px;
+  .flex-order(0);
 
   :hover {
     cursor: pointer;
@@ -148,6 +154,13 @@ h2 {
   padding: 5px;
   border: 1px solid @df-light-gray;
   white-space: nowrap;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, .2);
+
+  .tooltip-ls {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 
   &.show {
     display: block;
