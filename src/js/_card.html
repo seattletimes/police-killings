@@ -1,10 +1,12 @@
 <div class="featured featured-weapon">Armed with <%= data.weapon %></div>
 <div class="featured featured-age"><%= data.age %> years old</div>
-<% if (data.time) { %>
-  <div class="featured featured-time">
+<div class="featured featured-time">
+  <% if (data.time) { %>
     <%= data.time %>
-  </div>
-<% } %>
+  <% } else { %>
+    Time unknown
+  <% } %>
+</div>
 <div class="featured featured-race"><%= data.race %></div>
 
 <div class="name"><%= data.first %> <%= data.last %></div>

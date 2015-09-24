@@ -28,7 +28,7 @@ deadlyForceData.forEach(function(row, index) {
     var [, hour, amPm] = parsedTime;
     hour = Number(hour);
   } else {
-    hour = -1;
+    hour = 99999;
   }
   if (amPm == "AM" && hour == 12) hour = 0;
   if (amPm == "PM" && hour < 12) hour += 12;
@@ -38,19 +38,15 @@ deadlyForceData.forEach(function(row, index) {
   lookup[index] = row;
 });
 
+var weaponIndex = [ "Firearm", "Fake gun", "Knife/blade", "Vehicle", "Weapon - other", "No weapon" ];
+
 var makeSquares = function(grid, sort) {
   switch (sort) {
 
-    case "age":
+    case "weapon":
       deadlyForceData.sort(function(a,b) {
-        if (a[sort] < b[sort]) return -1;
-        if (a[sort] > b[sort]) return 1;
-        return 0;
-      });
-    case "hour":
-      deadlyForceData.sort(function(a,b) {
-        if (a[sort] < b[sort]) return -1;
-        if (a[sort] > b[sort]) return 1;
+        if (weaponIndex.indexOf(a[sort]) < weaponIndex.indexOf(b[sort])) return -1;
+        if (weaponIndex.indexOf(a[sort]) > weaponIndex.indexOf(b[sort])) return 1;
         return 0;
       });
 
@@ -58,8 +54,8 @@ var makeSquares = function(grid, sort) {
 
     default:
       deadlyForceData.sort(function(a,b) {
-        if (a[sort] < b[sort]) return 1;
-        if (a[sort] > b[sort]) return -1;
+        if (a[sort] < b[sort]) return -1;
+        if (a[sort] > b[sort]) return 1;
         return 0;
       });
   }
