@@ -7,3 +7,4 @@ require("./audioPlayer");
 require("./question");
 require("./map");
 require("./tweet");
+require("./animation");

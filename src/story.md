@@ -1,5 +1,3 @@
-<h2 class="deck">While most killings by police are deemed justified, controversial cases are nearly impossible to prosecute under Washington’s unique law.</h2>
-
 Killings by police in the line of duty have surged in Washington over the past decade, according to a Seattle Times analysis. 
 
 During that period, only one police officer has been criminally charged in state courts with the illegal use of deadly force on the job.
@@ -146,7 +144,7 @@ The law's malice language creates a bar that is "almost impossible to get over" 
 
 In Seattle, for example, the 2010 shooting of John T. Williams sparked outrage when [patrol-car video and audio](http://www.seattletimes.com/seattle-news/police-video-documents-fatal-encounter-between-officer-and-woodcarver/) revealed then-officer Ian Birk had given the First Nations woodcarver about four seconds to drop a knife before opening fire.
 
-The Police Department [found the shooting unjustified](http://www.seattletimes.com/seattle-news/officer-birk-quits-after-spd-rebuke/) under its policies, Birk resigned and the city paid Williams' family $1.5 million. The fallout from the shooting led  in part to the U.S. Justice Department demands that  Seattle police adopt reforms to curb excessive force.
+The Police Department [found the shooting unjustified](http://www.seattletimes.com/seattle-news/officer-birk-quits-after-spd-rebuke/) under its policies, Birk resigned and the city paid Williams' family $1.5 million. The fallout from the shooting led  in part to the [U.S. Justice Department demands](http://www.seattletimes.com/seattle-news/spd-faces-new-oversight-scrutiny-of-use-of-force/) that  Seattle police adopt reforms to curb excessive force.
 
 But no criminal charges were filed, which caused some community outcry. Despite believing Birk misread the situation, Satterberg decided his office wouldn't be able to prove beyond a reasonable doubt that Birk acted with malice and bad faith and didn't have a "subjective belief" he needed to defend himself.
 

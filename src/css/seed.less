@@ -8,15 +8,16 @@
 @fatface: Abril Fatface, @df-serif;
 
 @import "seattletimes";
-@import "social";
+
 @import "audio";
-@import "video";
-@import "question";
-@import "map";
-@import "question";
-@import "header";
 @import "comments";
 @import "footer";
+@import "header";
+@import "map";
+@import "question";
+@import "question";
+@import "social";
+@import "video";
 
 .metadata {
   display: block;
@@ -34,6 +35,15 @@
 h2 {
   font-family: @fatface;
   font-size: 26px;
+  
+  @media @mobile {
+    font-size: 20px;
+  }
+  
+  &.deck {
+    max-width: 960px;
+    margin: 20px auto;
+  }
 }
 
 main.story {

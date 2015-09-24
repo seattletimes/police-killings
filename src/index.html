@@ -13,16 +13,41 @@
 
     <%= t.include("partials/_dfHeader.html") %>
 
-    <header class="splash">
+    <header class="splash no-js">
       <div class="aspect-outer">
         <div class="aspect-inner">
           <video controls>
             <source src="./assets/trailer.mp4"></source>
           </video>
+          <div class="stage">
+            <div class="opening">
+              212 people were killed by police in Washington from 2005 to 2014.
+            </div>
+            <div class="dots">
+              <% for (var i = 0; i < 211; i++) { %>
+              <div class="spacer">
+                <div class="dot"></div>
+              </div>
+              <% } %>
+              <div class="spacer">
+                <div class="conviction">
+                  <a class="play-video">Play<br>video</a>
+                </div>
+              </div>
+            </div>
+            <div class="closing">
+              One officer was charged.
+            </div>
+            <h1>Shielded by the law</h1>
+          </div>
         </div>
       </div>
-      <h1>Shielded by the law</h1>
     </header>
+    
+    <!-- trigger styles -->
+    <script>document.querySelector("header.splash").classList.remove("no-js")</script>
+    
+    <h2 class="deck">While most killings by police are deemed justified, controversial cases are nearly impossible to prosecute under Washington’s unique law.</h2>
 
     <section class="metadata">
       <div class="byline">By Steve Miletich, Christine Willmsen, Mike Carter, and Justin Mayo</div>

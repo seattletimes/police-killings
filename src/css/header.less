@@ -1,5 +1,31 @@
+@desktop-dot: 20px;
+@tablet-dot: 16px;
+@mobile-dot: 8px;
+
+.center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.sizing() {
+  width: @desktop-dot;
+  height: @desktop-dot;
+  
+  @media @tablet {
+    width: @tablet-dot;
+    height: @tablet-dot;
+  }
+  
+  @media @mobile {
+    width: @mobile-dot;
+    height: @mobile-dot;
+  }
+}
+
 header.splash {
-  background: black;
   display: block;
   text-align: center;
   position: relative;
@@ -12,23 +38,200 @@ header.splash {
       height: 0;
       padding-bottom: percentage(9 / 16);
       position: relative;
+      
+      @media @tablet {
+        height: auto;
+        padding: 20px 0;
+        position: static;
+      }
     }
   }
 
   video {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    
+    @media @tablet {
+      display: none;
+    }
   }
-
+  
+  .stage {
+    .center();
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+    line-height: 1;
+    
+    @media @tablet {
+      position: static;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  .opening, .closing {
+    opacity: 0;
+    color: @df-dark-gray;
+    font-size: 32px;
+    
+    @media @tablet {
+      font-size: 24px;
+    }
+  }
+  
   h1 {
-    position: absolute;
-    color: white;
-    z-index: 999;
-    top: 0;
-    left: 0;
+    display: block;
+    width: 100%;
+    .center();
+    font-family: @fatface;
+    padding: 10px;
+    transition: opacity 1s linear;
+    opacity: 0;
+    font-size: 64px;
+    
+    @media @tablet {
+      font-size: 36px;
+    }
+  }
+  
+  .dots {
+    margin: 10px 0;
+  }
+  
+  .spacer {
+    display: inline-block;
+    position: relative;
+    .sizing();
+    
+    .dot {
+      .center();
+      .sizing();
+      border-radius: 100%;
+      background: @dkBlue;
+      opacity: 0;
+    }
+    
+    .conviction {
+      .center();
+      .sizing();
+      border-radius: 100%;
+      background: @dkOrange;
+      opacity: 0;
+      overflow: hidden;
+      
+      .play-video {
+        display: block;
+        .center();
+        color: black;
+        text-align: center;
+        font-family: @df-sans;
+        font-size: 32px;
+        line-height: 1;
+        text-transform: lowercase;
+        font-weight: bold;
+        opacity: 0;
+        cursor: pointer;
+        transition: opacity .5s linear;
+      }
+    }
+  }
+  
+  &.no-js {
+    .opening, .closing {
+      opacity: 1;
+    }
+    
+    .dot, .conviction {
+      opacity: 1;
+    }
+  }
+  
+  &.animation-start {
+    .opening, .closing {
+      transition: opacity 1s linear;
+    }
+    
+    .dot {
+      transition-property: opacity;
+      transition-delay: 0s;
+      transition-duration: .5s;
+      transition-timing-function: linear;
+    }
+    
+    .conviction {
+      transition-property: opacity, width, height, -webkit-transform;
+      transition-property: opacity, width, height, transform;
+      transition-duration: .5s;
+      transition-timing-function: linear, ease-in-out, ease-in-out, ease-in-out;
+    }
+  }
+  
+  &.animation-step-1 {
+    .opening {
+      opacity: 1;
+    }
+  }
+  
+  &.animation-step-2 {
+    .dot {
+      opacity: 1;
+    }
+  }
+  
+  &.animation-step-3 {
+    .closing {
+      opacity: 1;
+    }
+  }
+  
+  &.animation-step-4 {
+    .conviction {
+      opacity: 1;
+    }
+  }
+  
+  &.animation-step-5 {
+    .opening, .closing {
+      opacity: 0;
+    }
+    
+    .dot {
+      transition-duration: .5s;
+      opacity: .1;
+    }
+    
+    h1 {
+      opacity: 1;
+    }
+  }
+  
+  &.animation-step-6 {  
+    .conviction {
+      @media (min-width: 768px) {
+        width: 110px;
+        height: 110px;
+        // -webkit-transform: translateX(-20%) translateY(-20%);
+        // transform: translateX(-20%) translateY(-20%);
+        opacity: 1;
+        
+        .play-video {
+          opacity: 1;
+        }
+      }
+      
+      @media @tablet {
+        transition-duration: 1s;
+        opacity: 0;
+      }
+    }
+  }
+  
+  &.animation-step-7 {
   }
 
 }
