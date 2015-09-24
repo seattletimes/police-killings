@@ -112,7 +112,7 @@ The numbers of people killed by police from 2005 to 2009 averaged 16 deaths per 
         { data: "time-12", label: "<i class='fa fa-sun-o'></i> Noon - 6 p.m. (25.4%)", selected: "selected" },
         { data: "time-18", label: "<i class='fa fa-moon-o'></i> 6 p.m. - midnight (36.2%)" }
       ],
-      explanation: "While evening hours saw the highest number of fatal police encounters, 25 percent of incidents occurred in the afternoon, with another 16 percent occurring earlier in the day."
+      explanation: "While evening hours saw the highest number of fatal police encounters, 25 percent of incidents occurred during the afternoon, with another 16 percent occurring earlier in the day."
     }) %>
   </aside>
 </div>
@@ -130,6 +130,10 @@ Some numbers underscore the national concerns about deadly force.
 About 10 percent of those killed were black, a group that accounts for 3.6 percent of the state’s population. Blacks were also overrepresented among those without a weapon, accounting for nearly 15 percent of that group.
 
 In King County, where blacks represent 6.3 percent of the population, they accounted for more than 20 percent of deaths. 
+
+<aside class="race-graph">
+  <%= t.include("_race.html") %>
+</aside>
 
 Satterberg said he saw the recent videos of police encounters nationwide that "make you sick." He said it's no surprise these "awful but lawful" cases have people demanding change.
 
