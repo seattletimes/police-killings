@@ -115,32 +115,37 @@ $(".grid").each(function() {
   makeSquares(this, this.getAttribute("data-sort"));
 });
 
-var clearQuestion = function() {
+var clearQuestion = function(action) {
   $(".options").addClass("pending");
   $(".correct").removeClass("green");
   $(".chosen").removeClass("chosen");
   $(".hide-question.visible").removeClass("visible");
-  $(".answer.open").slideUp();
+  if (action == "slide") {
+    $(".answer").slideUp();
+  } else {
+    $(".answer").hide();
+  }
 }
 
 $(document.body).on("click", ".option", function(e) {
   var options = $(this).closest(".options");
   if (!options.hasClass("pending")) return;
 
-  clearQuestion();
+  clearQuestion("hide");
+  var _ = document.body.offsetWidth;
+  options.closest(".question-box")[0].scrollIntoView();
 
   options.removeClass("pending");
   options.siblings(".hide-question").addClass("visible");
   var answer = options.siblings(".answer");
   answer.slideDown();
-  answer.addClass("open");
 
   options.children(".correct").addClass("green");
   e.target.classList.add("chosen");
 });
 
 $(document.body).on("click", ".hide-question", function(e) {
-    clearQuestion();
+    clearQuestion("slide");
 });
 
 $(document.body).on("click", ".toggle", function(e) {

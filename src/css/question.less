@@ -8,7 +8,7 @@
   margin: 20px 0;
 
   @media @mobile {
-    padding: 5px 15px;
+    padding: 0;
   }
 }
 
@@ -154,9 +154,24 @@
   padding-bottom: 20px;
 }
 
+.mobile-grid-explainer {
+  display: none;
+  font-size: 14px;
+  font-style: italic;
+  padding-top: 15px;
+
+  @media @mobile {
+    display: block;
+  }
+}
+
 .grid-container {
   .display-flex();
   margin-top: 5px;
+
+  @media @mobile {
+    margin-top: 0;
+  }
 }
 
 .individual {
@@ -198,12 +213,22 @@
   width: 15px;
   background: @ltBlue;
   display: inline-block;
-  margin: 2px;
+  margin: 1.5px;
   transition: background .3s linear;
   cursor: pointer;
 
   &:hover, &.selected {
     border: 3px solid @dkOrange;
+  }
+
+  @media @mobile {
+    cursor: default;
+    height: 10px;
+    width: 10px;
+
+    &:hover, &.selected {
+      border: none;
+    }
   }
 }
 
