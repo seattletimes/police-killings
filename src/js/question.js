@@ -147,9 +147,21 @@ $(document.body).on("click", ".option", function(e) {
   var options = $(this).closest(".options");
   if (!options.hasClass("pending")) return;
 
-  clearQuestion("hide");
+  var box = options.closest(".question-box")[0];
+  var beforeBounds = box.getBoundingClientRect();
+  var isMobile = window.matchMedia && window.matchMedia("(max-width: 800px)").matches;
+  clearQuestion(isMobile ? "hide" : "slide");
   var _ = document.body.offsetWidth;
-  options.closest(".question-box")[0].scrollIntoView();
+  var bounds = box.getBoundingClientRect();
+  var delta = bounds.top - beforeBounds.top;
+  var scrollContainer = document.documentElement.scrollTop ? document.documentElement : document.body;
+  scrollContainer.scrollTop += delta;
+  if (isMobile) {
+    var top = box.offsetTop;
+    $(scrollContainer).animate({
+      scrollTop: top
+    });
+  }
 
   options.removeClass("pending");
   options.siblings(".hide-question").addClass("visible");
