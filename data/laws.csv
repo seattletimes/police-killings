@@ -10,7 +10,7 @@ Delaware,DE,N,Y,Y,N,N
 Florida,FL,N,N,N,Y,N
 Georgia,GA,N,N,Y,N,N
 Hawaii,HI,N,N,Y,N,N
-Idaho,ID,N,Y,Y,N,N
+Idaho,ID,N,Y,N,N,N
 Illinois,IL,N,N,N,N,N
 Indiana,IN,N,N,Y,Y,N
 Iowa,IA,N,N,N,N,N
@@ -29,7 +29,7 @@ Nebraska,NE,N,Y,Y,N,N
 Nevada,NV,N,N,N,Y,N
 New Hampshire,NH,N,N,Y,N,N
 New Jersey,NJ,N,N,Y,N,N
-New Mexico,NM,N,N,Y,Y,N
+New Mexico,NM,N,N,N,Y,N
 New York,NY,N,N,Y,N,N
 North Carolina,NC,N,N,Y,N,N
 North Dakota,ND,N,N,Y,N,N

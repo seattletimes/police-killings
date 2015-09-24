@@ -42,9 +42,9 @@ var showTooltip = function(target) {
   var laws = {
     law1: "Malicious intent and bad faith required",
     law2: "Riot suppression allowed",
-    law3: "Escapee shooting permitted",
+    law3: "Escapee shooting allowed",
     law4: "Prior warning required",
-    law5: "No laws"
+    law5: "No specific laws"
   };
   var hasLaw = false;
   var lawItems = "";

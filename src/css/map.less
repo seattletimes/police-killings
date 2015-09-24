@@ -13,10 +13,6 @@ main.story aside.map {
       text-align: center;
       border-bottom: 1px solid @df-light-gray;
 
-      strong {
-        display: block;
-      }
-
       .long {
         display: none;
       }
@@ -88,8 +84,8 @@ h2 {
 
 
 .button-container{
-  .flex(0 0 300px);
-  padding: 0 8px;
+  .flex(0 0 350px);
+  padding: 10px 24px 0 8px;
   font-size: 14px;
   .flex-order(0);
 
@@ -100,6 +96,12 @@ h2 {
   @media @mobile {
     display: block;
     padding: 0;
+  }
+
+  .button-header {
+    font-family: Abril Fatface;
+    font-size: 18px;
+    padding-bottom: 10px;
   }
 
   .law-container {
@@ -179,5 +181,7 @@ h2 {
 
 .source {
   font-style: italic;
+  font-size: 12px;
   padding-top: 10px;
+  color: @df-middle-gray;
 }
