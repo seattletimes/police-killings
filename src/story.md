@@ -282,7 +282,7 @@ In a [June report](https://www.amnestyusa.org/sites/default/files/aiusa_deadlyfo
 
 Putting himself in the mind of the police officer, he explained: "Unless you can demonstrate that I have this evil motive, I'm not guilty."
 
-<aside class="pullquote sidebar tweet" data-tweet="&quo;It is virtually a license to kill.&quo;">
+<aside class="pullquote sidebar tweet bigger" data-tweet="&quo;It is virtually a license to kill.&quo;">
   &ldquo;It is virtually a license to kill.&rdquo; <i class="fa fa-twitter"></i>
 </aside>
 
