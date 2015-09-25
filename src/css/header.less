@@ -97,6 +97,12 @@ header.splash {
       font-size: 24px;
     }
   }
+
+  .closing {
+    @media @mobile {
+      padding-top: 10px;
+    }
+  }
   
   h1 {
     display: block;
@@ -165,7 +171,7 @@ header.splash {
       transition-duration: .5s, 1s;
       transition-timing-function: linear, ease-out;
 
-      @play-size: 110px;
+      @play-size: 60px;
       width: @play-size;
       height: @play-size;
 
@@ -190,7 +196,7 @@ header.splash {
         color: white;
         text-align: center;
         font-family: @df-sans;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1;
         text-transform: uppercase;
         opacity: 0;
@@ -200,7 +206,7 @@ header.splash {
 
         .fa {
           display: block;
-          font-size: 36px;
+          font-size: 20px;
           opacity: .7;
           margin-bottom: 4px;
           transition: opacity .2s linear;

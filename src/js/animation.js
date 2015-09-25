@@ -52,7 +52,7 @@ $(function() {
   step(9000, 5, function() {
 
     //only devices with video playback get the fun zoom
-    if (iOS) return;
+    if (true || iOS) return;
 
     var spacer = header.querySelector(".spacer.movable");
     var first = spacer.getBoundingClientRect();
