@@ -74,12 +74,17 @@ main.story {
 }
 
 .nerdbox {
+  .display-flex();
   padding: 30px;
   margin: 36px auto;
   margin-top: 26px;
   background: @gray;
   font-size: 15px;
-  max-width: 600px;
+  max-width: 900px;
+
+  @media @mobile {
+    display: block;
+  }
 }
 
 .copyright {
