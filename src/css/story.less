@@ -1,0 +1,91 @@
+.metadata {
+  display: block;
+  max-width: 900px;
+  margin: auto;
+  padding: 0 10px;
+  padding-top: 10px;
+  color: @df-middle-gray;
+  font-size: 16px;
+  font-family: @df-sans;
+
+  .byline {
+    font-size: 19px;
+    font-family: @fatface;
+    color: black;
+    padding-top: 8px;
+  }
+}
+
+h2 {
+  font-family: @fatface;
+  font-size: 26px;
+  
+  @media @mobile {
+    font-size: 20px;
+  }
+  
+  &.deck {
+    max-width: 960px;
+    margin: 20px auto;
+  }
+}
+
+main.story {
+  max-width: 900px;
+  padding: 0 10px;
+  padding-top: 20px;
+  margin: auto;
+  font-size: 17px;
+
+  > * {
+    width: 66%;
+
+    @media @tablet {
+      width: 100%;
+    }
+  }
+
+  .bigger {
+    font-size: 24px;
+    width: 100%;
+
+    @media @mobile {
+      font-size: 17px;
+    }
+  }
+
+  .drop-cap {
+    font-size: 60px;
+    font-family: @fatface;
+    float: left;
+    vertical-align: top;
+    line-height: 1;
+    width: auto;
+    background: @mdBlue;
+    // border-radius: 100%;
+    color: @df-off-white;
+    padding: 4px 8px 6px 10px;
+    margin-right: 8px;
+  }
+
+  .deck {
+    width: 100%;
+  }
+}
+
+.nerdbox {
+  padding: 30px;
+  margin: 36px auto;
+  margin-top: 26px;
+  background: @gray;
+  font-size: 15px;
+  max-width: 600px;
+}
+
+.copyright {
+  font-size: 14px;
+  text-align: center;
+  color: @df-middle-gray;
+  margin: 20px 0;
+  font-family: @df-sans;
+}
