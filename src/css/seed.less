@@ -9,6 +9,7 @@
 
 @import "seattletimes";
 
+@import "asides";
 @import "audio";
 @import "comments";
 @import "footer";
@@ -16,8 +17,6 @@
 @import "map";
 @import "race";
 @import "question";
-@import "question";
-@import "social";
 @import "video";
 
 .metadata {
@@ -49,6 +48,14 @@ h2 {
   &.deck {
     max-width: 960px;
     margin: 20px auto;
+  }
+}
+
+.share {
+  z-index: 9999999;
+
+  &.share-top {
+    padding-top: 4px;
   }
 }
 
@@ -92,57 +99,6 @@ main.story {
 
   .deck {
     width: 100%;
-  }
-
-  aside.sidebar {
-    float: right;
-    padding: 16px;
-    width: 32%;
-    background: @gray;
-    clear: both;
-    margin-top: 12px;
-    margin-bottom: 12px;
-
-    &.pullquote {
-      font-family: @fatface;
-      font-size: 24px;
-      line-height: 34px;
-      padding: 14px;
-      background: white;
-    }
-
-    @media @tablet {
-      margin-right: 0px;
-      width: 50%;
-    }
-
-    @media @mobile {
-      float: none;
-      display: block;
-      width: 100%;
-      margin-left: 0;
-    }
-  }
-
-  aside.image {
-    width: 50%;
-    float: right;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    margin-left: 16px;
-    display: block;
-    clear: right;
-
-    .caption {
-      font-family: @df-sans;
-      font-size: 13px;
-    }
-
-    @media @tablet {
-      width: 100%;
-      float: none;
-      margin-left: 0;
-    }
   }
 }
 
