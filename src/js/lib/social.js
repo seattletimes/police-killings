@@ -20,7 +20,8 @@ var s = new Share(".share", {
       url: addQuery(here, utm("google+"))
     },
     twitter: {
-      url: addQuery(here, utm("twitter"))
+      url: addQuery(here, utm("twitter")),
+      description: "#KilledByPolice special report: It's 'almost impossible' to charge officers, say prosecutors."
     },
     facebook: {
       url: addQuery(here, utm("facebook"))
@@ -42,7 +43,8 @@ var sb = new Share(".share.bottom", {
       url: addQuery(here, utm("google+"))
     },
     twitter: {
-      url: addQuery(here, utm("twitter"))
+      url: addQuery(here, utm("twitter")),
+      description: "#KilledByPolice special report: It's 'almost impossible' to charge officers, say prosecutors."
     },
     facebook: {
       url: addQuery(here, utm("facebook"))
