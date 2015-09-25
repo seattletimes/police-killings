@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <%= t.include("partials/_adHead.html") %>
   </head>
-  <body>
+  <body class="no-js">
 
     <%= t.include("partials/_dfHeader.html") %>
+    <script>
+document.body.classList.remove("no-js");
+    </script>
 
-    <header class="splash no-js">
+    <header class="splash">
       <div class="aspect-outer">
         <div class="aspect-inner">
           <div class="stage">
@@ -41,11 +44,6 @@
       </div>
     </header>
     
-    <!-- trigger styles -->
-    <script>document.querySelector("header.splash").classList.remove("no-js")</script>
-    
-
-
     <section class="metadata">
       <div class="byline">By Steve Miletich, Christine Willmsen, Mike Carter, and Justin Mayo</div>
       <div class="date">Published September 26, 2015</div>
