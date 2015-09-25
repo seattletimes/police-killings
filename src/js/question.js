@@ -144,7 +144,7 @@ var clearQuestion = function(action) {
   }
 }
 
-$(document.body).on("click", ".option", function(e) {
+$(".question-box").on("click", ".option", function(e) {
   var options = $(this).closest(".options");
   if (!options.hasClass("pending")) return;
 
@@ -175,11 +175,11 @@ $(document.body).on("click", ".option", function(e) {
   e.target.classList.add("chosen");
 });
 
-$(document.body).on("click", ".hide-question", function(e) {
+$(".question-box").on("click", ".hide-question", function(e) {
     clearQuestion("slide");
 });
 
-$(document.body).on("click", ".toggle", function(e) {
+$(".question-box").on("click", ".toggle", function(e) {
   var toggle = this.getAttribute("data-filter");
   var $this = $(this);
   $this.closest(".answer").attr("data-filter", toggle);
