@@ -2,12 +2,15 @@
 @tablet-dot: 16px;
 @mobile-dot: 8px;
 
+@center-transform: translateX(-50%) translateY(-50%);
+@gpu: translateZ(0);
+
 .center() {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: @center-transform;
+  transform: @center-transform;
 }
 
 .sizing() {
@@ -125,22 +128,60 @@ header.splash {
     position: relative;
     .sizing();
     z-index: 999;
+
+    &.animated {
+      transition: all .5s ease-in-out;
+    }
+
+    &.relocated {
+      position: absolute;
+      display: block;
+      left: 50%;
+      text-align: center;
+    }
     
     .dot {
       .center();
       .sizing();
       border-radius: 100%;
       background: @mdBlue;
-      opacity: 0;
+      opacity: .001;
+
+      transition-property: opacity;
+      transition-delay: 0s;
+      transition-duration: .5s;
+      transition-timing-function: linear;
     }
     
-    .conviction {
+    .charged {
       .center();
-      .sizing();
       border-radius: 100%;
       background: @dkOrange;
       opacity: 0;
       overflow: hidden;
+
+      transition-property: opacity, -webkit-transform;
+      transition-property: opacity, transform;
+      transition-duration: .5s, 1s;
+      transition-timing-function: linear, ease-out;
+
+      @play-size: 100px;
+      width: @play-size;
+      height: @play-size;
+
+      //desktop squash
+      -webkit-transform: @center-transform @gpu scale(unit(@desktop-dot / @play-size));
+      transform: @center-transform @gpu scale(unit(@desktop-dot / @play-size));
+
+      @media @tablet {
+        -webkit-transform: @center-transform @gpu scale(unit(@tablet-dot / @play-size));
+        transform: @center-transform @gpu scale(unit(@tablet-dot / @play-size));
+      }
+
+      @media @mobile {
+        -webkit-transform: @center-transform @gpu scale(unit(@mobile-dot / @play-size));
+        transform: @center-transform @gpu scale(unit(@mobile-dot / @play-size));
+      }
       
       .play-video {
         white-space: nowrap;
@@ -179,7 +220,7 @@ header.splash {
       opacity: 1;
     }
     
-    .dot, .conviction {
+    .dot, .charged {
       opacity: 1;
     }
     
@@ -191,20 +232,6 @@ header.splash {
   &.animation-start {
     .opening, .closing {
       transition: opacity 1s linear;
-    }
-    
-    .dot {
-      transition-property: opacity;
-      transition-delay: 0s;
-      transition-duration: .5s;
-      transition-timing-function: linear;
-    }
-    
-    .conviction {
-      transition-property: opacity, width, height, -webkit-transform;
-      transition-property: opacity, width, height, transform;
-      transition-duration: .5s;
-      transition-timing-function: linear, ease-in-out, ease-in-out, ease-in-out;
     }
   }
   
@@ -227,14 +254,18 @@ header.splash {
   }
   
   &.animation-step-4 {
-    .conviction {
+    .charged {
       opacity: 1;
     }
   }
   
   &.animation-step-5 {
     .opening, .closing {
-      opacity: .5;
+      opacity: .3;
+
+      @media @mobile {
+        opacity: .2;
+      }
     }
     
     .dot {
@@ -248,12 +279,10 @@ header.splash {
   }
   
   &.animation-step-6.video-capable {  
-    .conviction {
-      width: 110px;
-      height: 110px;
-      // -webkit-transform: translateX(-20%) translateY(-20%);
-      // transform: translateX(-20%) translateY(-20%);
+    .charged {
       opacity: 1;
+      -webkit-transform: @center-transform @gpu scale(1);
+      transform: @center-transform @gpu scale(1);
       
       .play-video {
         opacity: 1;
@@ -262,9 +291,9 @@ header.splash {
   }
 
   &.animation-step-6.no-video {
-    .conviction {
+    .charged {
       transition-duration: .5s;
-      opacity: .1;
+      opacity: .5;
     }
   }
   

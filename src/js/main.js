@@ -8,3 +8,4 @@ require("./question");
 require("./map");
 require("./tweet");
 require("./animation");
+require("./lazyLoad");

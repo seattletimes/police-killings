@@ -31,15 +31,47 @@ header.classList.add("animation-start");
 header.classList.add(iOS ? "no-video" : "video-capable");
 
 
-var step = (d, n) => setTimeout(() => header.classList.add(`animation-step-${n}`), d);
+var step = (d, n, f) => setTimeout(function() {
+  header.classList.add(`animation-step-${n}`);
+  if (f) f();
+}, d);
 
 $(function() {
+  //hide share button, it interferes on mobile
+  $(".share:first").css({ display: "none" });
+
+  //fade in first sentence
   step(50, 1);
+  //fade in circles
   step(1000, 2);
+  //second sentence
   step(5500, 3);
+  //prosecution comes in
   step(7000, 4);
-  step(9000, 5);
-  step(9500, 6);
+  //bring in title, circles fade back out
+  step(9000, 5, function() {
+
+    //only devices with video playback get the fun zoom
+    if (iOS) return;
+
+    var spacer = header.querySelector(".spacer.movable");
+    var first = spacer.getBoundingClientRect();
+    spacer.classList.add("relocated");
+    var last = spacer.getBoundingClientRect();
+    $(spacer).css({
+      transform: `translateX(${first.left - last.left}px) translateY(${first.top - last.top}px)`
+    });
+    reflow();
+    spacer.classList.add("animated");
+    $(spacer).css({
+      transform: `translateX(0) translateY(0)`
+    });
+  });
+  //trigger play button
+  step(9500, 6, function() {
+    //show share button again
+    $(".share:first").css({ display: "block" })
+  });
 });
 
 $(".play-video").one("click", function() {
