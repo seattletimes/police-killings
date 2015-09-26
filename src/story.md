@@ -177,7 +177,7 @@ Thompson raised his baton and hurried to Zehm, who was holding a 2-liter plastic
 
 Standing over him, Thompson fired Taser probes into Zehm's chest, then smashed him with at least seven more baton strikes. Several other officers hogtied Zehm and held him on his stomach.
 
-Zehm, 36, ended up in a coma and died two days later after his ventilator was turned off. His last words in the store: "All I wanted was a Snickers bar." 
+Zehm ended up in a coma and died two days later after his ventilator was turned off. His last words in the store: "All I wanted was a Snickers bar." 
 
 Thompson would later say he felt threatened by Zehm's soda bottle. 
 
